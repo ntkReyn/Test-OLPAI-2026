@@ -119,22 +119,35 @@ try {
       if (document.querySelector('.your-choice') || document.querySelectorAll('.alternative-item').length !== 3) throw new Error('Correct answer explanation: ' + q.id);
     }
   })()`);
-  await check('All 140 correct explanations, 420 alternatives and 140 takeaways render in both states', "document.getElementById('correct-stat').textContent === '140' && document.getElementById('accuracy-stat').textContent === '100%' && document.getElementById('next-button').disabled && document.getElementById('session-summary').textContent.includes('140 câu')");
+  await check('All 140 correct explanations, 420 alternatives and 140 takeaways render in both states', "document.getElementById('correct-stat').textContent === '140' && document.getElementById('accuracy-stat').textContent === '100%' && document.getElementById('next-button').disabled && document.getElementById('answered-stat').textContent === '140/140' && document.getElementById('progress-track').getAttribute('aria-valuenow') === '140'");
   await evaluate("document.querySelectorAll('.grid-question')[0].click(); document.getElementById('retry-button').click(); document.querySelector('[data-letter=B]').click()");
-  for (const width of [1440, 1280, 768, 375]) {
-    await command('Emulation.setDeviceMetricsOverride', { width, height: width === 375 ? 900 : 1040, deviceScaleFactor: 1, mobile: width < 760 });
-    await check(`No page overflow at ${width}px`, 'document.documentElement.scrollWidth <= window.innerWidth');
+  for (const [width, height] of [[1440, 1040], [1366, 768], [1280, 720], [1024, 768], [768, 1024], [375, 900], [375, 667], [320, 568], [844, 390]]) {
+    await command('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: width < 760 });
+    await check(`Entire workspace fits ${width}x${height}`, 'document.documentElement.scrollWidth <= window.innerWidth && document.documentElement.scrollHeight <= window.innerHeight + 1 && window.scrollY === 0');
+    await check(`Question and navigation remain visible at ${width}x${height}`, "['question-card', 'navigation'].every(id => { const r = document.getElementById(id).getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight && r.height > 30; })");
     await check(`All explanation cards fit the screen at ${width}px`, "[...document.querySelectorAll('.alternative-item,.correct-explanation,.takeaway')].every(el => { const rect = el.getBoundingClientRect(); return rect.left >= 0 && rect.right <= window.innerWidth && el.scrollWidth <= el.clientWidth + 1; })");
-    if (width === 1440 || width === 375) {
-      await evaluate("document.getElementById('feedback').scrollIntoView({block:'start'})");
+    await evaluate("document.getElementById('question-card').scrollTop = document.getElementById('question-card').scrollHeight");
+    await check(`Long explanation scrolls inside the frame at ${width}x${height}`, "document.getElementById('question-card').scrollTop > 0 && window.scrollY === 0 && document.documentElement.scrollHeight <= innerHeight + 1 && document.getElementById('navigation').getBoundingClientRect().bottom <= innerHeight");
+    if ((width === 1440 && height === 1040) || (width === 375 && height === 667)) {
+      await evaluate("(() => { const card = document.getElementById('question-card'); card.scrollTop += document.getElementById('feedback').getBoundingClientRect().top - card.getBoundingClientRect().top - 16; })()");
       const screenshot = await command('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
       const output = join(tmpdir(), `uet-ai-${width}.png`);
       await writeFile(output, Buffer.from(screenshot.data, 'base64'));
       console.log('SCREENSHOT ' + output);
     }
   }
-  await evaluate("document.getElementById('feedback').scrollIntoView(); document.getElementById('next-button').click()");
+  await evaluate("document.getElementById('question-card').scrollTop = document.getElementById('question-card').scrollHeight; document.getElementById('next-button').click()");
   await check('Navigating after a long explanation brings the next question into view', "document.getElementById('question-index').textContent === 'CÂU 02' && document.getElementById('question-title').getBoundingClientRect().top >= 0 && document.getElementById('question-title').getBoundingClientRect().bottom <= window.innerHeight");
+  await command('Emulation.setDeviceMetricsOverride', { width: 375, height: 667, deviceScaleFactor: 1, mobile: true });
+  await check('Mobile question directory starts collapsed', "document.getElementById('directory-body').hidden && document.getElementById('directory-toggle').getAttribute('aria-expanded') === 'false'");
+  await evaluate("document.getElementById('directory-toggle').click(); document.getElementById('question-search').value = '140'; document.getElementById('question-search').dispatchEvent(new Event('input'))");
+  await check('Mobile directory opens with working search and no page scrolling', "!document.getElementById('directory-body').hidden && document.querySelectorAll('.grid-question').length === 1 && document.querySelector('.grid-question').getBoundingClientRect().top >= 0 && document.documentElement.scrollHeight <= innerHeight + 1");
+  await evaluate("document.querySelector('.grid-question').click()");
+  await check('Selecting a mobile directory question closes it and resets reading position', "document.getElementById('directory-body').hidden && document.getElementById('question-index').textContent === 'CÂU 140' && document.getElementById('question-card').scrollTop === 0 && document.getElementById('question-title').getBoundingClientRect().top >= 0");
+  await evaluate("document.getElementById('directory-toggle').click(); document.getElementById('reset-button').click()");
+  await check('Reset remains accessible from the mobile directory', "document.getElementById('reset-dialog').open");
+  await evaluate("document.querySelector('#reset-dialog button[value=cancel]').click(); document.dispatchEvent(new KeyboardEvent('keydown', {key:'Escape', bubbles:true}))");
+  await check('Mobile directory closes with Escape', "document.getElementById('directory-body').hidden");
   assert.deepEqual(errors, [], 'Browser runtime errors');
   console.log(`${passed} browser checks passed; no runtime exceptions.`);
 } finally {

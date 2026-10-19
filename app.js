@@ -16,6 +16,16 @@
   // Freeze the visible list between explicit filter changes so choosing an answer
   // in "Chưa làm" or "Câu sai" never removes its explanation from the screen.
   let visibleIds = [];
+  const mobileLayout = window.matchMedia('(max-width: 760px)');
+  let directoryOpen = false;
+
+  function updateDirectory() {
+    const expanded = !mobileLayout.matches || directoryOpen;
+    $('directory-body').hidden = !expanded;
+    $('directory-toggle').setAttribute('aria-expanded', String(expanded));
+    $('directory-toggle').setAttribute('aria-label', expanded ? 'Đóng bản đồ câu hỏi' : 'Mở bản đồ câu hỏi');
+    $('directory-toggle').textContent = expanded ? '⌄' : '⌃';
+  }
 
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
@@ -74,6 +84,7 @@
     visibleIds = order.filter(id => matches(byId.get(id)));
     if (!visibleIds.includes(currentId)) currentId = visibleIds[0] || null;
     render();
+    $('question-card').scrollTop = 0;
   }
 
   function renderCategories() {
@@ -93,7 +104,6 @@
     const scope = questions.filter(q => category === 'all' || q.category === category);
     const answered = scope.filter(q => answers[q.id]);
     const correct = answered.filter(q => answers[q.id] === q.answer).length;
-    $('practice-title').textContent = category === 'all' ? 'Tất cả câu hỏi' : categories.find(c => c.id === category).name;
     $('answered-stat').innerHTML = `${answered.length}<span>/${scope.length}</span>`;
     $('correct-stat').textContent = correct;
     $('wrong-stat').textContent = answered.length - correct;
@@ -101,18 +111,11 @@
     $('progress-fill').style.width = answered.length / scope.length * 100 + '%';
     $('progress-track').setAttribute('aria-valuenow', answered.length);
     $('progress-track').setAttribute('aria-valuemax', scope.length);
-    const summary = $('session-summary');
-    if (answered.length === scope.length) {
-      summary.innerHTML = `<span class="eyebrow">HOÀN THÀNH LƯỢT ÔN</span><strong>Bạn đã đi hết ${scope.length} câu!</strong><p>Trả lời đúng ${correct}/${scope.length} câu. ${correct < scope.length ? 'Mở bộ lọc “Câu sai” để ôn lại những phần cần củng cố.' : 'Tuyệt vời! Hãy thử giải thích lại kiến thức bằng lời của bạn.'}</p>`;
-    } else if (answered.length) {
-      summary.innerHTML = `<span class="eyebrow">MỖI NGÀY MỘT CHÚT</span><strong>Đã hoàn thành ${answered.length}/${scope.length} câu</strong><p>Còn ${scope.length - answered.length} cơ hội để hiểu thêm. Cứ tiếp tục theo nhịp của bạn.</p>`;
-    } else {
-      summary.innerHTML = '<span class="eyebrow">CHẬM MÀ CHẮC</span><strong>Sẵn sàng cho câu đầu tiên?</strong><p>Mỗi đáp án đều đi kèm giải thích để bạn hiểu bản chất.</p>';
-    }
   }
 
   function renderGrid() {
     const grid = $('question-grid');
+    const scrollPosition = grid.scrollTop;
     grid.replaceChildren();
     $('visible-count').textContent = visibleIds.length + ' câu';
     for (const id of visibleIds) {
@@ -128,6 +131,7 @@
       button.addEventListener('click', () => navigate(id));
       grid.append(button);
     }
+    grid.scrollTop = scrollPosition;
   }
 
   function renderQuestion() {
@@ -218,6 +222,9 @@
     renderGrid();
     renderQuestion();
     save();
+    const card = $('question-card');
+    const feedbackTop = $('feedback').getBoundingClientRect().top - card.getBoundingClientRect().top + card.scrollTop;
+    card.scrollTo({ top: Math.max(0, feedbackTop - 16), behavior: 'instant' });
   }
 
   function navigate(id) {
@@ -226,9 +233,9 @@
     renderGrid();
     renderQuestion();
     save();
-    // Long explanations can leave the viewport far below the next question.
-    const card = $('question-card');
-    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: 'start', behavior: 'instant' });
+    $('question-card').scrollTop = 0;
+    directoryOpen = false;
+    updateDirectory();
   }
 
   function step(delta) {
@@ -238,6 +245,14 @@
 
   document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => { filter = button.dataset.filter; refreshList(); }));
   $('question-search').addEventListener('input', event => { search = event.target.value; refreshList(); });
+  $('directory-toggle').addEventListener('click', () => { directoryOpen = !directoryOpen; updateDirectory(); });
+  mobileLayout.addEventListener('change', () => { directoryOpen = false; updateDirectory(); });
+  document.addEventListener('click', event => {
+    if (mobileLayout.matches && directoryOpen && !$('question-panel').contains(event.target)) {
+      directoryOpen = false;
+      updateDirectory();
+    }
+  });
   $('previous-button').addEventListener('click', () => step(-1));
   $('next-button').addEventListener('click', () => step(1));
   $('bookmark-button').addEventListener('click', () => {
@@ -269,10 +284,17 @@
     $('question-search').value = ''; refreshList();
   });
   document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && mobileLayout.matches && directoryOpen) {
+      directoryOpen = false;
+      updateDirectory();
+      $('directory-toggle').focus();
+      return;
+    }
     if (event.ctrlKey || event.altKey || event.metaKey || $('reset-dialog').open || /INPUT|TEXTAREA|SELECT/.test(event.target.tagName) || event.target.isContentEditable) return;
     if (/^[1-4]$/.test(event.key) && !event.repeat) { event.preventDefault(); answer('ABCD'[Number(event.key) - 1]); }
     if (event.key === 'ArrowLeft') { event.preventDefault(); step(-1); }
     if (event.key === 'ArrowRight') { event.preventDefault(); step(1); }
   });
+  updateDirectory();
   refreshList();
 })();

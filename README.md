@@ -8,6 +8,7 @@ Mở **`index.html`** bằng Chrome, Edge hoặc Firefox để bắt đầu. Kh�
 - Lọc theo 4 chủ đề, câu chưa làm, câu sai hoặc câu đã lưu bằng ngôi sao. Tìm câu theo số hoặc nội dung. **Xáo trộn** chỉ đổi thứ tự câu hỏi, giữ nguyên các phương án và tiến độ.
 - Đáp án, câu đã lưu và vị trí đang học được lưu trong trình duyệt. **Làm lại từ đầu** xóa tiến độ sau khi xác nhận. Thống kê tính theo chủ đề đang chọn và theo đáp án hiện được lưu của mỗi câu.
 - Trong bộ lọc **Chưa làm** hoặc **Câu sai**, danh sách giữ nguyên trong lúc trả lời để bạn đọc được lời giải. Chọn lại bộ lọc để cập nhật danh sách.
+- Giao diện vừa một màn hình: cuộn nội dung trong khung câu hỏi/lời giải, còn bảng thống kê và nút chuyển câu luôn hiện. Trên điện thoại, nhấn nút mũi tên cạnh **Bản đồ câu hỏi** ở cuối màn hình để mở danh sách, tìm câu hoặc làm lại từ đầu.
 
 ## Cập nhật từ Markdown
 
