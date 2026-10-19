@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#175c50">
+  <meta name="description" content="Luyện tập 140 câu trắc nghiệm Olympic Trí tuệ nhân tạo UET 2026, chấm đáp án và giải thích ngay sau khi chọn.">
+  <title>AI Practice · Ôn luyện Olympic UET 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="questions.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="AI Practice, trang luyện tập"><span class="brand-mark" aria-hidden="true">ai<span>✦</span></span><span>AI Practice<small>OLYMPIC UET 2026</small></span></a>
+    <div class="header-note"><span class="live-dot"></span>Không gian tự luyện</div>
+    <button class="button button-quiet" id="reset-button" type="button">↺ <span>Làm lại từ đầu</span></button>
+  </header>
+
+  <main class="workspace">
+    <aside class="sidebar" aria-label="Chủ đề luyện tập">
+      <p class="eyebrow">GÓC HỌC TẬP CỦA BẠN</p>
+      <h1>Mỗi câu hỏi,<br>một bước tiến.</h1>
+      <p class="sidebar-intro">Luyện tư duy AI qua từng tình huống.<br>Hiểu lời giải, nắm vững kiến thức.</p>
+      <div class="section-heading">NGÂN HÀNG CÂU HỎI <span id="bank-total">140</span></div>
+      <nav id="categories" class="categories" aria-label="Lọc theo chủ đề"></nav>
+      <div class="study-tip"><span class="tip-icon" aria-hidden="true">✧</span><strong>Học để hiểu sâu hơn</strong><p>Thử tự giải thích lựa chọn của mình trước khi xem lời giải nhé.</p></div>
+      <p class="source-note">Biên soạn từ ngân hàng ôn tập<br>Olympic Trí tuệ nhân tạo UET 2026</p>
+    </aside>
+
+    <section class="practice" aria-label="Luyện tập trắc nghiệm">
+      <div class="practice-heading"><div><p class="eyebrow">LUYỆN TẬP TRẮC NGHIỆM</p><h2 id="practice-title">Tất cả câu hỏi</h2></div><span class="mode-pill"><span></span> Chọn là biết đáp án</span></div>
+      <div class="stats" aria-label="Thống kê kết quả">
+        <div><span class="stat-icon neutral" aria-hidden="true">▤</span><span><strong id="answered-stat">0<span>/140</span></strong><small>Đã trả lời</small></span></div>
+        <div><span class="stat-icon positive" aria-hidden="true">✓</span><span><strong id="correct-stat">0</strong><small>Câu đúng</small></span></div>
+        <div><span class="stat-icon negative" aria-hidden="true">×</span><span><strong id="wrong-stat">0</strong><small>Câu sai</small></span></div>
+        <div><span class="stat-icon accuracy" aria-hidden="true">◎</span><span><strong id="accuracy-stat">—</strong><small>Độ chính xác</small></span></div>
+      </div>
+      <div class="progress-track" id="progress-track" role="progressbar" aria-label="Tiến độ hoàn thành chủ đề" aria-valuemin="0" aria-valuemax="140" aria-valuenow="0"><span id="progress-fill"></span></div>
+      <div class="toolbar"><div class="filter-tabs" role="group" aria-label="Lọc trạng thái câu hỏi"><button type="button" data-filter="all" class="active" aria-pressed="true">Tất cả</button><button type="button" data-filter="unanswered" aria-pressed="false">Chưa làm</button><button type="button" data-filter="wrong" aria-pressed="false">Câu sai</button><button type="button" data-filter="bookmarked" aria-pressed="false">Đã lưu</button></div><button id="shuffle-button" class="text-button" type="button">⇄ <span>Xáo trộn</span></button></div>
+
+      <article class="question-card" id="question-card" aria-labelledby="question-title">
+        <div class="question-meta"><span class="question-index" id="question-index">CÂU 01</span><span class="topic-label" id="topic-label"></span><button type="button" class="bookmark" id="bookmark-button" aria-label="Lưu câu hỏi" aria-pressed="false">☆</button></div>
+        <h3 id="question-title"></h3>
+        <div class="markdown question-prompt" id="question-prompt"></div>
+        <p class="answer-instruction" id="answer-instruction">Chọn một đáp án đúng nhất.</p>
+        <div class="options" id="options" role="group" aria-label="Các phương án trả lời"></div>
+        <div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+        <div class="card-bottom"><span id="answer-hint"><span aria-hidden="true">ⓘ</span> Lời giải xuất hiện sau khi bạn chọn đáp án.</span><button class="text-button" id="retry-button" type="button" hidden>↺ Thử lại câu này</button></div>
+      </article>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">✧</span><h3 id="empty-title">Không có câu hỏi</h3><p id="empty-message"></p><button type="button" class="button button-primary" id="show-all-button">Xem tất cả câu hỏi</button></div>
+      <div class="navigation" id="navigation"><button type="button" id="previous-button" class="button button-outline">← Câu trước</button><span id="position-label"></span><button type="button" id="next-button" class="button button-primary">Câu tiếp theo →</button></div>
+      <p class="keyboard-note">Phím <kbd>1</kbd>–<kbd>4</kbd> chọn đáp án <span>·</span> <kbd>←</kbd> <kbd>→</kbd> chuyển câu</p>
+      <p class="storage-note" id="storage-note">Tiến độ được tự động lưu trên trình duyệt này.</p>
+    </section>
+
+    <aside class="question-panel" aria-label="Danh sách câu hỏi">
+      <div class="panel-heading"><h2>Bản đồ câu hỏi</h2><span id="visible-count">140 câu</span></div>
+      <label class="search-box"><span aria-hidden="true">⌕</span><input id="question-search" type="search" placeholder="Tìm số câu, nội dung…" aria-label="Tìm câu hỏi theo số hoặc nội dung"></label>
+      <div class="question-grid" id="question-grid"></div>
+      <div class="legend"><span><i class="legend-dot current"></i>Đang xem</span><span><i class="legend-dot correct"></i>Đúng</span><span><i class="legend-dot wrong"></i>Sai</span><span><i class="legend-dot"></i>Chưa làm</span></div>
+      <div class="session-summary" id="session-summary"><span class="eyebrow">CHẬM MÀ CHẮC</span><strong>Sẵn sàng cho câu đầu tiên?</strong><p>Mỗi đáp án đều đi kèm giải thích để bạn hiểu bản chất.</p></div>
+    </aside>
+  </main>
+  <dialog id="reset-dialog"><form method="dialog"><span class="dialog-icon" aria-hidden="true">↺</span><h2>Bắt đầu một lượt mới?</h2><p>Tất cả đáp án và câu đã lưu sẽ được xóa khỏi trình duyệt này.</p><div class="dialog-actions"><button class="button button-outline" value="cancel">Tiếp tục học</button><button class="button button-danger" value="reset">Làm lại từ đầu</button></div></form></dialog>
+  <noscript>Vui lòng bật JavaScript để luyện tập trắc nghiệm.</noscript>
+</body>
+</html>

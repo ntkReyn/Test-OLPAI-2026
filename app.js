@@ -1,0 +1,278 @@
+(() => {
+  'use strict';
+  const questions = window.QUESTION_BANK;
+  const byId = new Map(questions.map(q => [q.id, q]));
+  const STORAGE_KEY = 'uet-ai-practice-v1';
+  const $ = id => document.getElementById(id);
+  const categories = [...new Map(questions.map(q => [q.category, { id: q.category, name: q.categoryName }])).values()];
+  let storageAvailable = true;
+  let answers = {};
+  let bookmarks = new Set();
+  let currentId = questions[0].id;
+  let category = 'all';
+  let filter = 'all';
+  let search = '';
+  let order = questions.map(q => q.id);
+  // Freeze the visible list between explicit filter changes so choosing an answer
+  // in "Chưa làm" or "Câu sai" never removes its explanation from the screen.
+  let visibleIds = [];
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+    if (saved && typeof saved === 'object') {
+      for (const [id, letter] of Object.entries(saved.answers || {})) {
+        if (byId.has(Number(id)) && /^[A-D]$/.test(letter)) answers[id] = letter;
+      }
+      bookmarks = new Set((Array.isArray(saved.bookmarks) ? saved.bookmarks : []).filter(id => byId.has(id)));
+      if (byId.has(saved.currentId)) currentId = saved.currentId;
+      if (categories.some(c => c.id === saved.category)) category = saved.category;
+    }
+  } catch { storageAvailable = false; }
+
+  function save() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ answers, bookmarks: [...bookmarks], currentId, category })); }
+    catch { storageAvailable = false; }
+    $('storage-note').textContent = storageAvailable
+      ? 'Tiến độ được tự động lưu trên trình duyệt này.'
+      : 'Trình duyệt không lưu được tiến độ. Bạn vẫn có thể luyện tập trong phiên này.';
+  }
+
+  function escapeHtml(text) {
+    return String(text).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+  }
+
+  function inlineMarkdown(text) {
+    return text.split(/(`[^`\n]+`)/g).map(part => {
+      if (part.startsWith('`') && part.endsWith('`')) return '<code>' + escapeHtml(part.slice(1, -1)) + '</code>';
+      return escapeHtml(part).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    }).join('');
+  }
+
+  function markdown(text) {
+    return text.split(/(```[^\n]*\n[\s\S]*?```)/g).map(part => {
+      if (part.startsWith('```')) {
+        return '<pre><code>' + escapeHtml(part.replace(/^```[^\n]*\n/, '').replace(/```$/, '').replace(/\n$/, '')) + '</code></pre>';
+      }
+      return part.trim().split(/\n\s*\n/).filter(Boolean).map(p => '<p>' + inlineMarkdown(p).replace(/\n/g, '<br>') + '</p>').join('');
+    }).join('');
+  }
+
+  function matches(q) {
+    if (category !== 'all' && q.category !== category) return false;
+    if (filter === 'unanswered' && answers[q.id]) return false;
+    if (filter === 'wrong' && (!answers[q.id] || answers[q.id] === q.answer)) return false;
+    if (filter === 'bookmarked' && !bookmarks.has(q.id)) return false;
+    const term = normalize(search.trim());
+    return !term || normalize(`${q.id} ${q.title} ${q.prompt} ${q.categoryName}`).includes(term);
+  }
+
+  function normalize(text) {
+    return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase();
+  }
+
+  function refreshList() {
+    visibleIds = order.filter(id => matches(byId.get(id)));
+    if (!visibleIds.includes(currentId)) currentId = visibleIds[0] || null;
+    render();
+  }
+
+  function renderCategories() {
+    $('categories').replaceChildren();
+    for (const c of [{ id: 'all', name: 'Tất cả câu hỏi' }, ...categories]) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'category-button' + (c.id === category ? ' active' : '');
+      button.setAttribute('aria-pressed', String(c.id === category));
+      button.innerHTML = `<span class="category-icon" aria-hidden="true">${c.id === 'all' ? '▦' : c.id}</span><span class="category-name">${escapeHtml(c.name)}</span><span class="count">${questions.filter(q => c.id === 'all' || q.category === c.id).length}</span>`;
+      button.addEventListener('click', () => { category = c.id; refreshList(); });
+      $('categories').append(button);
+    }
+  }
+
+  function renderStats() {
+    const scope = questions.filter(q => category === 'all' || q.category === category);
+    const answered = scope.filter(q => answers[q.id]);
+    const correct = answered.filter(q => answers[q.id] === q.answer).length;
+    $('practice-title').textContent = category === 'all' ? 'Tất cả câu hỏi' : categories.find(c => c.id === category).name;
+    $('answered-stat').innerHTML = `${answered.length}<span>/${scope.length}</span>`;
+    $('correct-stat').textContent = correct;
+    $('wrong-stat').textContent = answered.length - correct;
+    $('accuracy-stat').textContent = answered.length ? Math.round(correct / answered.length * 100) + '%' : '—';
+    $('progress-fill').style.width = answered.length / scope.length * 100 + '%';
+    $('progress-track').setAttribute('aria-valuenow', answered.length);
+    $('progress-track').setAttribute('aria-valuemax', scope.length);
+    const summary = $('session-summary');
+    if (answered.length === scope.length) {
+      summary.innerHTML = `<span class="eyebrow">HOÀN THÀNH LƯỢT ÔN</span><strong>Bạn đã đi hết ${scope.length} câu!</strong><p>Trả lời đúng ${correct}/${scope.length} câu. ${correct < scope.length ? 'Mở bộ lọc “Câu sai” để ôn lại những phần cần củng cố.' : 'Tuyệt vời! Hãy thử giải thích lại kiến thức bằng lời của bạn.'}</p>`;
+    } else if (answered.length) {
+      summary.innerHTML = `<span class="eyebrow">MỖI NGÀY MỘT CHÚT</span><strong>Đã hoàn thành ${answered.length}/${scope.length} câu</strong><p>Còn ${scope.length - answered.length} cơ hội để hiểu thêm. Cứ tiếp tục theo nhịp của bạn.</p>`;
+    } else {
+      summary.innerHTML = '<span class="eyebrow">CHẬM MÀ CHẮC</span><strong>Sẵn sàng cho câu đầu tiên?</strong><p>Mỗi đáp án đều đi kèm giải thích để bạn hiểu bản chất.</p>';
+    }
+  }
+
+  function renderGrid() {
+    const grid = $('question-grid');
+    grid.replaceChildren();
+    $('visible-count').textContent = visibleIds.length + ' câu';
+    for (const id of visibleIds) {
+      const q = byId.get(id);
+      const status = answers[id] ? answers[id] === q.answer ? 'correct' : 'wrong' : '';
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'grid-question ' + status + (id === currentId ? ' current' : '') + (bookmarks.has(id) ? ' saved' : '');
+      button.textContent = id;
+      button.title = `Câu ${id}: ${q.title}`;
+      button.setAttribute('aria-label', `Câu ${id}, ${status === 'correct' ? 'đúng' : status === 'wrong' ? 'sai' : 'chưa làm'}${bookmarks.has(id) ? ', đã lưu' : ''}`);
+      if (id === currentId) button.setAttribute('aria-current', 'true');
+      button.addEventListener('click', () => navigate(id));
+      grid.append(button);
+    }
+  }
+
+  function renderQuestion() {
+    const q = byId.get(currentId);
+    const empty = !q || !visibleIds.length;
+    $('question-card').hidden = empty;
+    $('navigation').hidden = empty;
+    $('empty-state').hidden = !empty;
+    if (empty) {
+      const messages = {
+        all: ['Chưa tìm thấy câu hỏi', 'Thử từ khóa khác hoặc chọn một chủ đề khác.'],
+        unanswered: ['Không còn câu chưa làm', 'Bạn đã trả lời hết các câu phù hợp với bộ lọc này.'],
+        wrong: ['Chưa có câu trả lời sai', 'Các câu bạn trả lời sai sẽ xuất hiện ở đây để ôn lại.'],
+        bookmarked: ['Chưa có câu đã lưu', 'Nhấn ngôi sao ở góc câu hỏi để lưu lại và ôn sau.'],
+      };
+      const [title, message] = messages[search ? 'all' : filter];
+      $('empty-title').textContent = title;
+      $('empty-message').textContent = message;
+      return;
+    }
+    const selected = answers[q.id];
+    $('question-index').textContent = 'CÂU ' + String(q.id).padStart(2, '0');
+    $('topic-label').textContent = 'Chủ đề ' + q.category;
+    $('question-title').textContent = q.title;
+    $('question-prompt').innerHTML = markdown(q.prompt);
+    $('answer-instruction').textContent = selected ? 'Đã ghi nhận đáp án của bạn.' : 'Chọn một đáp án đúng nhất.';
+    $('bookmark-button').textContent = bookmarks.has(q.id) ? '★' : '☆';
+    $('bookmark-button').setAttribute('aria-pressed', String(bookmarks.has(q.id)));
+    $('bookmark-button').setAttribute('aria-label', bookmarks.has(q.id) ? 'Bỏ lưu câu hỏi' : 'Lưu câu hỏi');
+    const options = $('options');
+    options.replaceChildren();
+    for (const option of q.options) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'option';
+      button.dataset.letter = option.letter;
+      button.disabled = Boolean(selected);
+      let indicator = '';
+      let status = '';
+      if (selected) {
+        if (option.letter === q.answer) { button.classList.add('correct'); indicator = '✓'; status = 'Đáp án đúng'; }
+        else if (option.letter === selected) { button.classList.add('wrong'); indicator = '×'; status = 'Bạn đã chọn sai'; }
+        else button.classList.add('dimmed');
+        if (selected === option.letter && option.letter === q.answer) status = 'Bạn đã chọn đúng';
+      }
+      button.innerHTML = `<span class="option-letter">${option.letter}</span><span class="option-content markdown">${markdown(option.text)}</span><span class="option-indicator" aria-hidden="true">${indicator}</span>`;
+      if (status) button.setAttribute('aria-label', `${option.letter}. ${option.text}. ${status}`);
+      button.addEventListener('click', () => answer(option.letter));
+      options.append(button);
+    }
+    const feedback = $('feedback');
+    feedback.hidden = !selected;
+    feedback.className = 'feedback' + (selected && selected !== q.answer ? ' wrong' : '');
+    if (selected) {
+      const isCorrect = selected === q.answer;
+      const alternatives = q.options.filter(option => option.letter !== q.answer && q.incorrectExplanations?.[option.letter]);
+      feedback.innerHTML = `<div class="feedback-title"><span aria-hidden="true">${isCorrect ? '✓' : '×'}</span>${isCorrect ? 'Chính xác! Bạn đã chọn đáp án ' + q.answer + '.' : 'Chưa chính xác. Bạn chọn ' + selected + ', đáp án đúng là ' + q.answer + '.'}</div>
+        <section class="correct-explanation" aria-label="Giải thích đáp án đúng"><h4>Vì sao ${q.answer} đúng?</h4><div class="markdown">${markdown(q.explanation)}</div></section>
+        ${alternatives.length ? `<section class="alternative-explanations" aria-label="Giải thích các phương án sai"><h4>Vì sao các phương án còn lại sai?</h4><ul class="alternative-list">${alternatives.map(option => `<li class="alternative-item${selected === option.letter ? ' your-choice' : ''}" data-explanation-letter="${option.letter}"><div class="alternative-heading"><span class="alternative-letter">${option.letter}</span><span class="markdown alternative-option">${inlineMarkdown(option.text)}</span>${selected === option.letter ? '<span class="your-choice-tag">Bạn đã chọn</span>' : ''}</div><div class="markdown alternative-reason">${markdown(q.incorrectExplanations[option.letter])}</div></li>`).join('')}</ul></section>` : ''}
+        ${q.takeaway ? `<section class="takeaway" aria-label="Kiến thức cần ghi nhớ"><h4>Ghi nhớ</h4><div class="markdown">${markdown(q.takeaway)}</div></section>` : ''}`;
+    } else feedback.replaceChildren();
+    $('retry-button').hidden = !selected;
+    $('answer-hint').textContent = selected ? 'Đọc lời giải để hiểu rõ hơn trước khi tiếp tục.' : 'ⓘ Lời giải xuất hiện sau khi bạn chọn đáp án.';
+    const position = visibleIds.indexOf(q.id);
+    $('position-label').textContent = `${position + 1} / ${visibleIds.length} câu`;
+    $('previous-button').disabled = position <= 0;
+    $('next-button').disabled = position >= visibleIds.length - 1;
+  }
+
+  function render() {
+    renderCategories();
+    renderStats();
+    renderGrid();
+    renderQuestion();
+    document.querySelectorAll('[data-filter]').forEach(button => {
+      const active = button.dataset.filter === filter;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    save();
+  }
+
+  function answer(letter) {
+    if (!currentId || answers[currentId] || !/^[A-D]$/.test(letter)) return;
+    answers[currentId] = letter;
+    // Update only results; keep the live status node in the DOM for screen readers.
+    renderStats();
+    renderGrid();
+    renderQuestion();
+    save();
+  }
+
+  function navigate(id) {
+    if (!visibleIds.includes(id)) return;
+    currentId = id;
+    renderGrid();
+    renderQuestion();
+    save();
+    // Long explanations can leave the viewport far below the next question.
+    const card = $('question-card');
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: 'start', behavior: 'instant' });
+  }
+
+  function step(delta) {
+    const position = visibleIds.indexOf(currentId);
+    if (position >= 0 && position + delta >= 0 && position + delta < visibleIds.length) navigate(visibleIds[position + delta]);
+  }
+
+  document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => { filter = button.dataset.filter; refreshList(); }));
+  $('question-search').addEventListener('input', event => { search = event.target.value; refreshList(); });
+  $('previous-button').addEventListener('click', () => step(-1));
+  $('next-button').addEventListener('click', () => step(1));
+  $('bookmark-button').addEventListener('click', () => {
+    if (!currentId) return;
+    if (bookmarks.has(currentId)) bookmarks.delete(currentId); else bookmarks.add(currentId);
+    renderGrid(); renderQuestion(); save();
+  });
+  $('retry-button').addEventListener('click', () => {
+    delete answers[currentId];
+    render();
+    $('options').querySelector('button')?.focus();
+  });
+  $('shuffle-button').addEventListener('click', () => {
+    for (let i = order.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [order[i], order[j]] = [order[j], order[i]];
+    }
+    currentId = null;
+    refreshList();
+  });
+  $('show-all-button').addEventListener('click', () => {
+    filter = 'all'; search = ''; $('question-search').value = ''; refreshList();
+  });
+  $('reset-button').addEventListener('click', () => $('reset-dialog').showModal());
+  $('reset-dialog').querySelector('form').addEventListener('submit', event => {
+    if (event.submitter?.value !== 'reset') return;
+    answers = {}; bookmarks.clear(); category = 'all'; filter = 'all'; search = '';
+    currentId = questions[0].id; order = questions.map(q => q.id);
+    $('question-search').value = ''; refreshList();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.ctrlKey || event.altKey || event.metaKey || $('reset-dialog').open || /INPUT|TEXTAREA|SELECT/.test(event.target.tagName) || event.target.isContentEditable) return;
+    if (/^[1-4]$/.test(event.key) && !event.repeat) { event.preventDefault(); answer('ABCD'[Number(event.key) - 1]); }
+    if (event.key === 'ArrowLeft') { event.preventDefault(); step(-1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); step(1); }
+  });
+  refreshList();
+})();
