@@ -2,6 +2,7 @@
 window.QUESTION_BANK = [
   {
     "id": 1,
+    "difficulty": "easy",
     "title": "Python: list comprehension",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -35,6 +36,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 2,
+    "difficulty": "easy",
     "title": "Python: mutable object",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -68,6 +70,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 3,
+    "difficulty": "easy",
     "title": "NumPy: broadcasting",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -101,6 +104,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 4,
+    "difficulty": "easy",
     "title": "NumPy: axis",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -134,6 +138,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 5,
+    "difficulty": "easy",
     "title": "pandas: xử lý missing value",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -167,6 +172,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 6,
+    "difficulty": "easy",
     "title": "pandas: lọc dữ liệu",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -200,6 +206,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 7,
+    "difficulty": "easy",
     "title": "Visualization",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -233,6 +240,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 8,
+    "difficulty": "easy",
     "title": "scikit-learn: tránh leakage",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -256,7 +264,7 @@ window.QUESTION_BANK = [
       }
     ],
     "answer": "C",
-    "explanation": "`Pipeline` đảm bảo scaler chỉ fit trên phần train của từng fold, tránh data leakage. Mean và độ lệch chuẩn được học lại trong mỗi fold; validation chỉ được `transform` bằng các thống kê đó. Mỗi bước của `Pipeline` phải có cặp `(tên, estimator)` như trong phương án C.",
+    "explanation": "`Pipeline` đảm bảo scaler chỉ fit trên phần train của từng fold, tránh data leakage. Mean và độ lệch chuẩn được học lại trong mỗi fold; validation chỉ được `transform` bằng các thống kê đó. Mỗi bước của `Pipeline` phải có cặp `(tên, estimator)` như trong phương án đúng.",
     "incorrectExplanations": {
       "A": "Chuẩn hóa trước CV để validation tham gia tính mean/std, làm quá trình huấn luyện gián tiếp biết phân phối phần dữ liệu cần đánh giá.",
       "B": "Gộp train và validation để fit scaler trong mỗi fold vẫn là leakage. Validation không được tham gia bất kỳ bước học thống kê nào.",
@@ -266,6 +274,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 9,
+    "difficulty": "easy",
     "title": "PyTorch: gradient",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -299,6 +308,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 10,
+    "difficulty": "easy",
     "title": "PyTorch: eval mode",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -332,6 +342,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 11,
+    "difficulty": "easy",
     "title": "CPU/GPU",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -365,6 +376,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 12,
+    "difficulty": "easy",
     "title": "Linear Regression: loại bài toán",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -398,6 +410,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 13,
+    "difficulty": "easy",
     "title": "Linear Regression: outlier",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -431,6 +444,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 14,
+    "difficulty": "easy",
     "title": "Linear Regression: dấu hiệu không phù hợp",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -464,6 +478,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 15,
+    "difficulty": "easy",
     "title": "Logistic Regression",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -497,6 +512,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 16,
+    "difficulty": "easy",
     "title": "Threshold",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -530,6 +546,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 17,
+    "difficulty": "easy",
     "title": "Logistic Regression và scaling",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -563,6 +580,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 18,
+    "difficulty": "easy",
     "title": "L1 vs L2",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -596,6 +614,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 19,
+    "difficulty": "easy",
     "title": "Regularization strength",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -629,6 +648,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 20,
+    "difficulty": "easy",
     "title": "L2",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -662,6 +682,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 21,
+    "difficulty": "easy",
     "title": "K-NN và scaling",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -695,6 +716,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 22,
+    "difficulty": "easy",
     "title": "K của K-NN",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -728,6 +750,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 23,
+    "difficulty": "easy",
     "title": "K-NN ở chiều cao",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -761,6 +784,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 24,
+    "difficulty": "easy",
     "title": "Decision Tree",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -794,6 +818,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 25,
+    "difficulty": "easy",
     "title": "Overfitting cây",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -827,6 +852,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 26,
+    "difficulty": "easy",
     "title": "Tree hyperparameter",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -860,6 +886,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 27,
+    "difficulty": "easy",
     "title": "SVM: margin",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -893,6 +920,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 28,
+    "difficulty": "easy",
     "title": "SVM: C",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -926,6 +954,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 29,
+    "difficulty": "easy",
     "title": "SVM: kernel",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -959,6 +988,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 30,
+    "difficulty": "easy",
     "title": "Bagging",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -992,6 +1022,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 31,
+    "difficulty": "easy",
     "title": "Random Forest",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1025,6 +1056,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 32,
+    "difficulty": "easy",
     "title": "Boosting",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1058,6 +1090,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 33,
+    "difficulty": "easy",
     "title": "Ensemble size",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1091,6 +1124,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 34,
+    "difficulty": "easy",
     "title": "K-Means: scale",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1124,6 +1158,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 35,
+    "difficulty": "easy",
     "title": "K-Means: hình dạng cluster",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1157,6 +1192,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 36,
+    "difficulty": "easy",
     "title": "K-Means: outlier",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1190,6 +1226,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 37,
+    "difficulty": "easy",
     "title": "PCA",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1223,6 +1260,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 38,
+    "difficulty": "easy",
     "title": "PCA và scaling",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1256,6 +1294,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 39,
+    "difficulty": "easy",
     "title": "PCA leakage",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1289,6 +1328,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 40,
+    "difficulty": "easy",
     "title": "t-SNE/UMAP",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1322,6 +1362,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 41,
+    "difficulty": "easy",
     "title": "DBSCAN",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1355,6 +1396,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 42,
+    "difficulty": "easy",
     "title": "Hierarchical Clustering",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1388,6 +1430,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 43,
+    "difficulty": "easy",
     "title": "Spectral Clustering",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1421,6 +1464,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 44,
+    "difficulty": "easy",
     "title": "Accuracy trong dữ liệu mất cân bằng",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1454,6 +1498,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 45,
+    "difficulty": "easy",
     "title": "Precision",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1487,6 +1532,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 46,
+    "difficulty": "easy",
     "title": "Recall",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1520,6 +1566,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 47,
+    "difficulty": "easy",
     "title": "F1",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1553,6 +1600,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 48,
+    "difficulty": "easy",
     "title": "Chọn metric theo mục tiêu",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1586,6 +1634,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 49,
+    "difficulty": "easy",
     "title": "ROC curve",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1619,6 +1668,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 50,
+    "difficulty": "easy",
     "title": "Underfitting",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1652,6 +1702,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 51,
+    "difficulty": "easy",
     "title": "Overfitting",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1685,6 +1736,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 52,
+    "difficulty": "easy",
     "title": "Hyperparameter tuning",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1718,6 +1770,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 53,
+    "difficulty": "easy",
     "title": "Cross-validation leakage",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1751,6 +1804,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 54,
+    "difficulty": "easy",
     "title": "Feature engineering: time series",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1784,6 +1838,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 55,
+    "difficulty": "easy",
     "title": "Feature engineering: categorical",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1817,6 +1872,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 56,
+    "difficulty": "easy",
     "title": "Standardization vs normalization",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1850,6 +1906,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 57,
+    "difficulty": "easy",
     "title": "Imputation leakage",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1883,6 +1940,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 58,
+    "difficulty": "easy",
     "title": "Variable-length sequence",
     "category": "A",
     "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
@@ -1916,6 +1974,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 59,
+    "difficulty": "easy",
     "title": "Perceptron",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -1949,6 +2008,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 60,
+    "difficulty": "easy",
     "title": "Perceptron update",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -1982,6 +2042,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 61,
+    "difficulty": "easy",
     "title": "Gradient descent",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2015,6 +2076,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 62,
+    "difficulty": "easy",
     "title": "Learning rate quá lớn",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2048,6 +2110,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 63,
+    "difficulty": "easy",
     "title": "Backpropagation",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2081,6 +2144,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 64,
+    "difficulty": "easy",
     "title": "ReLU",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2114,6 +2178,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 65,
+    "difficulty": "easy",
     "title": "Sigmoid output",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2147,6 +2212,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 66,
+    "difficulty": "easy",
     "title": "Tanh",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2180,6 +2246,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 67,
+    "difficulty": "easy",
     "title": "Loss regression",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2213,6 +2280,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 68,
+    "difficulty": "easy",
     "title": "MSE vs MAE",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2246,6 +2314,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 69,
+    "difficulty": "easy",
     "title": "Multiclass classification",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2279,6 +2348,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 70,
+    "difficulty": "easy",
     "title": "Multi-label classification",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2312,6 +2382,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 71,
+    "difficulty": "easy",
     "title": "MLP parameter count",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2345,6 +2416,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 72,
+    "difficulty": "easy",
     "title": "MLP cho ảnh",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2378,6 +2450,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 73,
+    "difficulty": "easy",
     "title": "Embedding",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2411,6 +2484,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 74,
+    "difficulty": "easy",
     "title": "Similarity embedding",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2444,6 +2518,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 75,
+    "difficulty": "easy",
     "title": "Max pooling",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2477,6 +2552,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 76,
+    "difficulty": "easy",
     "title": "Max vs average pooling",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2510,6 +2586,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 77,
+    "difficulty": "easy",
     "title": "Attention: Q/K/V",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2543,6 +2620,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 78,
+    "difficulty": "easy",
     "title": "Attention softmax",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2576,6 +2654,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 79,
+    "difficulty": "easy",
     "title": "Positional information",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2609,6 +2688,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 80,
+    "difficulty": "easy",
     "title": "Causal mask",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2642,6 +2722,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 81,
+    "difficulty": "easy",
     "title": "Chi phí attention",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2675,6 +2756,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 82,
+    "difficulty": "easy",
     "title": "Mini-batch",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2708,6 +2790,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 83,
+    "difficulty": "easy",
     "title": "SGD shuffle",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2741,6 +2824,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 84,
+    "difficulty": "easy",
     "title": "Autoencoder",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2774,6 +2858,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 85,
+    "difficulty": "easy",
     "title": "Autoencoder anomaly detection",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2807,6 +2892,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 86,
+    "difficulty": "easy",
     "title": "Adam",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2840,6 +2926,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 87,
+    "difficulty": "easy",
     "title": "AdamW",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2873,6 +2960,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 88,
+    "difficulty": "easy",
     "title": "Learning rate quá nhỏ",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2906,6 +2994,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 89,
+    "difficulty": "easy",
     "title": "Warmup/decay",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2939,6 +3028,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 90,
+    "difficulty": "easy",
     "title": "Dropout",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -2972,6 +3062,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 91,
+    "difficulty": "easy",
     "title": "Dropout eval",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3005,6 +3096,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 92,
+    "difficulty": "easy",
     "title": "Early stopping",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3038,6 +3130,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 93,
+    "difficulty": "easy",
     "title": "Weight decay",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3071,6 +3164,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 94,
+    "difficulty": "easy",
     "title": "Weight initialization",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3104,6 +3198,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 95,
+    "difficulty": "easy",
     "title": "He initialization",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3137,6 +3232,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 96,
+    "difficulty": "easy",
     "title": "BatchNorm train/eval",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3170,6 +3266,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 97,
+    "difficulty": "easy",
     "title": "Feature extraction",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3203,6 +3300,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 98,
+    "difficulty": "easy",
     "title": "Full fine-tuning",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3236,6 +3334,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 99,
+    "difficulty": "easy",
     "title": "Parameter-efficient fine-tuning",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3269,6 +3368,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 100,
+    "difficulty": "easy",
     "title": "Fine-tuning learning rate",
     "category": "B",
     "categoryName": "Mạng nơ-ron & Học sâu",
@@ -3302,6 +3402,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 101,
+    "difficulty": "easy",
     "title": "Convolution output size",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3335,6 +3436,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 102,
+    "difficulty": "easy",
     "title": "Convolution parameter count",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3368,6 +3470,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 103,
+    "difficulty": "easy",
     "title": "Weight sharing",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3401,6 +3504,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 104,
+    "difficulty": "easy",
     "title": "Stride",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3434,6 +3538,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 105,
+    "difficulty": "easy",
     "title": "Padding",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3467,6 +3572,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 106,
+    "difficulty": "easy",
     "title": "Image classification transfer learning",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3500,6 +3606,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 107,
+    "difficulty": "easy",
     "title": "Class imbalance trong ảnh",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3533,6 +3640,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 108,
+    "difficulty": "easy",
     "title": "Detection vs classification",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3566,6 +3674,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 109,
+    "difficulty": "easy",
     "title": "IoU",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3599,6 +3708,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 110,
+    "difficulty": "easy",
     "title": "NMS",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3632,6 +3742,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 111,
+    "difficulty": "easy",
     "title": "YOLO/SSD/DETR",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3665,6 +3776,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 112,
+    "difficulty": "easy",
     "title": "Segmentation",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3698,6 +3810,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 113,
+    "difficulty": "easy",
     "title": "U-Net skip connections",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3731,6 +3844,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 114,
+    "difficulty": "easy",
     "title": "Dice/IoU",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3764,6 +3878,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 115,
+    "difficulty": "easy",
     "title": "Pretrained encoder domain shift",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3797,6 +3912,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 116,
+    "difficulty": "easy",
     "title": "Image augmentation",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3824,12 +3940,13 @@ window.QUESTION_BANK = [
     "incorrectExplanations": {
       "B": "Resize nhất quán và phù hợp model thường giữ hướng trái/phải; nó không phải biến đổi đảo nhãn như flip trong ví dụ.",
       "C": "Normalize phù hợp điều chỉnh cường độ pixel, không tự hoán đổi ngữ nghĩa trái với phải.",
-      "D": "Crop nhẹ đã giả định không mất object và vẫn cần giữ dấu hiệu phân biệt nhãn, nên không phải lựa chọn gây đảo hướng rõ như A."
+      "D": "Crop nhẹ đã giả định không mất object và vẫn cần giữ dấu hiệu phân biệt nhãn, nên không phải lựa chọn gây đảo hướng rõ như lật ngang."
     },
     "takeaway": "Augmentation chỉ hợp lệ khi giữ đúng nhãn hoặc có quy tắc cập nhật nhãn tương ứng."
   },
   {
     "id": 117,
+    "difficulty": "easy",
     "title": "GAN",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3863,6 +3980,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 118,
+    "difficulty": "easy",
     "title": "Mode collapse",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3896,6 +4014,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 119,
+    "difficulty": "easy",
     "title": "Diffusion model",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3929,6 +4048,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 120,
+    "difficulty": "easy",
     "title": "CLIP & self-supervised/contrastive learning",
     "category": "C",
     "categoryName": "Computer Vision",
@@ -3962,6 +4082,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 121,
+    "difficulty": "easy",
     "title": "BERT architecture",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -3995,6 +4116,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 122,
+    "difficulty": "easy",
     "title": "BERT context",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4028,6 +4150,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 123,
+    "difficulty": "easy",
     "title": "BERT `[CLS]`",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4061,6 +4184,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 124,
+    "difficulty": "easy",
     "title": "BERT fine-tuning",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4094,6 +4218,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 125,
+    "difficulty": "easy",
     "title": "Language modeling",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4127,6 +4252,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 126,
+    "difficulty": "easy",
     "title": "Causal leakage",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4160,6 +4286,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 127,
+    "difficulty": "easy",
     "title": "Perplexity",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4193,6 +4320,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 128,
+    "difficulty": "easy",
     "title": "Tokenization",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4226,6 +4354,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 129,
+    "difficulty": "easy",
     "title": "Text classification pipeline",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4259,6 +4388,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 130,
+    "difficulty": "easy",
     "title": "NLP class imbalance",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4292,6 +4422,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 131,
+    "difficulty": "easy",
     "title": "Encoder-decoder",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4325,6 +4456,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 132,
+    "difficulty": "easy",
     "title": "Cross-attention",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4358,6 +4490,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 133,
+    "difficulty": "easy",
     "title": "Teacher forcing",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4391,6 +4524,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 134,
+    "difficulty": "easy",
     "title": "Open-source vs API LLM",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4424,6 +4558,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 135,
+    "difficulty": "easy",
     "title": "Chọn model theo tài nguyên",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4457,6 +4592,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 136,
+    "difficulty": "easy",
     "title": "Prompting vs fine-tuning",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4490,6 +4626,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 137,
+    "difficulty": "easy",
     "title": "HuBERT",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4523,6 +4660,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 138,
+    "difficulty": "easy",
     "title": "Audio feature transfer",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4556,6 +4694,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 139,
+    "difficulty": "easy",
     "title": "Whisper",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4589,6 +4728,7 @@ window.QUESTION_BANK = [
   },
   {
     "id": 140,
+    "difficulty": "easy",
     "title": "Chọn audio model",
     "category": "D",
     "categoryName": "NLP & Âm thanh",
@@ -4619,5 +4759,5445 @@ window.QUESTION_BANK = [
       "D": "CLIP image–text không có audio encoder mặc định; không thể coi waveform và ảnh là cùng modality mà bỏ qua cách biểu diễn/huấn luyện."
     },
     "takeaway": "Chọn đúng loại model rồi kiểm tra đúng phiên bản, ngôn ngữ, context audio, tài nguyên và chất lượng trên tác vụ cần làm."
+  },
+  {
+    "id": 141,
+    "difficulty": "medium",
+    "title": "Python: các hàng dùng chung tham chiếu",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Để tạo ma trận đếm, bạn chạy `a = [[0]*2]*3; a[0][1] = 5`. Giá trị `a` là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "`[[0,5],[0,5],[0,5]]`"
+      },
+      {
+        "letter": "B",
+        "text": "`[[0,5],[0,0],[0,0]]`"
+      },
+      {
+        "letter": "C",
+        "text": "`[[5,0],[5,0],[5,0]]`"
+      },
+      {
+        "letter": "D",
+        "text": "Phát sinh IndexError"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Phép nhân list ngoài lặp lại tham chiếu tới cùng hàng. Sửa phần tử của một hàng làm cả ba tham chiếu thấy `[0,5]`.",
+    "incorrectExplanations": {
+      "B": "Đây là kết quả khi tạo từng hàng độc lập bằng comprehension.",
+      "C": "Chỉ số 1 chỉ cột thứ hai, không phải cột đầu.",
+      "D": "Ma trận có ba hàng, mỗi hàng hai phần tử nên chỉ số hợp lệ."
+    },
+    "takeaway": "Tạo các hàng độc lập bằng `[[0]*2 for _ in range(3)]`."
+  },
+  {
+    "id": 142,
+    "difficulty": "medium",
+    "title": "NumPy: trừ trung bình từng mẫu",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "`X` có shape `(5,3)`, mỗi hàng là một mẫu. Cần trừ trung bình của chính hàng đó khỏi từng phần tử. Biểu thức nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "`X - X.mean(axis=0)`"
+      },
+      {
+        "letter": "B",
+        "text": "`X - X.mean(axis=1, keepdims=True)`"
+      },
+      {
+        "letter": "C",
+        "text": "`X - X.mean(axis=1)`"
+      },
+      {
+        "letter": "D",
+        "text": "`X - X.mean()`"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Trung bình có shape `(5,1)` nên broadcast theo ba cột của mỗi hàng.",
+    "incorrectExplanations": {
+      "A": "Trừ trung bình từng đặc trưng trên năm mẫu, khác yêu cầu.",
+      "C": "Shape `(5,)` không broadcast được với `(5,3)`.",
+      "D": "Trừ một trung bình chung cho toàn ma trận."
+    },
+    "takeaway": "Giữ chiều bị rút gọn giúp broadcasting thể hiện đúng ý nghĩa theo hàng/cột."
+  },
+  {
+    "id": 143,
+    "difficulty": "medium",
+    "title": "pandas: gộp dữ liệu đúng đơn vị",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Bảng giao dịch có nhiều dòng cho mỗi `customer_id`; bảng nhãn có đúng một dòng mỗi khách. Cần một mẫu cho mỗi khách với tổng tiền và nhãn. Chọn quy trình đúng.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Merge rồi coi mỗi giao dịch là một khách độc lập"
+      },
+      {
+        "letter": "B",
+        "text": "Drop_duplicates khách rồi lấy tiền của dòng đầu"
+      },
+      {
+        "letter": "C",
+        "text": "Groupby khách để tính tổng tiền, rồi merge với bảng nhãn theo customer_id"
+      },
+      {
+        "letter": "D",
+        "text": "Nối hai bảng theo chỉ số dòng"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Tổng hợp trước tạo đúng một hàng mỗi khách; phép gộp thêm nhãn không nhân số mẫu.",
+    "incorrectExplanations": {
+      "A": "Khách nhiều giao dịch bị đếm nhiều lần, sai đơn vị dự đoán.",
+      "B": "Làm mất các giao dịch còn lại nên không tính được tổng.",
+      "D": "Chỉ số dòng không bảo đảm cùng khách; phải dùng khóa."
+    },
+    "takeaway": "Xác định một mẫu tương ứng với thực thể nào trước khi groupby và merge."
+  },
+  {
+    "id": 144,
+    "difficulty": "medium",
+    "title": "Trực quan hóa: che khuất lớp hiếm",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Dữ liệu nhị phân có 990 mẫu lớp 0 và 10 mẫu lớp 1. Heatmap confusion matrix toàn bộ theo số đếm khiến lỗi lớp 1 khó thấy. Cách bổ sung nào hữu ích nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ vẽ accuracy 99% bằng một cột"
+      },
+      {
+        "letter": "B",
+        "text": "Xóa hàng lớp 0 khỏi tập test"
+      },
+      {
+        "letter": "C",
+        "text": "Đổi sang biểu đồ đường nhưng bỏ tên lớp"
+      },
+      {
+        "letter": "D",
+        "text": "Hiển thị thêm confusion matrix chuẩn hóa theo lớp thật, kèm số mẫu từng lớp"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Tỷ lệ theo hàng giúp đọc recall từng lớp; số mẫu giữ thông tin về độ mất cân bằng.",
+    "incorrectExplanations": {
+      "A": "Một số chung tiếp tục che khuất hiệu năng lớp hiếm.",
+      "B": "Thay đổi phân phối đánh giá và bỏ mất false positive quan trọng.",
+      "C": "Đổi hình thức không khắc phục việc thiếu tỷ lệ theo lớp."
+    },
+    "takeaway": "Đọc số đếm và tỷ lệ cùng nhau để tránh diễn giải sai biểu đồ."
+  },
+  {
+    "id": 145,
+    "difficulty": "medium",
+    "title": "Pipeline: imputation trong cross-validation",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Bạn muốn chọn `C` của Logistic Regression bằng CV trên bảng có giá trị thiếu. Median imputation và scaling cần đặt ở đâu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Trong Pipeline được truyền vào GridSearchCV"
+      },
+      {
+        "letter": "B",
+        "text": "Fit imputer và scaler trên toàn dữ liệu rồi mới CV"
+      },
+      {
+        "letter": "C",
+        "text": "Fit riêng scaler trên validation từng fold"
+      },
+      {
+        "letter": "D",
+        "text": "Thay toàn bộ giá trị thiếu bằng nhãn mục tiêu"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Mỗi fold học median và scaler chỉ từ phần train của fold đó.",
+    "incorrectExplanations": {
+      "B": "Các thống kê đã nhìn phần validation của từng fold.",
+      "C": "Tạo phép biến đổi khác với train, không mô phỏng suy luận thực tế.",
+      "D": "Dùng đích làm đầu vào gây rò rỉ và không có khi dự đoán."
+    },
+    "takeaway": "Mọi bước có học thống kê đều phải nằm trong vòng chia train/validation."
+  },
+  {
+    "id": 146,
+    "difficulty": "medium",
+    "title": "Tensor: đổi thứ tự chiều ảnh",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Batch ảnh NHWC có shape `(8,32,32,3)`. Conv2d PyTorch thông thường cần NCHW. Thao tác nào giữ đúng ý nghĩa pixel và kênh?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "`x.reshape(8,3,32,32)`"
+      },
+      {
+        "letter": "B",
+        "text": "`x.permute(0,3,1,2)`"
+      },
+      {
+        "letter": "C",
+        "text": "`x.mean(dim=3)`"
+      },
+      {
+        "letter": "D",
+        "text": "`x.permute(3,0,1,2)`"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Hoán vị trục chuyển chiều kênh sang vị trí thứ hai, không diễn giải lại thứ tự phần tử.",
+    "incorrectExplanations": {
+      "A": "Reshape không hoán vị các trục; vị trí các kênh/pixel bị diễn giải sai.",
+      "C": "Bỏ chiều kênh bằng trung bình và mất màu, không tạo NCHW.",
+      "D": "Đưa kênh thành chiều batch và batch thành chiều kênh."
+    },
+    "takeaway": "Đổi ý nghĩa trục dùng permute/transpose; đổi cách nhóm phần tử mới dùng reshape."
+  },
+  {
+    "id": 147,
+    "difficulty": "medium",
+    "title": "CPU/GPU: lỗi device trong huấn luyện",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Model đã chuyển sang CUDA; batch `x,y` còn ở CPU. Lần forward báo lỗi khác device. Sửa tối thiểu thế nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ gọi `model.eval()`"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ tăng batch size"
+      },
+      {
+        "letter": "C",
+        "text": "Chuyển cả x và y tới device của model trước forward và tính loss"
+      },
+      {
+        "letter": "D",
+        "text": "Gọi `loss.item()` trước backward để chuyển loss về CPU"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Input, tham số và target tham gia loss phải ở thiết bị tương thích.",
+    "incorrectExplanations": {
+      "A": "Eval đổi hành vi một số lớp, không chuyển thiết bị.",
+      "B": "Không sửa vị trí bộ nhớ của tensor.",
+      "D": "item trả số Python và không giữ đồ thị để backward."
+    },
+    "takeaway": "Kiểm tra device của model, input và target khi gặp lỗi CPU/CUDA."
+  },
+  {
+    "id": 148,
+    "difficulty": "medium",
+    "title": "Linear Regression: thêm đặc trưng phi tuyến",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Đồ thị y theo x dạng parabol; Linear Regression chỉ dùng x có residual hình chữ U. Muốn vẫn dùng mô hình tuyến tính theo tham số, nên làm gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ nhân x với 100"
+      },
+      {
+        "letter": "B",
+        "text": "Đổi y liên tục thành nhãn 0/1 tùy ý"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ tăng số vòng lặp của mô hình đã hội tụ"
+      },
+      {
+        "letter": "D",
+        "text": "Thêm đặc trưng x bình phương và chọn mức regularization trên validation"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Mô hình `b+w1*x+w2*x²` vẫn tuyến tính theo trọng số nhưng biểu diễn được độ cong.",
+    "incorrectExplanations": {
+      "A": "Đổi thang đo không tạo quan hệ parabol.",
+      "B": "Thay đổi bài toán và mất thông tin mục tiêu.",
+      "C": "Không thay đổi khả năng biểu diễn của đường thẳng."
+    },
+    "takeaway": "Tuyến tính theo tham số không có nghĩa chỉ dùng đặc trưng thô tuyến tính."
+  },
+  {
+    "id": 149,
+    "difficulty": "medium",
+    "title": "Logistic Regression: đổi ngưỡng",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Giữ nguyên xác suất của một bộ phân loại nhị phân và quy tắc dự đoán dương khi `p >= t`. Khi giảm t từ 0,7 xuống 0,3 trên cùng tập test, điều gì được bảo đảm nếu có mẫu dương thật?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Recall không giảm"
+      },
+      {
+        "letter": "B",
+        "text": "Precision luôn tăng"
+      },
+      {
+        "letter": "C",
+        "text": "ROC-AUC luôn tăng"
+      },
+      {
+        "letter": "D",
+        "text": "Số false positive luôn giảm"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Tập dự đoán dương chỉ mở rộng, nên số true positive không thể giảm.",
+    "incorrectExplanations": {
+      "B": "Các mẫu mới được nhận có thể là false positive nên precision không được bảo đảm tăng.",
+      "C": "Đổi một ngưỡng không thay đổi thứ tự các score dùng tính AUC.",
+      "D": "Tập dự đoán dương mở rộng nên false positive không thể giảm."
+    },
+    "takeaway": "Phân biệt thay ngưỡng quyết định với thay khả năng xếp hạng của mô hình."
+  },
+  {
+    "id": 150,
+    "difficulty": "medium",
+    "title": "L1/L2: mục tiêu sparsity",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Bảng đã chuẩn hóa có 2.000 đặc trưng, nhiều cột được cho là không liên quan. Muốn một mô hình tuyến tính với nhiều hệ số đúng bằng 0, lựa chọn đầu tiên hợp lý là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "L2 vì luôn xóa chính xác mọi cột thừa"
+      },
+      {
+        "letter": "B",
+        "text": "L1 và chọn độ phạt bằng CV"
+      },
+      {
+        "letter": "C",
+        "text": "Bỏ regularization rồi chọn hệ số lớn nhất trên test"
+      },
+      {
+        "letter": "D",
+        "text": "Tăng độ phạt tới khi mọi hệ số bằng 0 bất kể validation"
+      }
+    ],
+    "answer": "B",
+    "explanation": "L1 khuyến khích nghiệm thưa; CV cân bằng độ thưa với khả năng dự đoán.",
+    "incorrectExplanations": {
+      "A": "L2 thường co nhỏ hệ số, không tạo sparsity như L1 và không biết cột nào thật sự thừa.",
+      "C": "Dùng test để lựa chọn làm sai đánh giá; không trực tiếp tối ưu sparsity.",
+      "D": "Có thể gây underfitting và đánh mất tín hiệu."
+    },
+    "takeaway": "Sparsity là mục tiêu mô hình hóa cần kiểm tra, không bảo đảm đã tìm đúng mọi biến nhân quả."
+  },
+  {
+    "id": 151,
+    "difficulty": "medium",
+    "title": "K-NN: khoảng cách và đơn vị đo",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "K-NN dùng tuổi (18–80) và thu nhập (triệu đồng, 5–5000). Khi đổi thu nhập sang đồng, kết quả thay đổi mạnh. Cách xử lý đúng nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Tăng k bằng đúng số mẫu train"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ chuẩn hóa nhãn lớp"
+      },
+      {
+        "letter": "C",
+        "text": "Fit scaler trên train rồi dùng cùng scaler cho validation/test"
+      },
+      {
+        "letter": "D",
+        "text": "Chuẩn hóa test bằng trung bình test riêng"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Chuẩn hóa làm giảm việc một đơn vị số lớn chi phối khoảng cách.",
+    "incorrectExplanations": {
+      "A": "Mô hình gần như chỉ dự đoán theo đa số, không sửa cơ chế khoảng cách.",
+      "B": "Khoảng cách được tính trên đầu vào, không trên nhãn.",
+      "D": "Dùng hệ tọa độ khác train, không nhất quán khi tìm láng giềng."
+    },
+    "takeaway": "Với mô hình dựa khoảng cách, đơn vị đo là một phần của thiết kế đặc trưng."
+  },
+  {
+    "id": 152,
+    "difficulty": "medium",
+    "title": "Decision Tree: lá quá nhỏ",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Cây đạt train accuracy 100%, validation 71%; nhiều lá chỉ có một mẫu. Can thiệp nào trực tiếp giảm độ phức tạp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Giảm min_samples_leaf từ 2 xuống 1"
+      },
+      {
+        "letter": "B",
+        "text": "Chuẩn hóa tất cả đặc trưng rồi giữ cây y nguyên"
+      },
+      {
+        "letter": "C",
+        "text": "Đổi random_state đến khi test cao nhất"
+      },
+      {
+        "letter": "D",
+        "text": "Tăng min_samples_leaf và chọn bằng validation"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Buộc các lá có nhiều mẫu hơn, giảm chia nhỏ theo nhiễu.",
+    "incorrectExplanations": {
+      "A": "Cho phép thêm lá nhỏ, thường tăng độ phức tạp.",
+      "B": "Scaling không phải cách chính kiểm soát độ sâu/số lá của cây.",
+      "C": "Tối ưu theo test làm rò rỉ đánh giá, không xử lý gốc overfitting."
+    },
+    "takeaway": "Chẩn đoán overfitting bằng khoảng cách train/validation rồi điều chỉnh độ phức tạp."
+  },
+  {
+    "id": 153,
+    "difficulty": "medium",
+    "title": "SVM: C và regularization",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "RBF-SVM sau scaling đạt train 100%, validation 75%. Đang dùng C và gamma rất lớn. Thử nghiệm nào phù hợp nhất để giảm overfitting?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Tìm C và gamma nhỏ hơn bằng CV trên train"
+      },
+      {
+        "letter": "B",
+        "text": "Tăng đồng thời C và gamma thật mạnh"
+      },
+      {
+        "letter": "C",
+        "text": "Chọn C từ nhãn test"
+      },
+      {
+        "letter": "D",
+        "text": "Bỏ scaling và giữ nguyên gamma"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Giảm C tăng regularization; giảm gamma làm ảnh hưởng kernel ít cục bộ hơn.",
+    "incorrectExplanations": {
+      "B": "Thường cho phép ranh giới phức tạp hơn, không hợp dấu hiệu hiện tại.",
+      "C": "Dùng nhãn test để tuning làm kết quả không còn độc lập.",
+      "D": "Làm thay đổi khoảng cách khó kiểm soát, không phải sửa regularization có căn cứ."
+    },
+    "takeaway": "C và gamma cần chọn cùng với tiền xử lý trong CV."
+  },
+  {
+    "id": 154,
+    "difficulty": "medium",
+    "title": "Bagging: giảm variance",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Một Decision Tree sâu thay đổi dự đoán rất mạnh khi thay vài dòng train. Có nhiều CPU và muốn giảm variance mà không học tuần tự. Nên thử gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Huấn luyện cùng cây trên đúng dữ liệu và seed nhiều lần"
+      },
+      {
+        "letter": "B",
+        "text": "Bagging nhiều cây trên các bootstrap sample rồi tổng hợp"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ dùng một cây sâu hơn"
+      },
+      {
+        "letter": "D",
+        "text": "Gradient Boosting vì mọi cây luôn độc lập và song song"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Trung bình/voting các cây đa dạng giúp giảm dao động do mẫu train.",
+    "incorrectExplanations": {
+      "A": "Các cây giống nhau không tạo đa dạng hữu ích.",
+      "C": "Có thể tăng nhạy với nhiễu thay vì giảm variance.",
+      "D": "Boosting xây dựng mô hình theo chuỗi để sửa sai, khác yêu cầu."
+    },
+    "takeaway": "Ensemble có lợi khi thành phần đủ tốt và sai số không hoàn toàn tương quan."
+  },
+  {
+    "id": 155,
+    "difficulty": "medium",
+    "title": "Gradient Boosting: bước sửa residual",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Boosting cho squared error đang dự đoán `[3,5]` với y=`[5,4]`. Cây mới fit residual chính xác `[2,-1]`. Learning rate là 0,1. Dự đoán sau cập nhật là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "`[5,4]`"
+      },
+      {
+        "letter": "B",
+        "text": "`[2,-1]`"
+      },
+      {
+        "letter": "C",
+        "text": "`[3.2,4.9]`"
+      },
+      {
+        "letter": "D",
+        "text": "`[2.8,5.1]`"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Cộng 0,1 lần residual vào dự đoán cũ: `[3,5]+0,1*[2,-1]`.",
+    "incorrectExplanations": {
+      "A": "Chỉ đúng khi learning rate bằng 1 trong ví dụ này.",
+      "B": "Đây là residual, không phải tổng dự đoán của ensemble.",
+      "D": "Đã trừ bước sửa thay vì cộng residual y trừ dự đoán."
+    },
+    "takeaway": "Boosting cộng từng bước nhỏ; không thay toàn bộ mô hình bằng cây mới."
+  },
+  {
+    "id": 156,
+    "difficulty": "medium",
+    "title": "K-Means: một bước cập nhật",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Dữ liệu 1D `[0,2,8,10]`, tâm khởi tạo 0 và 8. Sau một bước gán cụm gần nhất rồi cập nhật tâm, hai tâm là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "0 và 10"
+      },
+      {
+        "letter": "B",
+        "text": "2 và 8"
+      },
+      {
+        "letter": "C",
+        "text": "5 và 5"
+      },
+      {
+        "letter": "D",
+        "text": "1 và 9"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Hai cụm là `{0,2}` và `{8,10}`; tâm mới là trung bình từng cụm.",
+    "incorrectExplanations": {
+      "A": "Đây là hai cực trị, không phải trung bình của các điểm được gán.",
+      "B": "Đây là các điểm gần giữa, không phải trung bình cụm.",
+      "C": "5 là trung bình chung; K-Means cập nhật riêng mỗi cụm."
+    },
+    "takeaway": "K-Means luân phiên gán về tâm gần nhất và lấy trung bình theo cụm."
+  },
+  {
+    "id": 157,
+    "difficulty": "medium",
+    "title": "PCA: chọn số thành phần",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "PCA trên train cho tỷ lệ phương sai lần lượt `0.50,0.25,0.15,0.10`. Muốn giữ ít nhất 85% phương sai với ít thành phần nhất, chọn bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "3"
+      },
+      {
+        "letter": "B",
+        "text": "1"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "4"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Hai thành phần chỉ đạt 75%; ba thành phần đạt 90%, vượt ngưỡng 85%.",
+    "incorrectExplanations": {
+      "B": "Chỉ giữ 50%.",
+      "C": "Tổng 50%+25%=75%, chưa đạt yêu cầu.",
+      "D": "Đạt 100% nhưng không tối thiểu."
+    },
+    "takeaway": "Chọn k bằng tổng tích lũy, rồi kiểm tra thêm chất lượng tác vụ sau giảm chiều."
+  },
+  {
+    "id": 158,
+    "difficulty": "medium",
+    "title": "t-SNE/UMAP: diễn giải hình vẽ",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hai lần chạy t-SNE với seed khác nhau tạo các đảo cụm xoay và dịch vị trí. Kết luận nào hợp lý nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Đảo nằm bên phải luôn có nhãn lớn hơn"
+      },
+      {
+        "letter": "B",
+        "text": "Không gán ý nghĩa cho hướng trục; kiểm tra cấu trúc lân cận và độ ổn định"
+      },
+      {
+        "letter": "C",
+        "text": "Cụm cách xa gấp đôi chắc chắn khác nhau gấp đôi"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn seed tạo các đảo đẹp nhất để báo accuracy"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Phép nhúng phục vụ khám phá, vị trí tuyệt đối và khoảng cách xa không tự chứng minh quan hệ ngữ nghĩa.",
+    "incorrectExplanations": {
+      "A": "Trục t-SNE không mang thứ tự nhãn cố định.",
+      "C": "Khoảng cách xa trong hình không phải thước đo định lượng đáng tin như vậy.",
+      "D": "Hình vẽ không phải phép đánh giá phân loại độc lập."
+    },
+    "takeaway": "Dùng t-SNE/UMAP để đặt giả thuyết, rồi kiểm chứng trong không gian và tác vụ gốc."
+  },
+  {
+    "id": 159,
+    "difficulty": "medium",
+    "title": "DBSCAN: nhiễu và mật độ",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "DBSCAN đánh dấu phần lớn điểm là noise sau khi đã chọn thang đo phù hợp. Muốn nới điều kiện gom cụm, thử nào hợp lý?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Giảm eps và tăng min_samples"
+      },
+      {
+        "letter": "B",
+        "text": "Tăng số cụm k trong DBSCAN"
+      },
+      {
+        "letter": "C",
+        "text": "Tăng eps hoặc giảm min_samples rồi kiểm tra lại cấu trúc"
+      },
+      {
+        "letter": "D",
+        "text": "Coi mọi noise là một cụm chắc chắn có cùng ý nghĩa"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Hai thay đổi này làm điều kiện mật độ dễ đạt hơn; vẫn phải tránh nối nhầm cụm.",
+    "incorrectExplanations": {
+      "A": "Cả hai làm điều kiện mật độ chặt hơn, có thể tăng noise.",
+      "B": "DBSCAN không nhận k làm tham số số cụm.",
+      "D": "Nhãn noise gom những điểm không đạt điều kiện, không khẳng định chúng tương tự nhau."
+    },
+    "takeaway": "DBSCAN phụ thuộc đồng thời thang đo, eps và min_samples."
+  },
+  {
+    "id": 160,
+    "difficulty": "medium",
+    "title": "Hierarchical Clustering: cắt dendrogram",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Một dendrogram agglomerative cho thấy bốn nhóm chỉ hợp nhất với nhau ở khoảng cách rất lớn, còn các hợp nhất trong từng nhóm có khoảng cách nhỏ. Cách chọn bốn cụm phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Lấy bốn dòng đầu trong bảng dữ liệu"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ định k=4 cho t-SNE"
+      },
+      {
+        "letter": "C",
+        "text": "Luôn cắt tại khoảng cách 0 bất kể dữ liệu"
+      },
+      {
+        "letter": "D",
+        "text": "Cắt cây ở ngưỡng giữa các hợp nhất trong nhóm và giữa nhóm"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Giữ nguyên bốn nhánh trước các bước hợp nhất xa tạo bốn cụm.",
+    "incorrectExplanations": {
+      "A": "Thứ tự dòng không mô tả phân cấp khoảng cách.",
+      "B": "t-SNE không phải thuật toán phân cụm bằng k.",
+      "C": "Có thể giữ gần như từng điểm riêng, không dựa vào cấu trúc cây."
+    },
+    "takeaway": "Dendrogram thể hiện quá trình hợp nhất, ngưỡng cắt quyết định mức độ chi tiết."
+  },
+  {
+    "id": 161,
+    "difficulty": "medium",
+    "title": "Spectral Clustering: cụm phi lồi",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Tập điểm có hai vòng tròn đồng tâm, đã biết cần hai cụm và dữ liệu không quá lớn. Phương pháp nào đáng thử hơn K-Means trực tiếp trên tọa độ?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Spectral Clustering với đồ thị lân cận phù hợp"
+      },
+      {
+        "letter": "B",
+        "text": "Linear Regression dự đoán tọa độ x"
+      },
+      {
+        "letter": "C",
+        "text": "K-Means nhưng bắt buộc tâm nằm ngoài dữ liệu"
+      },
+      {
+        "letter": "D",
+        "text": "PCA một chiều rồi mặc định tách được hai vòng"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Đồ thị có thể nắm kết nối dọc từng vòng, thay vì chỉ khoảng cách tới một tâm.",
+    "incorrectExplanations": {
+      "B": "Đây là hồi quy, không giải bài toán phân cụm theo cấu trúc hai vòng.",
+      "C": "Không xử lý đúng sự phi lồi, cũng không phải cập nhật K-Means chuẩn.",
+      "D": "Chiếu tuyến tính có thể chồng lấp hai vòng, không có bảo đảm."
+    },
+    "takeaway": "Chọn thuật toán theo hình dạng cụm và kiểm tra tham số xây dựng đồ thị."
+  },
+  {
+    "id": 162,
+    "difficulty": "medium",
+    "title": "Confusion matrix: tính F1",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Bộ phát hiện có TP=30, FP=10, FN=20, TN=140. F1 của lớp dương là bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "0,85"
+      },
+      {
+        "letter": "B",
+        "text": "0,667 xấp xỉ"
+      },
+      {
+        "letter": "C",
+        "text": "0,75"
+      },
+      {
+        "letter": "D",
+        "text": "0,60"
+      }
+    ],
+    "answer": "B",
+    "explanation": "F1=`2TP/(2TP+FP+FN)`=60/90=2/3.",
+    "incorrectExplanations": {
+      "A": "Đây là accuracy `(TP+TN)/200`.",
+      "C": "Đây là precision `30/(30+10)`.",
+      "D": "Đây là recall `30/(30+20)`."
+    },
+    "takeaway": "F1 kết hợp precision và recall, không dùng TN trong công thức nhị phân của lớp dương."
+  },
+  {
+    "id": 163,
+    "difficulty": "medium",
+    "title": "ROC: chọn trục và đầu vào",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Muốn vẽ ROC cho Logistic Regression nhị phân đã huấn luyện. Cần đưa dữ liệu nào vào hàm tính ROC?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ nhãn dự đoán cứng 0/1 để có toàn bộ đường chi tiết"
+      },
+      {
+        "letter": "B",
+        "text": "Loss train từng epoch mà không có nhãn đánh giá"
+      },
+      {
+        "letter": "C",
+        "text": "Nhãn thật và score/xác suất của lớp dương trên tập đánh giá"
+      },
+      {
+        "letter": "D",
+        "text": "Tên lớp đã sắp xếp theo bảng chữ cái"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Quét ngưỡng score tạo các cặp FPR và TPR.",
+    "incorrectExplanations": {
+      "A": "Nhãn cứng chỉ cho rất ít mức ngưỡng, làm mất thông tin xếp hạng.",
+      "B": "Đó là đường học, không phải ROC.",
+      "D": "Tên lớp không cung cấp score theo từng mẫu."
+    },
+    "takeaway": "ROC dùng FPR trên trục ngang, TPR trên trục dọc và score liên tục khi có."
+  },
+  {
+    "id": 164,
+    "difficulty": "medium",
+    "title": "Cross-validation: dữ liệu theo người",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Mỗi người có 20 bản ghi cảm biến. Mục tiêu dự đoán cho người hoàn toàn mới. Cách chia nào phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Random split từng bản ghi"
+      },
+      {
+        "letter": "B",
+        "text": "Chia theo số thứ tự cột"
+      },
+      {
+        "letter": "C",
+        "text": "Đưa person_id vào nhãn thay cho đích cần dự đoán"
+      },
+      {
+        "letter": "D",
+        "text": "GroupKFold theo person_id, giữ người tách biệt giữa train và validation"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Đánh giá mức khái quát sang người chưa thấy, tránh ghi nhớ đặc điểm cá nhân.",
+    "incorrectExplanations": {
+      "A": "Một người có thể xuất hiện ở cả hai phía, làm đánh giá lạc quan.",
+      "B": "Cột là đặc trưng, không phải đơn vị cần chia train/validation.",
+      "C": "Thay đổi bài toán, không đánh giá mục tiêu ban đầu."
+    },
+    "takeaway": "Đơn vị độc lập khi chia dữ liệu phải phù hợp đối tượng sẽ gặp khi triển khai."
+  },
+  {
+    "id": 165,
+    "difficulty": "medium",
+    "title": "Sliding window: số mẫu có nhãn tương lai",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Chuỗi dài 10 bước; dùng 3 bước liên tiếp dự đoán bước ngay sau đó, stride=1, không padding. Có bao nhiêu cặp input-target hợp lệ?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "7"
+      },
+      {
+        "letter": "B",
+        "text": "8"
+      },
+      {
+        "letter": "C",
+        "text": "3"
+      },
+      {
+        "letter": "D",
+        "text": "10"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Input đầu là bước 1–3 dự đoán 4; input cuối 7–9 dự đoán 10, tổng 10−3=7.",
+    "incorrectExplanations": {
+      "B": "Đây là số cửa sổ độ dài 3, nhưng cửa sổ cuối 8–10 không còn target tương lai.",
+      "C": "Nhầm độ dài cửa sổ với số mẫu sinh ra.",
+      "D": "Không phải mọi mốc đều có đủ lịch sử và target."
+    },
+    "takeaway": "Đếm cả điều kiện đủ lịch sử và tồn tại nhãn ở chân trời dự báo."
+  },
+  {
+    "id": 166,
+    "difficulty": "medium",
+    "title": "Imputation: ngoại lệ làm lệch trung bình",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Đặc trưng thu nhập trên train có vài ngoại lệ rất lớn, 10% giá trị thiếu. Muốn baseline imputation ít nhạy với ngoại lệ, nên chọn gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Trung bình tính trên cả train và test"
+      },
+      {
+        "letter": "B",
+        "text": "Median của train, có thể kèm cờ missing và đánh giá bằng validation"
+      },
+      {
+        "letter": "C",
+        "text": "Điền mọi giá trị thiếu bằng mức thu nhập lớn nhất"
+      },
+      {
+        "letter": "D",
+        "text": "Xóa toàn bộ cột mà không đánh giá"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Median ít bị kéo bởi các giá trị cực lớn; cờ missing có thể giữ tín hiệu về thiếu dữ liệu.",
+    "incorrectExplanations": {
+      "A": "Vừa nhạy ngoại lệ vừa dùng thông tin của test.",
+      "C": "Gán một cực trị không có căn cứ cho tất cả mẫu thiếu.",
+      "D": "Có thể bỏ mất một đặc trưng hữu ích; không phải lựa chọn baseline có kiểm chứng."
+    },
+    "takeaway": "Chọn cách impute theo phân phối và chỉ học thống kê trên train."
+  },
+  {
+    "id": 167,
+    "difficulty": "medium",
+    "title": "One-hot: hạng mục mới",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Train có màu đỏ/xanh, test có màu vàng chưa thấy. Trong Pipeline scikit-learn cần one-hot và muốn tránh lỗi khi suy luận. Cấu hình nào phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Fit encoder riêng trên test"
+      },
+      {
+        "letter": "B",
+        "text": "Gán vàng bằng nhãn mục tiêu của mẫu test"
+      },
+      {
+        "letter": "C",
+        "text": "OneHotEncoder(handle_unknown='ignore') fit trên train"
+      },
+      {
+        "letter": "D",
+        "text": "Sắp màu theo alphabet rồi dùng mã số như khoảng cách có nghĩa"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Hạng mục chưa thấy được biểu diễn bằng các giá trị 0 trong nhóm cột đó, không làm thay đổi không gian đặc trưng.",
+    "incorrectExplanations": {
+      "A": "Số lượng và ý nghĩa cột có thể khác train.",
+      "B": "Dùng nhãn không sẵn có trong suy luận và gây rò rỉ.",
+      "D": "Tạo thứ tự và khoảng cách giả cho biến danh nghĩa."
+    },
+    "takeaway": "Hạng mục chưa thấy cần một chính sách suy luận nhất quán với encoder đã fit."
+  },
+  {
+    "id": 168,
+    "difficulty": "medium",
+    "title": "Padding: mean pooling theo độ dài thật",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Embedding scalar của một chuỗi có hai token thật `[2,4]`, sau padding thành `[2,4,0,0]`. Mean pooling loại padding phải cho giá trị nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "1,5"
+      },
+      {
+        "letter": "B",
+        "text": "6"
+      },
+      {
+        "letter": "C",
+        "text": "4"
+      },
+      {
+        "letter": "D",
+        "text": "3"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Tổng token thật là 6, chia cho 2 token thật được 3.",
+    "incorrectExplanations": {
+      "A": "Chia cả bốn vị trí đã tính padding vào mẫu số.",
+      "B": "Chỉ lấy tổng, chưa chuẩn hóa theo độ dài thật.",
+      "C": "Đây là max pooling trên hai token thật."
+    },
+    "takeaway": "Mask phải áp dụng cho cả tổng và số lượng phần tử khi mean pooling chuỗi không đều."
+  },
+  {
+    "id": 169,
+    "difficulty": "medium",
+    "title": "Perceptron: giới hạn của một lớp",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Dữ liệu XOR nhị phân: `[0,0]` và `[1,1]` thuộc lớp 0; hai điểm còn lại thuộc lớp 1. Perceptron tuyến tính đơn không fit được dù tối ưu lâu. Cách sửa kiến trúc phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Thêm lớp ẩn với activation phi tuyến"
+      },
+      {
+        "letter": "B",
+        "text": "Tăng số epoch của cùng perceptron"
+      },
+      {
+        "letter": "C",
+        "text": "Chồng nhiều lớp Linear nhưng bỏ mọi activation"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ thay batch size từ 4 thành 2"
+      }
+    ],
+    "answer": "A",
+    "explanation": "XOR không phân tách tuyến tính; lớp ẩn phi tuyến có thể tạo biểu diễn phân tách được.",
+    "incorrectExplanations": {
+      "B": "Không thay đổi tập hàm tuyến tính mà mô hình biểu diễn được.",
+      "C": "Hợp thành các phép affine vẫn là affine.",
+      "D": "Thay động lực tối ưu nhưng không vượt giới hạn biểu diễn."
+    },
+    "takeaway": "Phân biệt lỗi tối ưu với giới hạn của họ mô hình."
+  },
+  {
+    "id": 170,
+    "difficulty": "medium",
+    "title": "Gradient descent: một bước cập nhật",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Tại w=2, gradient của loss theo w là 3. Dùng SGD không momentum, không weight decay, learning rate=0,1. w mới là bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2,3"
+      },
+      {
+        "letter": "B",
+        "text": "1,7"
+      },
+      {
+        "letter": "C",
+        "text": "0,3"
+      },
+      {
+        "letter": "D",
+        "text": "1,4"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Cập nhật giảm loss cục bộ theo `w_new=w−lr*gradient=2−0,3`.",
+    "incorrectExplanations": {
+      "A": "Đây là đi cùng chiều gradient thay vì ngược chiều.",
+      "C": "Đây là độ lớn bước thay đổi, không phải trọng số mới.",
+      "D": "Đã nhân thêm w vào gradient dù đề đã cho gradient đầy đủ."
+    },
+    "takeaway": "Gradient là đạo hàm của loss; optimizer dùng nó để tính bước cập nhật."
+  },
+  {
+    "id": 171,
+    "difficulty": "medium",
+    "title": "Backpropagation: gradient qua ReLU",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Một neuron có z=w*x+b=−2, đầu ra ReLU(z), loss khả vi theo đầu ra. Bỏ qua các nhánh khác, gradient truyền qua ReLU tới z là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "1"
+      },
+      {
+        "letter": "B",
+        "text": "−2"
+      },
+      {
+        "letter": "C",
+        "text": "0"
+      },
+      {
+        "letter": "D",
+        "text": "Luôn bằng gradient ở đầu ra"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Với z âm, ReLU hằng bằng 0 nên đạo hàm theo z bằng 0.",
+    "incorrectExplanations": {
+      "A": "Đây là đạo hàm ReLU ở miền z dương.",
+      "B": "Giá trị đầu vào không bằng đạo hàm của activation.",
+      "D": "Chỉ đúng nếu đạo hàm cục bộ bằng 1; ở đây bằng 0."
+    },
+    "takeaway": "Backprop nhân gradient phía sau với đạo hàm cục bộ của từng phép toán."
+  },
+  {
+    "id": 172,
+    "difficulty": "medium",
+    "title": "Sigmoid/Tanh: activation bão hòa",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "MLP nhiều lớp dùng sigmoid với pre-activation thường có độ lớn rất cao. Gradient ở các lớp đầu gần 0. Giải thích phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Sigmoid luôn có đạo hàm bằng 1"
+      },
+      {
+        "letter": "B",
+        "text": "Tanh không bao giờ bão hòa"
+      },
+      {
+        "letter": "C",
+        "text": "Tăng độ lớn trọng số ban đầu luôn giải quyết được"
+      },
+      {
+        "letter": "D",
+        "text": "Sigmoid bão hòa làm đạo hàm nhỏ; tích nhiều đạo hàm nhỏ làm gradient suy giảm"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Đây là một cơ chế vanishing gradient; cần xem lại scaling, khởi tạo và activation.",
+    "incorrectExplanations": {
+      "A": "Đạo hàm là `s*(1−s)`, tối đa 0,25.",
+      "B": "Tanh cũng có đạo hàm gần 0 khi đầu vào có độ lớn lớn.",
+      "C": "Thường đẩy activation sâu hơn vào vùng bão hòa."
+    },
+    "takeaway": "Activation, thang đo đầu vào và khởi tạo cùng ảnh hưởng đường truyền gradient."
+  },
+  {
+    "id": 173,
+    "difficulty": "medium",
+    "title": "MSE/MAE: tác động của ngoại lệ",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Sai số dự đoán của hai mẫu là 1 và 10. Dùng mean reduction. Cặp (MSE, MAE) nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "(50,5; 5,5)"
+      },
+      {
+        "letter": "B",
+        "text": "(5,5; 50,5)"
+      },
+      {
+        "letter": "C",
+        "text": "(101; 11)"
+      },
+      {
+        "letter": "D",
+        "text": "(25,25; 2,75)"
+      }
+    ],
+    "answer": "A",
+    "explanation": "MSE=(1²+10²)/2=50,5; MAE=(1+10)/2=5,5.",
+    "incorrectExplanations": {
+      "B": "Đảo vai trò bình phương và trị tuyệt đối.",
+      "C": "Đó là tổng, chưa chia số mẫu.",
+      "D": "Đã chia hai lần thay vì lấy trung bình một lần."
+    },
+    "takeaway": "MSE phạt sai số lớn mạnh hơn MAE do bình phương."
+  },
+  {
+    "id": 174,
+    "difficulty": "medium",
+    "title": "Cross-entropy: logits và target",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Phân loại đơn nhãn 5 lớp, logits có shape `(16,5)`. Dùng CrossEntropyLoss PyTorch với target chỉ số lớp. Đầu vào nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Softmax logits rồi target float shape (16,)"
+      },
+      {
+        "letter": "B",
+        "text": "Logits thô và target long shape (16,) với giá trị 0–4"
+      },
+      {
+        "letter": "C",
+        "text": "Argmax logits rồi target long"
+      },
+      {
+        "letter": "D",
+        "text": "Logits shape (5,16) và target shape (16,)"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Loss thực hiện chuẩn hóa nội bộ; mỗi mẫu có một chỉ số lớp.",
+    "incorrectExplanations": {
+      "A": "Vừa chuẩn hóa không cần thiết vừa sai dtype cho target chỉ số.",
+      "C": "Argmax mất score và không tạo gradient hữu ích qua quyết định rời rạc.",
+      "D": "Với batch 16, trục class phải là 5 ở chiều thứ hai trong trường hợp này."
+    },
+    "takeaway": "Kiểm tra shape, dtype và ngữ nghĩa target trước khi chọn loss."
+  },
+  {
+    "id": 175,
+    "difficulty": "medium",
+    "title": "MLP: đếm tham số",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "MLP gồm Linear(10,4), ReLU, Linear(4,3); cả hai Linear có bias. Tổng số tham số học được là bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "52"
+      },
+      {
+        "letter": "B",
+        "text": "56"
+      },
+      {
+        "letter": "C",
+        "text": "59"
+      },
+      {
+        "letter": "D",
+        "text": "63"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Lớp đầu 10*4+4=44, lớp sau 4*3+3=15; ReLU không có tham số.",
+    "incorrectExplanations": {
+      "A": "Chỉ đếm trọng số, bỏ 7 bias.",
+      "B": "Đếm bias lớp đầu nhưng bỏ 3 bias đầu ra.",
+      "D": "Đã cộng thêm tham số không tồn tại cho ReLU."
+    },
+    "takeaway": "Linear có số tham số `in_features*out_features + out_features` khi có bias."
+  },
+  {
+    "id": 176,
+    "difficulty": "medium",
+    "title": "Embedding: tra bảng và cập nhật",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Embedding(1000,32) nhận token IDs shape `(8,12)`. Shape đầu ra và số tham số của bảng là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Đầu ra (8,1000), bảng có 12.000 tham số"
+      },
+      {
+        "letter": "B",
+        "text": "Đầu ra (8,32), bảng có 32 tham số"
+      },
+      {
+        "letter": "C",
+        "text": "Đầu ra (1000,32), bảng có 96 tham số"
+      },
+      {
+        "letter": "D",
+        "text": "Đầu ra (8,12,32), bảng có 32.000 tham số"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Mỗi trong 96 vị trí token nhận vector 32 chiều; bảng có một vector cho mỗi mục từ.",
+    "incorrectExplanations": {
+      "A": "Nhầm chiều vocab với số token và dùng độ dài chuỗi để đếm bảng.",
+      "B": "Chưa có pooling; mỗi token vẫn giữ một embedding riêng.",
+      "C": "Nhầm bảng tham số với đầu ra của batch."
+    },
+    "takeaway": "Embedding thêm chiều đặc trưng vào shape token ID, không tự gộp chuỗi."
+  },
+  {
+    "id": 177,
+    "difficulty": "medium",
+    "title": "Pooling: giữ tín hiệu mạnh nhất",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Một feature map 2x2 có giá trị `[[1,7],[3,5]]`. Max pooling và average pooling với kernel 2, stride 2 lần lượt cho gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "7 và 4"
+      },
+      {
+        "letter": "B",
+        "text": "5 và 4"
+      },
+      {
+        "letter": "C",
+        "text": "7 và 16"
+      },
+      {
+        "letter": "D",
+        "text": "16 và 7"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Max là 7; trung bình `(1+7+3+5)/4=4`.",
+    "incorrectExplanations": {
+      "B": "5 là phần tử cuối, không phải cực đại.",
+      "C": "16 là tổng, chưa chia số phần tử.",
+      "D": "Đổi pooling thành phép tổng và đảo vai trò."
+    },
+    "takeaway": "Pooling giảm độ phân giải nhưng không có cùng cách giữ thông tin."
+  },
+  {
+    "id": 178,
+    "difficulty": "medium",
+    "title": "Attention: tổ hợp có trọng số",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Một query có attention weights `[0.25,0.75]` trên hai value `[2,0]` và `[0,4]`. Output là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "`[2,4]`"
+      },
+      {
+        "letter": "B",
+        "text": "`[0.5,3]`"
+      },
+      {
+        "letter": "C",
+        "text": "`[1,2]`"
+      },
+      {
+        "letter": "D",
+        "text": "`[0.75,0.25]`"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Cộng `0,25*[2,0]+0,75*[0,4]` theo từng chiều.",
+    "incorrectExplanations": {
+      "A": "Cộng value mà bỏ các trọng số.",
+      "C": "Đây là trung bình đều, không dùng weights đã cho.",
+      "D": "Đây không phải vector value tổng hợp; còn đảo thứ tự trọng số."
+    },
+    "takeaway": "Attention weights quyết định tỷ lệ đóng góp của value, không phải chính đầu ra."
+  },
+  {
+    "id": 179,
+    "difficulty": "medium",
+    "title": "Transformer: vì sao cần vị trí",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Một Transformer encoder xử lý câu nhưng không có positional information. Khó khăn chính khi nhiệm vụ phụ thuộc thứ tự từ là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Không thể nhân ma trận Q và K"
+      },
+      {
+        "letter": "B",
+        "text": "Mỗi token tự biết vị trí nhờ ID từ vựng"
+      },
+      {
+        "letter": "C",
+        "text": "Self-attention thuần không tự mã hóa thứ tự chuỗi, nên cần thông tin vị trí"
+      },
+      {
+        "letter": "D",
+        "text": "Softmax tự sắp xếp các từ theo ngữ pháp"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Quan hệ theo nội dung không đủ phân biệt các hoán vị theo đúng thứ tự cần cho ngôn ngữ.",
+    "incorrectExplanations": {
+      "A": "Các phép toán vẫn hợp lệ dù không thêm vị trí.",
+      "B": "Một từ có cùng ID ở nhiều vị trí.",
+      "D": "Softmax chỉ chuẩn hóa score, không suy ra thứ tự ngữ pháp cố định."
+    },
+    "takeaway": "Nội dung và vị trí là hai nguồn thông tin khác nhau trong Transformer."
+  },
+  {
+    "id": 180,
+    "difficulty": "medium",
+    "title": "Mini-batch: số bước optimizer",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Train có 1.000 mẫu, batch_size=128, không bỏ batch cuối (`drop_last=False`). Mỗi batch cập nhật một lần. Một epoch có bao nhiêu bước?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "7"
+      },
+      {
+        "letter": "B",
+        "text": "128"
+      },
+      {
+        "letter": "C",
+        "text": "1.000"
+      },
+      {
+        "letter": "D",
+        "text": "8"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Có 7 batch đủ 128 mẫu và một batch 104 mẫu, tổng ceil(1000/128)=8.",
+    "incorrectExplanations": {
+      "A": "Chỉ đúng nếu bỏ batch cuối thiếu 128 mẫu.",
+      "B": "Đây là kích thước batch, không phải số batch.",
+      "C": "Chỉ đúng nếu mỗi mẫu là một batch riêng."
+    },
+    "takeaway": "Phân biệt số mẫu, batch size, số bước cập nhật và số epoch."
+  },
+  {
+    "id": 181,
+    "difficulty": "medium",
+    "title": "Autoencoder: denoising",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Muốn autoencoder khôi phục ảnh sạch từ ảnh nhiễu tổng hợp. Cặp input-target trong train nên là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Input ảnh thêm nhiễu, target ảnh sạch tương ứng"
+      },
+      {
+        "letter": "B",
+        "text": "Input ảnh sạch, target nhãn tên lớp"
+      },
+      {
+        "letter": "C",
+        "text": "Input ảnh nhiễu, target một ảnh sạch ngẫu nhiên khác"
+      },
+      {
+        "letter": "D",
+        "text": "Input và target cùng ảnh nhiễu, không ràng buộc gì khác"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Mục tiêu buộc mạng học phục hồi tín hiệu thay vì sao chép nhiễu.",
+    "incorrectExplanations": {
+      "B": "Đây là phân loại, không phải tái tạo ảnh.",
+      "C": "Mất cặp tương ứng nên không dạy đúng phép khử nhiễu.",
+      "D": "Không trực tiếp đặt mục tiêu khôi phục ảnh sạch."
+    },
+    "takeaway": "Target của autoencoder phải phản ánh loại tái tạo bạn muốn học."
+  },
+  {
+    "id": 182,
+    "difficulty": "medium",
+    "title": "AdamW: weight decay tách biệt",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Bạn dùng AdamW để fine-tune, muốn hiểu weight_decay. Mô tả nào đúng nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Weight decay là xác suất tắt neuron"
+      },
+      {
+        "letter": "B",
+        "text": "AdamW áp dụng co trọng số tách khỏi phép chuẩn hóa gradient thích nghi"
+      },
+      {
+        "letter": "C",
+        "text": "AdamW bảo đảm validation tăng ở mọi bước"
+      },
+      {
+        "letter": "D",
+        "text": "AdamW không dùng thông tin gradient quá khứ"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Đây là đặc điểm của decoupled weight decay, khác với cộng phạt L2 vào gradient rồi cho qua cơ chế Adam.",
+    "incorrectExplanations": {
+      "A": "Đó là dropout, không phải weight decay.",
+      "C": "Không optimizer nào có bảo đảm như vậy cho mọi dữ liệu.",
+      "D": "AdamW vẫn dùng các ước lượng moment của gradient."
+    },
+    "takeaway": "Tách vai trò optimizer, learning rate và regularization khi chẩn đoán huấn luyện."
+  },
+  {
+    "id": 183,
+    "difficulty": "medium",
+    "title": "Learning rate: loss phân kỳ",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Sau khi tăng learning rate gấp 100, loss train nhảy lớn và thành NaN; dữ liệu và code trước đó chạy ổn. Thử nghiệm đầu tiên có căn cứ nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Tăng tiếp learning rate thêm 100 lần"
+      },
+      {
+        "letter": "B",
+        "text": "Tăng dropout lên 0,99 trước mọi kiểm tra"
+      },
+      {
+        "letter": "C",
+        "text": "Khôi phục learning rate thấp hơn và kiểm tra gradient/loss hữu hạn"
+      },
+      {
+        "letter": "D",
+        "text": "Đổi nhãn validation để loss nhỏ hơn"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Thay đổi mới có khả năng tạo bước cập nhật quá lớn; cần xác minh bằng chạy kiểm soát.",
+    "incorrectExplanations": {
+      "A": "Có thể làm bất ổn nặng hơn.",
+      "B": "Không trực tiếp sửa bước cập nhật và có thể làm mô hình gần như không học.",
+      "D": "Làm sai mục tiêu đánh giá, không sửa train."
+    },
+    "takeaway": "Khi có thay đổi gây lỗi, thử nghiệm một biến và quan sát cả loss lẫn gradient."
+  },
+  {
+    "id": 184,
+    "difficulty": "medium",
+    "title": "Dropout: kỳ vọng đầu ra",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Trong train, PyTorch Dropout(p=0.5) nhận giá trị 6. Nếu phần tử được giữ lại, giá trị đầu ra là bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "6"
+      },
+      {
+        "letter": "B",
+        "text": "3"
+      },
+      {
+        "letter": "C",
+        "text": "0 trong mọi trường hợp"
+      },
+      {
+        "letter": "D",
+        "text": "12"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Inverted dropout nhân phần tử giữ lại với `1/(1−p)=2` để giữ kỳ vọng bằng 6.",
+    "incorrectExplanations": {
+      "A": "Đây là hành vi ở eval; train cần scaling khi giữ lại.",
+      "B": "Đã nhân với xác suất giữ thay vì chia.",
+      "C": "0 chỉ khi phần tử bị loại trong lần lấy mẫu đó."
+    },
+    "takeaway": "PyTorch Dropout là ngẫu nhiên lúc train và phép đồng nhất khi eval."
+  },
+  {
+    "id": 185,
+    "difficulty": "medium",
+    "title": "Early stopping: chọn checkpoint",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Validation loss các epoch 1–5 lần lượt `0.60,0.45,0.40,0.44,0.48`; train loss giảm liên tục. Theo tiêu chí minimum validation loss, nên dùng checkpoint nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Epoch 3"
+      },
+      {
+        "letter": "B",
+        "text": "Epoch 5 vì train loss thấp nhất"
+      },
+      {
+        "letter": "C",
+        "text": "Epoch 1 vì luôn phải chọn mô hình đơn giản nhất"
+      },
+      {
+        "letter": "D",
+        "text": "Trung bình nhãn của năm epoch"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Validation loss thấp nhất là 0,40 ở epoch 3; lưu/khôi phục trọng số tương ứng.",
+    "incorrectExplanations": {
+      "B": "Mục tiêu chọn checkpoint là chất lượng validation, không phải chỉ fit train.",
+      "C": "Không dựa trên tiêu chí đã cho.",
+      "D": "Nhãn không phải checkpoint và không giải quyết lựa chọn mô hình."
+    },
+    "takeaway": "Early stopping cần lưu checkpoint tốt nhất, không chỉ dừng tại một epoch muộn."
+  },
+  {
+    "id": 186,
+    "difficulty": "medium",
+    "title": "Khởi tạo: phá đối xứng",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Một lớp ẩn MLP có nhiều neuron, toàn bộ weight và bias đều khởi tạo bằng 0. Vấn đề quan trọng là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mọi phép nhân ma trận đều sai shape"
+      },
+      {
+        "letter": "B",
+        "text": "Các neuron có thể nhận cùng gradient và học giống nhau, không phá được đối xứng"
+      },
+      {
+        "letter": "C",
+        "text": "Khởi tạo 0 luôn tạo NaN ngay lập tức"
+      },
+      {
+        "letter": "D",
+        "text": "Khởi tạo toàn 1000 luôn tốt hơn"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Khởi tạo ngẫu nhiên phù hợp giúp các neuron phát triển biểu diễn khác nhau.",
+    "incorrectExplanations": {
+      "A": "Giá trị 0 không quyết định shape.",
+      "C": "Không đúng nói chung; vấn đề chính ở đây là đối xứng và luồng gradient.",
+      "D": "Trọng số quá lớn có thể gây bão hòa hoặc bất ổn."
+    },
+    "takeaway": "Khởi tạo phải xét activation và độ rộng lớp, đồng thời tránh đối xứng không mong muốn."
+  },
+  {
+    "id": 187,
+    "difficulty": "medium",
+    "title": "BatchNorm: đánh giá đúng chế độ",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Model có BatchNorm và Dropout. Validation đang gọi `torch.no_grad()` nhưng quên `model.eval()`. Điều gì cần sửa?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ giảm batch_size xuống 1"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ đặt requires_grad=False cho target"
+      },
+      {
+        "letter": "C",
+        "text": "Gọi eval trước validation và train lại trước giai đoạn train"
+      },
+      {
+        "letter": "D",
+        "text": "Gọi zero_grad trên validation sau mỗi batch"
+      }
+    ],
+    "answer": "C",
+    "explanation": "no_grad chỉ tắt ghi đồ thị; eval mới đổi Dropout và BatchNorm sang hành vi đánh giá.",
+    "incorrectExplanations": {
+      "A": "Không đổi chế độ, còn có thể làm thống kê batch kém ổn định.",
+      "B": "Target thường đã không cần gradient; không đổi hành vi model.",
+      "D": "Không tắt dropout và không chuyển BatchNorm sang running statistics."
+    },
+    "takeaway": "Chế độ module và chế độ autograd là hai điều khiển độc lập."
+  },
+  {
+    "id": 188,
+    "difficulty": "medium",
+    "title": "Fine-tuning: ít nhãn và ít bộ nhớ",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Có encoder tiền huấn luyện lớn, 600 mẫu có nhãn và VRAM hạn chế. Baseline nào hợp lý trước khi cân nhắc full fine-tuning?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Luôn huấn luyện mọi trọng số từ ngẫu nhiên"
+      },
+      {
+        "letter": "B",
+        "text": "PEFT nghĩa là chắc chắn không cần forward qua encoder"
+      },
+      {
+        "letter": "C",
+        "text": "Đánh giá head trên đúng tập đã fit để quyết định"
+      },
+      {
+        "letter": "D",
+        "text": "Đóng băng encoder, train head nhỏ; sau đó thử PEFT nếu cần"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Giảm số tham số cần cập nhật và nguy cơ overfit; quyết định tiếp bằng validation.",
+    "incorrectExplanations": {
+      "A": "Bỏ kiến thức tiền huấn luyện và tăng nhu cầu dữ liệu/tài nguyên.",
+      "B": "Vẫn phải dùng mạng gốc để tạo biểu diễn; PEFT chỉ giảm tham số được học.",
+      "C": "Không đo được khả năng khái quát."
+    },
+    "takeaway": "Đóng băng, fine-tuning một phần, PEFT và full fine-tuning là các mức can thiệp khác nhau."
+  },
+  {
+    "id": 189,
+    "difficulty": "medium",
+    "title": "Convolution: kích thước đầu ra",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Conv2d nhận ảnh 32x32, kernel=3, stride=2, padding=1, dilation=1. Kích thước không gian đầu ra là bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "16x16"
+      },
+      {
+        "letter": "B",
+        "text": "15x15"
+      },
+      {
+        "letter": "C",
+        "text": "17x17"
+      },
+      {
+        "letter": "D",
+        "text": "32x32"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Mỗi chiều là floor((32+2−3)/2)+1=16.",
+    "incorrectExplanations": {
+      "B": "Kết quả này bỏ padding trong công thức.",
+      "C": "Đã làm tròn sai phép chia hoặc cộng dư một vị trí.",
+      "D": "Stride 2 giảm độ phân giải, dù padding=1."
+    },
+    "takeaway": "Tính từng chiều bằng công thức có kernel, stride, padding và dilation."
+  },
+  {
+    "id": 190,
+    "difficulty": "medium",
+    "title": "Convolution: số tham số",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Conv2d từ 3 kênh sang 16 kênh, kernel 3x3, groups=1, có bias. Tổng số tham số là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "432"
+      },
+      {
+        "letter": "B",
+        "text": "448"
+      },
+      {
+        "letter": "C",
+        "text": "160"
+      },
+      {
+        "letter": "D",
+        "text": "448 nhân với chiều rộng và chiều cao ảnh"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Mỗi filter có 3*3*3=27 weight và một bias; 16*(27+1)=448.",
+    "incorrectExplanations": {
+      "A": "Bỏ qua 16 bias.",
+      "C": "Quên nhân số kênh đầu vào khi đếm kernel.",
+      "D": "Weight được chia sẻ giữa các vị trí; số tham số không nhân diện tích ảnh."
+    },
+    "takeaway": "Số vị trí áp dụng convolution quyết định chi phí tính, không nhân số weight được học."
+  },
+  {
+    "id": 191,
+    "difficulty": "medium",
+    "title": "Image classification: đối tượng hay toàn ảnh",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Ứng dụng chỉ cần trả một trong năm loại hoa cho mỗi ảnh đã crop một bông, không cần tọa độ. Thiết kế đầu ra phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "U-Net xuất nhãn cho từng pixel dù không có mask"
+      },
+      {
+        "letter": "B",
+        "text": "Detector bắt buộc dự đoán 100 hộp mỗi ảnh"
+      },
+      {
+        "letter": "C",
+        "text": "Classifier năm logits cho mỗi ảnh, train với nhãn loại hoa"
+      },
+      {
+        "letter": "D",
+        "text": "Hồi quy một số thực rồi coi khoảng cách tên loài là có nghĩa"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Bài toán là phân loại đơn nhãn toàn ảnh.",
+    "incorrectExplanations": {
+      "A": "Không cần phân đoạn và dữ liệu không cung cấp target pixel.",
+      "B": "Tạo thêm tác vụ định vị không được yêu cầu.",
+      "D": "Mã loài không có khoảng cách số tự nhiên; cần phân loại."
+    },
+    "takeaway": "Chọn đầu ra theo thông tin sản phẩm cần, không chỉ theo độ lớn mô hình."
+  },
+  {
+    "id": 192,
+    "difficulty": "medium",
+    "title": "IoU: tính giao trên hợp",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Hai bounding box có diện tích 100 và 80, giao nhau diện tích 40. IoU bằng bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "0,5"
+      },
+      {
+        "letter": "B",
+        "text": "0,4"
+      },
+      {
+        "letter": "C",
+        "text": "2/9 xấp xỉ 0,222"
+      },
+      {
+        "letter": "D",
+        "text": "2/7 xấp xỉ 0,286"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Hợp=100+80−40=140; IoU=40/140.",
+    "incorrectExplanations": {
+      "A": "Đây là giao chia diện tích hộp thứ hai, không phải hợp.",
+      "B": "Đây là giao chia diện tích hộp thứ nhất.",
+      "C": "Đã cộng hai diện tích mà không trừ vùng giao."
+    },
+    "takeaway": "IoU chuẩn hóa phần giao bằng phần hợp để đo độ trùng khớp hình học."
+  },
+  {
+    "id": 193,
+    "difficulty": "medium",
+    "title": "YOLO/SSD: ràng buộc triển khai",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Nhóm cần phát hiện nhiều vật trên video và có giới hạn 30 ms/frame trên thiết bị cụ thể. Cách chọn giữa các checkpoint YOLO/SSD phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Benchmark cả độ chính xác và latency end-to-end trên thiết bị đích"
+      },
+      {
+        "letter": "B",
+        "text": "Chọn mọi YOLO vì tên gọi bảo đảm dưới 30 ms"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ so sánh số epoch tiền huấn luyện"
+      },
+      {
+        "letter": "D",
+        "text": "Đo FPS nhưng bỏ bước resize, chuyển dữ liệu và hậu xử lý khỏi ngân sách tổng"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Tốc độ phụ thuộc checkpoint, input, runtime và phần cứng; cần đo theo yêu cầu thực tế.",
+    "incorrectExplanations": {
+      "B": "Tên họ mô hình không bảo đảm latency trên mọi cấu hình.",
+      "C": "Không đo tốc độ hay chất lượng trên miền ứng dụng.",
+      "D": "Không phản ánh latency end-to-end đã yêu cầu."
+    },
+    "takeaway": "Lựa chọn detector cần cả metric định vị/phân loại và phép đo triển khai."
+  },
+  {
+    "id": 194,
+    "difficulty": "medium",
+    "title": "DETR: dự đoán theo tập",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "DETR gốc xuất nhiều object query. Mô tả nào đúng về cách học tránh các dự đoán trùng cho cùng đối tượng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mỗi query bắt buộc khớp với mọi đối tượng cùng lúc"
+      },
+      {
+        "letter": "B",
+        "text": "Dùng matching một-một giữa dự đoán và ground truth trong huấn luyện"
+      },
+      {
+        "letter": "C",
+        "text": "Mọi query đều phải là một vật thật"
+      },
+      {
+        "letter": "D",
+        "text": "DETR chỉ trả một nhãn cho toàn ảnh"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Set prediction và matching là phần cốt lõi để học một dự đoán cho mỗi đối tượng; query dư học no-object.",
+    "incorrectExplanations": {
+      "A": "Matching một-một không gán tất cả đối tượng cho một query.",
+      "C": "Số query thường lớn hơn số vật, có nhãn no-object.",
+      "D": "DETR là detector có nhãn và bounding box cho nhiều đối tượng."
+    },
+    "takeaway": "Phân biệt tập dự đoán object với phân loại toàn ảnh."
+  },
+  {
+    "id": 195,
+    "difficulty": "medium",
+    "title": "U-Net: skip connection",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Trong U-Net, decoder upsample có kích thước không gian khớp encoder. Tại sao nối đặc trưng encoder cùng độ phân giải vào decoder?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Để xóa toàn bộ thông tin không gian"
+      },
+      {
+        "letter": "B",
+        "text": "Để không cần mask nhãn trong mọi cách train có giám sát"
+      },
+      {
+        "letter": "C",
+        "text": "Kết hợp chi tiết định vị từ encoder với ngữ cảnh của decoder"
+      },
+      {
+        "letter": "D",
+        "text": "Để đầu ra chỉ còn một vector nhãn toàn ảnh"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Downsampling làm mất chi tiết; skip giúp phân đoạn ranh giới chính xác hơn.",
+    "incorrectExplanations": {
+      "A": "Ngược mục đích giữ chi tiết của skip.",
+      "B": "Skip là thiết kế mạng, không thay thế nhãn giám sát.",
+      "D": "U-Net thường dự đoán dày đặc theo pixel."
+    },
+    "takeaway": "Skip trong U-Net phục vụ kết hợp thông tin ở các thang độ phân giải."
+  },
+  {
+    "id": 196,
+    "difficulty": "medium",
+    "title": "Segmentation: accuracy nền cao",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Ảnh có 99% pixel nền. Model luôn đoán nền được accuracy 99% nhưng bỏ hết tổn thương. Nên bổ sung đánh giá nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ accuracy toàn ảnh rồi kết luận tốt"
+      },
+      {
+        "letter": "B",
+        "text": "Số tham số model thay cho metric"
+      },
+      {
+        "letter": "C",
+        "text": "Loss của riêng pixel nền"
+      },
+      {
+        "letter": "D",
+        "text": "Dice/IoU và recall của vùng tổn thương"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Các độ đo tập trung vùng đích làm lộ việc model bỏ sót toàn bộ foreground.",
+    "incorrectExplanations": {
+      "A": "Tiếp tục bị nền chi phối.",
+      "B": "Kích thước mạng không đo chất lượng phân đoạn.",
+      "C": "Không cho biết khả năng phát hiện vùng tổn thương."
+    },
+    "takeaway": "Metric cho phân đoạn mất cân bằng phải phản ánh lớp foreground quan trọng."
+  },
+  {
+    "id": 197,
+    "difficulty": "medium",
+    "title": "ResNet: dùng encoder tiền huấn luyện",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Muốn dùng ResNet tiền huấn luyện làm feature extractor cho 10 lớp ảnh mới. Bước nào phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Thay head phân loại, dùng preprocessing đúng checkpoint và train head trên train"
+      },
+      {
+        "letter": "B",
+        "text": "Giữ head 1000 lớp và gán nhãn mới tùy ý vào 10 vị trí"
+      },
+      {
+        "letter": "C",
+        "text": "Chuẩn hóa ảnh test bằng mean riêng từng lớp thật"
+      },
+      {
+        "letter": "D",
+        "text": "Luôn đổi thứ tự RGB thành BGR bất kể checkpoint"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Head cũ thuộc tập nhãn cũ; preprocessing nhất quán giúp dùng biểu diễn đã học.",
+    "incorrectExplanations": {
+      "B": "Không học ánh xạ phù hợp tác vụ mới.",
+      "C": "Khi suy luận không biết nhãn lớp thật để làm bước này.",
+      "D": "Tiền xử lý phải theo yêu cầu của trọng số cụ thể."
+    },
+    "takeaway": "Checkpoint bao gồm giả định về đầu vào và nhãn; transfer cần điều chỉnh đúng phần."
+  },
+  {
+    "id": 198,
+    "difficulty": "medium",
+    "title": "Augmentation: segmentation đồng bộ",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Train U-Net, bạn lật ngang ảnh nhưng giữ nguyên mask. Hậu quả và cách sửa phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Không có ảnh hưởng vì U-Net tự căn chỉnh mọi mask"
+      },
+      {
+        "letter": "B",
+        "text": "Ảnh và mask lệch nhãn; áp dụng cùng phép lật hình học cho cả hai"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ tăng số epoch"
+      },
+      {
+        "letter": "D",
+        "text": "Lật mask theo một hướng ngẫu nhiên độc lập"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Mỗi pixel ảnh phải tương ứng đúng pixel nhãn sau biến đổi.",
+    "incorrectExplanations": {
+      "A": "Mạng không tự sửa cặp giám sát bị sai tùy ý.",
+      "C": "Huấn luyện lâu hơn trên nhãn lệch không khắc phục pipeline.",
+      "D": "Vẫn có thể làm ảnh và mask không tương ứng."
+    },
+    "takeaway": "Augmentation hình học của ảnh phải đồng bộ với box, mask hoặc keypoint."
+  },
+  {
+    "id": 199,
+    "difficulty": "medium",
+    "title": "Patch ảnh: số token",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Ảnh RGB 224x224 chia thành patch không chồng lấp 16x16; thêm một token CLS. Encoder nhận bao nhiêu token ảnh kể cả CLS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "196"
+      },
+      {
+        "letter": "B",
+        "text": "589"
+      },
+      {
+        "letter": "C",
+        "text": "197"
+      },
+      {
+        "letter": "D",
+        "text": "225"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Có `(224/16)²=196` patch và một CLS; RGB nằm trong vector của mỗi patch.",
+    "incorrectExplanations": {
+      "A": "Bỏ token CLS đã nêu.",
+      "B": "Đã đếm ba kênh thành ba token riêng cho mỗi patch rồi cộng CLS.",
+      "D": "Nhầm kích thước ảnh với số patch theo cả hai chiều."
+    },
+    "takeaway": "Đếm patch theo lưới không gian; số kênh ảnh ảnh hưởng độ dài vector patch."
+  },
+  {
+    "id": 200,
+    "difficulty": "medium",
+    "title": "GAN: mode collapse",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "GAN sinh ra ảnh khá sắc nét nhưng gần như tất cả đều cùng một kiểu khuôn mặt dù noise khác nhau. Vấn đề phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Overfitting của classifier nhãn test chắc chắn"
+      },
+      {
+        "letter": "B",
+        "text": "Mọi ảnh sắc nét đều chứng minh GAN đã học đủ phân phối"
+      },
+      {
+        "letter": "C",
+        "text": "Noise đầu vào khác nhau bảo đảm đầu ra đa dạng"
+      },
+      {
+        "letter": "D",
+        "text": "Mode collapse; cần đánh giá đa dạng cùng chất lượng và điều chỉnh train"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Generator bỏ qua nhiều mode của phân phối, nên đẹp mắt chưa đồng nghĩa bao phủ dữ liệu.",
+    "incorrectExplanations": {
+      "A": "Không có bằng chứng về classifier hay nhãn test trong tình huống.",
+      "B": "Độ sắc nét không đo được tính đa dạng.",
+      "C": "Generator có thể học gần như bỏ qua noise."
+    },
+    "takeaway": "Đánh giá mô hình sinh cần cả chất lượng, đa dạng và dấu hiệu ghi nhớ dữ liệu."
+  },
+  {
+    "id": 201,
+    "difficulty": "medium",
+    "title": "Diffusion: train và sampling",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Với diffusion dự đoán noise, một bước train thông thường gồm thao tác nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Lấy ảnh sạch, chọn timestep, thêm noise theo lịch rồi dự đoán noise đã thêm"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ phân loại ảnh thành thật/giả bằng discriminator"
+      },
+      {
+        "letter": "C",
+        "text": "Xóa timestep vì mọi mức noise hoàn toàn giống nhau"
+      },
+      {
+        "letter": "D",
+        "text": "Lấy noise bất kỳ làm target không liên quan ảnh nhiễu"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Tạo cặp giám sát từ ảnh và noise; khi sampling dùng quá trình khử nhiễu nhiều bước.",
+    "incorrectExplanations": {
+      "B": "Đây là thành phần thường gặp của GAN, không phải mục tiêu noise prediction đã nêu.",
+      "C": "Timestep cho biết mức nhiễu cần xử lý.",
+      "D": "Làm sai quan hệ giữa input và target."
+    },
+    "takeaway": "Timestep và lịch noise xác định bài toán khử nhiễu mà mạng được học."
+  },
+  {
+    "id": 202,
+    "difficulty": "medium",
+    "title": "Self-supervised vision: cặp tăng cường",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Trong một baseline contrastive, hai ảnh crop/đổi màu từ cùng ảnh gốc được dùng làm cặp positive. Mục tiêu trực tiếp là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Buộc mọi ảnh trong dataset có cùng embedding"
+      },
+      {
+        "letter": "B",
+        "text": "Học embedding gần nhau cho hai view giữ cùng nội dung liên quan"
+      },
+      {
+        "letter": "C",
+        "text": "Dự đoán chính xác nhãn lớp thủ công dù train không cung cấp nhãn"
+      },
+      {
+        "letter": "D",
+        "text": "Chứng minh mọi augmentation đều giữ nguyên ngữ nghĩa"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Tạo giám sát từ dữ liệu không nhãn để học biểu diễn hữu ích cho tác vụ sau.",
+    "incorrectExplanations": {
+      "A": "Làm mất khả năng phân biệt và gây collapse biểu diễn.",
+      "C": "Mục tiêu tiền huấn luyện không yêu cầu nhãn lớp thủ công.",
+      "D": "Chọn augmentation vẫn cần phù hợp miền và tác vụ."
+    },
+    "takeaway": "Giám sát tự sinh phải khuyến khích bất biến hữu ích và tránh phá tín hiệu quan trọng."
+  },
+  {
+    "id": 203,
+    "difficulty": "medium",
+    "title": "CLIP: zero-shot classification",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Có CLIP và 4 lớp ảnh mới, chưa có nhãn train. Cách tạo baseline zero-shot đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "So trực tiếp token ID của tên lớp với pixel RGB"
+      },
+      {
+        "letter": "B",
+        "text": "Dùng text encoder riêng mà không nhìn ảnh"
+      },
+      {
+        "letter": "C",
+        "text": "Mã hóa mô tả của bốn lớp và ảnh, so độ tương đồng trong không gian chung"
+      },
+      {
+        "letter": "D",
+        "text": "Mặc định similarity cao nhất là xác suất đã được hiệu chuẩn"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Nhãn dự đoán lấy từ mô tả phù hợp nhất với embedding ảnh.",
+    "incorrectExplanations": {
+      "A": "Hai kiểu số không nằm trong cùng không gian ngữ nghĩa.",
+      "B": "Không có thông tin về ảnh cần phân loại.",
+      "D": "Similarity và softmax không tự bảo đảm hiệu chuẩn trên miền mới."
+    },
+    "takeaway": "Prompt mô tả lớp là một phần của baseline CLIP và cần đánh giá trên miền đích."
+  },
+  {
+    "id": 204,
+    "difficulty": "medium",
+    "title": "Dữ liệu ảnh: chia trước augmentation",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Có 500 ảnh gốc, mỗi ảnh sinh 10 biến thể gần giống. Cách chia train/test nào tránh rò rỉ nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Trộn 5.000 biến thể rồi random split từng ảnh"
+      },
+      {
+        "letter": "B",
+        "text": "Đưa ảnh gốc vào train và toàn bộ biến thể vào test"
+      },
+      {
+        "letter": "C",
+        "text": "Chọn test bằng các ảnh model dự đoán đúng nhất"
+      },
+      {
+        "letter": "D",
+        "text": "Chia theo ảnh gốc trước, chỉ augment phần train"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Mọi biến thể của một ảnh nằm cùng phía, test đo ảnh gốc chưa thấy.",
+    "incorrectExplanations": {
+      "A": "Các bản gần trùng có thể nằm cả train và test.",
+      "B": "Test vẫn có cùng nội dung nguồn đã thấy.",
+      "C": "Làm sai mục tiêu đánh giá độc lập."
+    },
+    "takeaway": "Ảnh gốc, người, phiên chụp hoặc video có thể là đơn vị nhóm cần giữ tách biệt."
+  },
+  {
+    "id": 205,
+    "difficulty": "medium",
+    "title": "Tokenization: dùng đúng tokenizer",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Bạn fine-tune một BERT checkpoint có tokenizer riêng. Thay tokenizer bằng bộ tách từ tự tạo rồi dùng ID mới cho embedding cũ gây rủi ro gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "ID mới có thể trỏ sai ý nghĩa trong bảng embedding đã học"
+      },
+      {
+        "letter": "B",
+        "text": "Không có rủi ro vì mọi ID chỉ là số bất kỳ dùng hoán đổi được"
+      },
+      {
+        "letter": "C",
+        "text": "Tokenizer mới luôn làm model nhanh và chính xác hơn"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ thay tên biến tokenizer là đủ sửa ánh xạ"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Checkpoint gắn với ánh xạ token-ID; cần tokenizer tương thích hoặc cập nhật bảng embedding có chủ đích.",
+    "incorrectExplanations": {
+      "B": "ID là chỉ mục vào các vector có ý nghĩa đã học, không đổi tùy ý được.",
+      "C": "Phải đánh giá; không có bảo đảm chung.",
+      "D": "Tên biến không thay quan hệ giữa token, ID và embedding."
+    },
+    "takeaway": "Tokenizer là một phần của mô hình tiền huấn luyện, không chỉ là bước tách chuỗi."
+  },
+  {
+    "id": 206,
+    "difficulty": "medium",
+    "title": "BERT: phân loại câu",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Muốn phân loại cảm xúc đơn nhãn bằng BERT. Thiết kế nào phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Sinh token liên tiếp bằng argmax trực tiếp trên mọi hidden state BERT gốc"
+      },
+      {
+        "letter": "B",
+        "text": "Tokenize đúng checkpoint, dùng biểu diễn câu với head phân loại và fine-tune trên train"
+      },
+      {
+        "letter": "C",
+        "text": "Dùng token ID lớn nhất trong câu làm nhãn"
+      },
+      {
+        "letter": "D",
+        "text": "Không dùng attention mask dù batch có padding dài"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Encoder tạo biểu diễn theo ngữ cảnh; head ánh xạ sang nhãn cảm xúc.",
+    "incorrectExplanations": {
+      "A": "BERT encoder không tự trở thành decoder sinh tự hồi quy bằng cách đó.",
+      "C": "ID từ vựng không mã hóa nhãn cảm xúc.",
+      "D": "Padding có thể ảnh hưởng biểu diễn nếu không được loại theo quy ước của model."
+    },
+    "takeaway": "Chọn head, mask và loss khớp với bài toán phân loại."
+  },
+  {
+    "id": 207,
+    "difficulty": "medium",
+    "title": "Masked language modeling: ngữ cảnh hai phía",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Câu chứa `Hôm nay trời [MASK] nên tôi mang ô`. Đặc điểm nào khiến BERT phù hợp dự đoán vị trí MASK?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "BERT chỉ được nhìn token đầu tiên của câu"
+      },
+      {
+        "letter": "B",
+        "text": "MASK phải luôn là nhãn cảm xúc"
+      },
+      {
+        "letter": "C",
+        "text": "Encoder hai chiều có thể dùng cả ngữ cảnh trước và sau MASK"
+      },
+      {
+        "letter": "D",
+        "text": "BERT bắt buộc bỏ toàn bộ dấu tiếng Việt"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Pretraining masked token khuyến khích biểu diễn dựa trên hai phía ngữ cảnh.",
+    "incorrectExplanations": {
+      "A": "Không đúng cơ chế encoder hai chiều.",
+      "B": "MASK là vị trí token bị che, không phải nhãn tác vụ mặc định.",
+      "D": "Yêu cầu này không đúng chung; tiền xử lý theo tokenizer/checkpoint."
+    },
+    "takeaway": "Masked LM và causal LM dùng các điều kiện ngữ cảnh khác nhau."
+  },
+  {
+    "id": 208,
+    "difficulty": "medium",
+    "title": "Causal LM: căn chỉnh nhãn",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Với chuỗi token `[A,B,C,D]`, bạn tự triển khai next-token loss, không dùng model tự shift labels. Cặp input-target đúng là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Input [A,B,C], target [A,B,C] và bỏ mask"
+      },
+      {
+        "letter": "B",
+        "text": "Input [B,C,D], target [A,B,C]"
+      },
+      {
+        "letter": "C",
+        "text": "Input [A], target [A,B,C,D] mà không có decoder theo chuỗi"
+      },
+      {
+        "letter": "D",
+        "text": "Input [A,B,C], target [B,C,D] với causal mask"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Mỗi vị trí dự đoán token kế tiếp chỉ từ tiền tố có sẵn.",
+    "incorrectExplanations": {
+      "A": "Khuyến khích sao chép token đang thấy thay vì dự đoán token sau.",
+      "B": "Đây là hướng ngược yêu cầu next-token.",
+      "C": "Không tạo căn chỉnh từng vị trí như quy trình đã yêu cầu."
+    },
+    "takeaway": "Kiểm tra thư viện có shift labels nội bộ để tránh shift hai lần."
+  },
+  {
+    "id": 209,
+    "difficulty": "medium",
+    "title": "Language modeling: perplexity",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Hai LM dùng cùng tokenizer và cùng tập đánh giá; mean token NLL theo log tự nhiên lần lượt là 1 và 2. Kết luận nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Perplexity lần lượt là e và e²; mô hình thứ nhất tốt hơn theo NLL"
+      },
+      {
+        "letter": "B",
+        "text": "Perplexity lần lượt là 1 và 2"
+      },
+      {
+        "letter": "C",
+        "text": "Perplexity lớn hơn luôn tốt hơn"
+      },
+      {
+        "letter": "D",
+        "text": "Có thể so trực tiếp mọi perplexity dù tokenizer khác nhau"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Perplexity=exp(mean NLL), nhỏ hơn là tốt hơn với điều kiện đánh giá tương đương.",
+    "incorrectExplanations": {
+      "B": "Đây là NLL, chưa lấy hàm mũ.",
+      "C": "Thể hiện mô hình gán xác suất thấp hơn cho token thật, nên không đúng.",
+      "D": "Đơn vị token thay đổi làm phép so sánh trực tiếp dễ sai."
+    },
+    "takeaway": "So perplexity phải giữ nhất quán dữ liệu, tokenizer và cách bỏ padding."
+  },
+  {
+    "id": 210,
+    "difficulty": "medium",
+    "title": "Text classification: nhiều nhãn độc lập",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Một bài báo có thể đồng thời thuộc Công nghệ và Giáo dục. Có 6 nhãn, không loại trừ nhau. Head và loss phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Softmax 6 lớp với đúng một chỉ số target"
+      },
+      {
+        "letter": "B",
+        "text": "6 logits, sigmoid theo từng nhãn và BCEWithLogitsLoss khi train"
+      },
+      {
+        "letter": "C",
+        "text": "Argmax embedding chiều lớn nhất làm nhãn"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ hồi quy số lượng nhãn đúng"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Mỗi nhãn là một quyết định nhị phân; loss nhận logits để tính ổn định.",
+    "incorrectExplanations": {
+      "A": "Ép các nhãn cạnh tranh tổng bằng 1, không mô hình hóa nhiều nhãn độc lập.",
+      "C": "Chiều embedding không tự tương ứng nhãn.",
+      "D": "Không xác định nhãn cụ thể nào xuất hiện."
+    },
+    "takeaway": "Phân biệt multi-class đơn nhãn và multi-label trước khi chọn loss."
+  },
+  {
+    "id": 211,
+    "difficulty": "medium",
+    "title": "Encoder-decoder: dịch máy",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Trong mô hình dịch Transformer encoder-decoder, decoder cần thông tin nào khi dự đoán từ đích tiếp theo?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Toàn bộ câu đích thật kể cả tương lai khi suy luận"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ độ dài câu nguồn, bỏ nội dung"
+      },
+      {
+        "letter": "C",
+        "text": "Tiền tố câu đích và biểu diễn câu nguồn từ encoder"
+      },
+      {
+        "letter": "D",
+        "text": "Nhãn cảm xúc của câu nguồn thay cho encoder state"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Self-attention causal xử lý tiền tố đích, cross-attention truy cập nguồn.",
+    "incorrectExplanations": {
+      "A": "Khi suy luận chưa có các token tương lai.",
+      "B": "Không đủ để xác định bản dịch.",
+      "D": "Đây không phải biểu diễn đủ cho dịch tổng quát."
+    },
+    "takeaway": "Encoder-decoder nối hai chuỗi có vai trò và độ dài có thể khác nhau."
+  },
+  {
+    "id": 212,
+    "difficulty": "medium",
+    "title": "Vision-language: nối encoder ảnh và decoder",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Muốn sinh caption ảnh bằng encoder ảnh tiền huấn luyện và decoder ngôn ngữ. Cần gì ngoài hai checkpoint riêng rẽ?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ đổi đuôi file ảnh sang .txt"
+      },
+      {
+        "letter": "B",
+        "text": "Ghép hai model bất kỳ là chắc chắn caption đúng ngay"
+      },
+      {
+        "letter": "C",
+        "text": "Bỏ ảnh, chỉ cấp token bắt đầu câu"
+      },
+      {
+        "letter": "D",
+        "text": "Cơ chế nối biểu diễn và huấn luyện trên cặp ảnh-caption phù hợp"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Kích thước và ngữ nghĩa đặc trưng phải được căn chỉnh để decoder dùng được thông tin ảnh.",
+    "incorrectExplanations": {
+      "A": "Không mã hóa ảnh thành biểu diễn có nghĩa cho decoder.",
+      "B": "Không bảo đảm giao diện và không gian biểu diễn tương thích.",
+      "C": "Decoder có thể sinh câu nhưng không có căn cứ nội dung ảnh."
+    },
+    "takeaway": "Tính đa phương thức cần một cơ chế căn chỉnh giữa các nguồn biểu diễn."
+  },
+  {
+    "id": 213,
+    "difficulty": "medium",
+    "title": "LM qua API: so sánh có kiểm soát",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "So sánh hai mô hình qua API cho phân loại văn bản. Quy trình nào đáng tin cậy nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dùng cùng tập giữ riêng, cùng rubric, lưu phiên bản/prompt/cấu hình và đo cả chất lượng lẫn latency"
+      },
+      {
+        "letter": "B",
+        "text": "Mỗi model nhận một tập test khác độ khó"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉnh prompt liên tục bằng test rồi báo điểm cuối là đánh giá độc lập"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ xem một câu trả lời nghe tự tin"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Các điều kiện nhất quán giúp phân biệt khác biệt model với khác biệt cách gọi.",
+    "incorrectExplanations": {
+      "B": "Không cô lập được tác động của model.",
+      "C": "Test đã trở thành dữ liệu phát triển.",
+      "D": "Độ tự tin ngôn ngữ không thay thế đánh giá trên tập đại diện."
+    },
+    "takeaway": "Đánh giá mô hình tiền huấn luyện cần tái lập điều kiện và giữ tập test độc lập."
+  },
+  {
+    "id": 214,
+    "difficulty": "medium",
+    "title": "Sinh văn bản: kiểm soát ngẫu nhiên",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Đang lấy mẫu token từ softmax(logits/temperature), logits không đồng hạng. Khi giảm temperature dương về gần 0, điều gì thường xảy ra?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Phân phối tiến tới đồng đều"
+      },
+      {
+        "letter": "B",
+        "text": "Phân phối tập trung hơn vào token logit cao nhất"
+      },
+      {
+        "letter": "C",
+        "text": "Model chắc chắn hết mọi lỗi kiến thức"
+      },
+      {
+        "letter": "D",
+        "text": "Số tham số model giảm"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Chia cho số dương nhỏ tăng chênh lệch logits trước softmax.",
+    "incorrectExplanations": {
+      "A": "Điều này thường xảy ra khi temperature tăng rất lớn.",
+      "C": "Thay cách lấy mẫu không bảo đảm tính đúng sự thật.",
+      "D": "Temperature không thay kiến trúc hay số tham số."
+    },
+    "takeaway": "Điều khiển độ ngẫu nhiên khác với cải thiện độ đúng của kiến thức."
+  },
+  {
+    "id": 215,
+    "difficulty": "medium",
+    "title": "Âm thanh: resample đúng nghĩa",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Checkpoint audio yêu cầu 16 kHz; file thực tế 48 kHz. Xử lý nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ đổi metadata từ 48000 thành 16000"
+      },
+      {
+        "letter": "B",
+        "text": "Giữ mọi mẫu và nhân biên độ với 3"
+      },
+      {
+        "letter": "C",
+        "text": "Resample waveform từ 48 xuống 16 kHz trước processor"
+      },
+      {
+        "letter": "D",
+        "text": "Đổi nhãn của file thành 16"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Cần đổi số mẫu theo thời gian thực, đồng thời khai báo đúng sampling rate.",
+    "incorrectExplanations": {
+      "A": "Làm sai thời lượng/tần số diễn giải, không thực hiện resampling.",
+      "B": "Thay âm lượng, không đổi tần số lấy mẫu.",
+      "D": "Nhãn tác vụ không xử lý waveform."
+    },
+    "takeaway": "Sampling rate là số mẫu mỗi giây, không phải một tên định dạng có thể đổi tùy ý."
+  },
+  {
+    "id": 216,
+    "difficulty": "medium",
+    "title": "HuBERT: học biểu diễn không transcript",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Có nhiều giờ lời nói chưa chép và ít dữ liệu có nhãn. Đặc điểm nào của HuBERT phù hợp để tận dụng dữ liệu chưa chép?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "HuBERT bắt buộc có transcript chuẩn cho mọi giờ pretraining"
+      },
+      {
+        "letter": "B",
+        "text": "HuBERT chỉ nhận văn bản đầu vào"
+      },
+      {
+        "letter": "C",
+        "text": "Không có transcript thì không thể học bất kỳ đặc trưng nào"
+      },
+      {
+        "letter": "D",
+        "text": "Học dự đoán các hidden unit từ clustering ở vùng bị mask"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Tạo mục tiêu tự giám sát từ âm thanh, rồi có thể thích nghi cho tác vụ có nhãn.",
+    "incorrectExplanations": {
+      "A": "Mục tiêu hidden unit không yêu cầu transcript như vậy.",
+      "B": "Đây là mô hình biểu diễn âm thanh lời nói.",
+      "C": "Self-supervised learning chính là một cách học từ dữ liệu không nhãn thủ công."
+    },
+    "takeaway": "Phân biệt mục tiêu tiền huấn luyện tự giám sát với tác vụ downstream có nhãn."
+  },
+  {
+    "id": 217,
+    "difficulty": "medium",
+    "title": "Whisper: ASR thay vì phân loại âm thanh",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Cần chép lời tiếng Việt từ file họp. Baseline nào phù hợp nhất về đầu ra?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Checkpoint Whisper đa ngôn ngữ phù hợp, với processor và cấu hình tác vụ chép lời"
+      },
+      {
+        "letter": "B",
+        "text": "Một classifier chỉ trả nhãn nhạc/tiếng nói"
+      },
+      {
+        "letter": "C",
+        "text": "K-Means trên thời lượng rồi lấy ID cụm làm câu chữ"
+      },
+      {
+        "letter": "D",
+        "text": "Whisper luôn trả văn bản đúng tuyệt đối trong mọi môi trường"
+      }
+    ],
+    "answer": "A",
+    "explanation": "ASR ánh xạ audio sang chuỗi từ; cần kiểm tra hỗ trợ ngôn ngữ của checkpoint cụ thể.",
+    "incorrectExplanations": {
+      "B": "Không sinh transcript.",
+      "C": "Cụm thời lượng không cung cấp chuỗi từ.",
+      "D": "Tiếng ồn, giọng và miền nội dung có thể gây lỗi."
+    },
+    "takeaway": "Chọn model theo loại đầu ra và kiểm tra thực nghiệm trên ngôn ngữ/miền đích."
+  },
+  {
+    "id": 218,
+    "difficulty": "medium",
+    "title": "WER: tính lỗi chép lời",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Transcript chuẩn có 20 từ. Dự đoán cần 2 substitution, 1 deletion và 1 insertion để khớp. WER là bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "10%"
+      },
+      {
+        "letter": "B",
+        "text": "20%"
+      },
+      {
+        "letter": "C",
+        "text": "15%"
+      },
+      {
+        "letter": "D",
+        "text": "80%"
+      }
+    ],
+    "answer": "B",
+    "explanation": "WER=(S+D+I)/N=(2+1+1)/20=0,20.",
+    "incorrectExplanations": {
+      "A": "Chỉ tính substitution, bỏ deletion và insertion.",
+      "C": "Bỏ một loại lỗi trong tổng.",
+      "D": "Đây là 1−WER trong ví dụ này, không phải WER."
+    },
+    "takeaway": "WER dùng số từ của transcript chuẩn làm mẫu số, có thể vượt 100% nếu nhiều insertion."
+  },
+  {
+    "id": 219,
+    "difficulty": "medium",
+    "title": "Qwen-Audio/Voxtral: hiểu nội dung âm thanh",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Cần hỏi bằng văn bản về nội dung một đoạn audio, trả lời bằng văn bản. Cách chọn hệ thống phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chọn mọi model có chữ Audio vì bảo đảm mọi ngôn ngữ và tác vụ"
+      },
+      {
+        "letter": "B",
+        "text": "Đưa đường dẫn file vào một text-only model không có công cụ đọc audio"
+      },
+      {
+        "letter": "C",
+        "text": "Thử checkpoint audio-language hỗ trợ audio+text như Qwen-Audio hoặc Voxtral phù hợp và đánh giá tác vụ"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ đo dung lượng file audio"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Cần năng lực nhận audio và hiểu câu hỏi, không chỉ một nhãn âm thanh; khả năng cụ thể tùy checkpoint.",
+    "incorrectExplanations": {
+      "A": "Tên họ không bảo đảm toàn bộ năng lực.",
+      "B": "Model không nhận được nội dung waveform từ đường dẫn đơn thuần.",
+      "D": "Không thể trả lời về nội dung bằng kích thước file."
+    },
+    "takeaway": "Kiểm tra input, output và tác vụ được hỗ trợ ở đúng model card."
+  },
+  {
+    "id": 220,
+    "difficulty": "medium",
+    "title": "Audio classification: chia theo người nói",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Huấn luyện phân loại cảm xúc lời nói; mỗi người đọc nhiều câu. Muốn dùng cho người nói mới. Quy trình nào phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Random split các đoạn ngắn từ cùng bản ghi vào mọi tập"
+      },
+      {
+        "letter": "B",
+        "text": "Nối mọi audio rồi gán một nhãn cảm xúc cho toàn bộ"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ đánh giá trên người đã xuất hiện trong train rồi khẳng định cho người mới"
+      },
+      {
+        "letter": "D",
+        "text": "Tách người nói giữa train/validation/test và pooling embedding có mask độ dài"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Vừa đo khái quát sang người mới vừa tránh padding làm sai biểu diễn chuỗi.",
+    "incorrectExplanations": {
+      "A": "Có thể rò rỉ giọng và nền âm thanh.",
+      "B": "Mất nhãn và ranh giới từng mẫu.",
+      "C": "Không đo đúng tình huống triển khai."
+    },
+    "takeaway": "Thiết kế chia tập và xử lý độ dài quan trọng không kém lựa chọn audio encoder."
+  },
+  {
+    "id": 221,
+    "difficulty": "hard",
+    "title": "Python: trạng thái ẩn giữa các lần gọi",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hàm tạo đặc trưng có mã: `def collect(x, buf=[]): buf.append(x); return len(buf)`. Chạy `collect(1)`, `collect(2)`, rồi `collect(3, [])`. Bộ kết quả và cách sửa tránh chia sẻ ngoài ý muốn là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "(1,2,1); dùng mặc định None và tạo list mới trong hàm"
+      },
+      {
+        "letter": "B",
+        "text": "(1,1,1); đổi mặc định thành tuple rỗng nhưng giữ nguyên append"
+      },
+      {
+        "letter": "C",
+        "text": "(1,2,3); dùng mặc định None nhưng không khởi tạo list khi nhận None"
+      },
+      {
+        "letter": "D",
+        "text": "(1,2,1); sao chép buf sau khi append, ngay trước return"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Default list được tạo một lần, dùng chung ở hai lần gọi đầu; list truyền riêng ở lần ba độc lập.",
+    "incorrectExplanations": {
+      "B": "Hai lần gọi đầu dùng chung default list nên lần hai trả 2. Tuple rỗng tránh default mutable nhưng không hỗ trợ append, nên cách sửa được đề xuất sẽ gây lỗi.",
+      "C": "List truyền riêng ở lần ba bắt đầu rỗng nên trả 1. Đổi default thành None còn cần nhánh tạo list mới khi nhận None; nếu không thì append trên None gây lỗi.",
+      "D": "Bộ kết quả đúng nhưng sao chép sau append là quá muộn: list mặc định đã bị sửa tại append. Muốn tạo trạng thái mới cho mỗi lần gọi mà vẫn tôn trọng list được truyền vào, dùng None rồi chỉ khởi tạo khi cần."
+    },
+    "takeaway": "Tránh trạng thái mặc định mutable khi mỗi mẫu cần xử lý độc lập."
+  },
+  {
+    "id": 222,
+    "difficulty": "hard",
+    "title": "NumPy: view và bản sao khi chọn đặc trưng",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "`a=np.arange(6); b=a[1:4]; c=a[[1,2,3]]; b[0]=99; c[1]=77`. Giá trị cuối của a là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "`[0,99,77,3,4,5]`"
+      },
+      {
+        "letter": "B",
+        "text": "`[0,99,2,3,4,5]`"
+      },
+      {
+        "letter": "C",
+        "text": "`[0,1,2,3,4,5]`"
+      },
+      {
+        "letter": "D",
+        "text": "`[0,77,2,3,4,5]`"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Basic slice b là view nên sửa a[1]; advanced indexing c tạo copy nên c[1] không sửa a[2].",
+    "incorrectExplanations": {
+      "A": "Nhầm advanced indexing cũng luôn trả view.",
+      "C": "Bỏ qua tác động của basic slice view.",
+      "D": "c[1] không trỏ a[1] và c là bản sao."
+    },
+    "takeaway": "Khi sửa mảng trung gian, xác định thao tác tạo view hay copy trước khi suy luận tác động."
+  },
+  {
+    "id": 223,
+    "difficulty": "hard",
+    "title": "Broadcasting: loss sai mà vẫn chạy",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Model hồi quy xuất pred shape `(4,1)` nhưng target shape `(4,)`. Đoạn `(pred-target)**2` chạy được. Tại sao đây có thể là lỗi nghiêm trọng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Kết quả chắc chắn shape (4,1), không có lỗi"
+      },
+      {
+        "letter": "B",
+        "text": "NumPy/PyTorch luôn từ chối mọi phép trừ khác shape"
+      },
+      {
+        "letter": "C",
+        "text": "Broadcast tạo ma trận (4,4), so mọi dự đoán với mọi nhãn; cần căn target thành (4,1)"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ cần chia loss cho 4 lần nữa"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Trục cuối 1 của pred và 4 của target được mở rộng; không còn bốn cặp tương ứng.",
+    "incorrectExplanations": {
+      "A": "Quy tắc căn chiều từ phải cho ra (4,4).",
+      "B": "Broadcasting cho phép phép toán này dù sai ý nghĩa.",
+      "D": "Đổi hệ số không sửa việc ghép nhầm cặp mẫu."
+    },
+    "takeaway": "Phép toán chạy thành công không chứng minh shape đúng ngữ nghĩa bài toán."
+  },
+  {
+    "id": 224,
+    "difficulty": "hard",
+    "title": "pandas: nhãn tương lai bị nhân dòng",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Train dự đoán churn mỗi khách tại ngày 1/6. Bảng giao dịch có lịch sử đến 1/7; nhãn ghi churn trong tháng 6. Cách tạo dữ liệu đáng tin cậy nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Tổng tiền cả tháng 6 rồi dự đoán churn cùng tháng"
+      },
+      {
+        "letter": "B",
+        "text": "Merge tất cả giao dịch rồi random split từng dòng"
+      },
+      {
+        "letter": "C",
+        "text": "Xóa cột ngày sau merge để mô hình không thấy thời gian"
+      },
+      {
+        "letter": "D",
+        "text": "Lọc giao dịch trước mốc dự đoán, tổng hợp theo khách, rồi merge nhãn với kiểm tra khóa"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Đặc trưng chỉ dùng quá khứ; một hàng mỗi khách và kiểm tra cardinality tránh nhân mẫu.",
+    "incorrectExplanations": {
+      "A": "Dùng hành vi xảy ra sau mốc dự đoán làm đặc trưng.",
+      "B": "Vừa có tương lai vừa có cùng khách ở nhiều tập.",
+      "C": "Thông tin tương lai đã nằm trong giá trị đặc trưng dù bỏ cột ngày."
+    },
+    "takeaway": "Chống leakage phải theo thời điểm thông tin sẵn có, không chỉ theo tên cột."
+  },
+  {
+    "id": 225,
+    "difficulty": "hard",
+    "title": "Trực quan hóa: learning curve theo dữ liệu",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Train/validation dùng cùng metric error. Khi tăng mẫu từ 1.000 lên 10.000, train error và validation error đều hội tụ quanh 30%, khoảng cách nhỏ. Model tuyến tính đã tối ưu ổn. Hướng ưu tiên nào có căn cứ nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Thử đặc trưng hoặc mô hình giàu biểu diễn hơn và đánh giá lại"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ tăng regularization rất mạnh"
+      },
+      {
+        "letter": "C",
+        "text": "Khẳng định thêm đúng 100 mẫu sẽ đưa error về 0"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn lại test đến khi error thấp"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Hai lỗi cao, gần nhau và không cải thiện theo mẫu gợi ý high bias/underfitting.",
+    "incorrectExplanations": {
+      "B": "Thường giảm khả năng fit, không phù hợp dấu hiệu bias cao.",
+      "C": "Không có căn cứ từ đường học đã quan sát.",
+      "D": "Thay đổi đánh giá không sửa mô hình và gây chọn lọc kết quả."
+    },
+    "takeaway": "Đọc cả mức lỗi, khoảng cách và xu hướng theo lượng dữ liệu để chọn can thiệp."
+  },
+  {
+    "id": 226,
+    "difficulty": "hard",
+    "title": "Cross-validation: selection bias nhiều cấu hình",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Nhóm thử 500 cấu hình, chọn theo cùng một CV rồi báo điểm CV cao nhất là hiệu năng cuối. Muốn ước lượng khách quan hơn khi chưa có test riêng, nên làm gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Lặp lại đúng điểm CV cao nhất trong báo cáo nhiều lần"
+      },
+      {
+        "letter": "B",
+        "text": "Nested CV: tuning ở vòng trong, đánh giá cấu hình được chọn ở fold ngoài"
+      },
+      {
+        "letter": "C",
+        "text": "Tuning trực tiếp trên fold ngoài rồi báo điểm đó"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn cấu hình có tên ngắn nhất thay mọi đánh giá"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Fold ngoài không tham gia chọn cấu hình nên phản ánh cả quy trình lựa chọn.",
+    "incorrectExplanations": {
+      "A": "Không giảm thiên lệch do chọn cực đại trong nhiều thử nghiệm.",
+      "C": "Vòng ngoài lại bị dùng cho lựa chọn, mất vai trò độc lập.",
+      "D": "Không dựa vào chất lượng dự đoán."
+    },
+    "takeaway": "Đánh giá cần bao gồm sự không chắc chắn do quá trình chọn mô hình."
+  },
+  {
+    "id": 227,
+    "difficulty": "hard",
+    "title": "Chia chuỗi thời gian: cửa sổ chồng lấp",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Mỗi mẫu dùng 24 giờ cảm biến dự đoán 6 giờ sau. Các cửa sổ được tạo stride 1 rồi random split. Validation rất cao. Thiết kế nào phù hợp hơn cho dự báo tương lai?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ tăng random seed nhưng giữ random split"
+      },
+      {
+        "letter": "B",
+        "text": "Fit scaler toàn chuỗi để train và test cùng chuẩn"
+      },
+      {
+        "letter": "C",
+        "text": "Chia theo thời gian, train ở quá khứ, loại các mẫu có khoảng input/target giao vùng cấm ở ranh giới"
+      },
+      {
+        "letter": "D",
+        "text": "Xóa timestamp rồi random split lại"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Cửa sổ chồng lấp và nhãn tương lai có thể làm hai tập chia sẻ thông tin; cần gap phù hợp chân trời và thiết kế cửa sổ.",
+    "incorrectExplanations": {
+      "A": "Không loại quan hệ thời gian và sự chồng lấp.",
+      "B": "Thống kê tương lai tiếp tục ảnh hưởng train.",
+      "D": "Quan hệ thời gian vẫn còn trong nội dung các cửa sổ."
+    },
+    "takeaway": "Kiểm tra khoảng thời gian thực của cả input lẫn target khi chia dữ liệu cửa sổ."
+  },
+  {
+    "id": 228,
+    "difficulty": "hard",
+    "title": "Precision/recall: macro F1 khác accuracy",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hai lớp có số mẫu 90 và 10. Model luôn dự đoán lớp lớn. Với F1 lớp không được dự đoán quy ước là 0, accuracy và macro-F1 xấp xỉ là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "90% và 0,90"
+      },
+      {
+        "letter": "B",
+        "text": "50% và 0,50"
+      },
+      {
+        "letter": "C",
+        "text": "100% và 1"
+      },
+      {
+        "letter": "D",
+        "text": "90% và 0,474"
+      }
+    ],
+    "answer": "D",
+    "explanation": "F1 lớp lớn=180/(180+10)=18/19; F1 lớp nhỏ=0; trung bình hai lớp là 9/19.",
+    "incorrectExplanations": {
+      "A": "Macro-F1 không đồng nhất accuracy; nó cho hai lớp trọng số bằng nhau.",
+      "B": "Accuracy vẫn đếm đúng 90 trên 100 mẫu, không cân bằng theo lớp.",
+      "C": "Mười mẫu lớp nhỏ đều bị dự đoán sai."
+    },
+    "takeaway": "Metric trung bình theo mẫu và trung bình theo lớp trả lời các câu hỏi khác nhau."
+  },
+  {
+    "id": 229,
+    "difficulty": "hard",
+    "title": "Ngưỡng: tối ưu theo chi phí lỗi",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Trên validation: t=0,3 cho FN=5, FP=40; t=0,5 cho FN=12, FP=15; t=0,7 cho FN=20, FP=5. Mỗi FN tốn 10 đơn vị, FP tốn 1. Chọn ngưỡng nào trong ba ứng viên và đánh giá tiếp ra sao?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chọn 0,3 vì chi phí 90; khóa ngưỡng rồi đo trên test riêng"
+      },
+      {
+        "letter": "B",
+        "text": "Chọn 0,7 vì ít FP nhất"
+      },
+      {
+        "letter": "C",
+        "text": "Chọn 0,5 vì luôn là ngưỡng tối ưu cho mọi ứng dụng"
+      },
+      {
+        "letter": "D",
+        "text": "Đo ba ngưỡng trên test và chọn thấp nhất rồi báo chính điểm đó"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Chi phí lần lượt 90,135,205. Ngưỡng được chọn bằng validation, không bằng test.",
+    "incorrectExplanations": {
+      "B": "Bỏ chi phí FN lớn hơn; tổng chi phí là 205.",
+      "C": "Tối ưu phụ thuộc chi phí và phân phối, không mặc định 0,5.",
+      "D": "Test đã tham gia lựa chọn nên không còn độc lập."
+    },
+    "takeaway": "Tối ưu quyết định theo chi phí thật và tách bước chọn ngưỡng khỏi đánh giá cuối."
+  },
+  {
+    "id": 230,
+    "difficulty": "hard",
+    "title": "ROC-AUC: đếm cặp xếp hạng",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hai mẫu dương có score 0,9 và 0,4; hai mẫu âm có score 0,8 và 0,1. Không có tie. ROC-AUC bằng bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "1"
+      },
+      {
+        "letter": "B",
+        "text": "0,75"
+      },
+      {
+        "letter": "C",
+        "text": "0,5"
+      },
+      {
+        "letter": "D",
+        "text": "0,25"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Có bốn cặp dương-âm; score dương thắng ba cặp: 0,9 thắng cả hai, 0,4 chỉ thắng 0,1.",
+    "incorrectExplanations": {
+      "A": "Có một cặp bị xếp sai: dương 0,4 thấp hơn âm 0,8.",
+      "C": "Không phải hai trong bốn mà là ba trong bốn cặp đúng thứ tự.",
+      "D": "Đây là tỷ lệ cặp xếp sai, không phải AUC."
+    },
+    "takeaway": "AUC đánh giá thứ tự score giữa dương và âm, không phụ thuộc một ngưỡng đơn lẻ."
+  },
+  {
+    "id": 231,
+    "difficulty": "hard",
+    "title": "Linear Regression: ngoại lệ và mục tiêu",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hai mô hình hồi quy có residual: A=`[0,0,0,8]`, B=`[3,3,3,3]`. Nếu nghiệp vụ dùng MAE nhưng nhóm chọn theo MSE, kết quả chọn khác nhau thế nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Cả hai metric chọn A"
+      },
+      {
+        "letter": "B",
+        "text": "Cả hai metric chọn B"
+      },
+      {
+        "letter": "C",
+        "text": "MAE chọn A; MSE chọn B"
+      },
+      {
+        "letter": "D",
+        "text": "Không tính được vì thiếu nhãn gốc"
+      }
+    ],
+    "answer": "C",
+    "explanation": "A có MAE=2, MSE=16; B có MAE=3, MSE=9. Loss bình phương nhạy hơn với sai số 8.",
+    "incorrectExplanations": {
+      "A": "MSE của A lớn hơn B.",
+      "B": "MAE của A nhỏ hơn B.",
+      "D": "Residual đã đủ để tính MAE và MSE."
+    },
+    "takeaway": "Chọn model bằng metric khớp mục tiêu nghiệp vụ, không mặc định loss nào cũng xếp hạng giống nhau."
+  },
+  {
+    "id": 232,
+    "difficulty": "hard",
+    "title": "L1/L2: scaling và diễn giải hệ số",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hai đặc trưng có cùng nội dung nhưng x2=1000*x1. Dùng L2 không chuẩn hóa, cùng dự đoán có thể đạt bằng hệ số x2 nhỏ hơn rất nhiều. Kết luận nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "L2 luôn bất biến với mọi thay đổi đơn vị đặc trưng"
+      },
+      {
+        "letter": "B",
+        "text": "Hệ số x1 lớn hơn chứng minh nó quan trọng hơn về nhân quả"
+      },
+      {
+        "letter": "C",
+        "text": "Fit scaler riêng trên từng mẫu test sẽ giải quyết đúng"
+      },
+      {
+        "letter": "D",
+        "text": "L2 phạt theo độ lớn hệ số nên thang đo có thể ảnh hưởng nghiệm; cần scaling trong CV"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Cùng đóng góp dự đoán nhưng hệ số nhỏ hơn chịu phạt ít hơn, làm regularization phụ thuộc đơn vị.",
+    "incorrectExplanations": {
+      "A": "Không đúng nếu không điều chỉnh scaling hoặc mức phạt tương ứng.",
+      "B": "So hệ số khác đơn vị và suy luận nhân quả đều không có căn cứ.",
+      "C": "Làm thay đổi hệ tọa độ dự đoán và không dùng thống kê train đã học."
+    },
+    "takeaway": "So hệ số phải xét đơn vị đo, đồng tuyến và cơ chế regularization."
+  },
+  {
+    "id": 233,
+    "difficulty": "hard",
+    "title": "K-NN: tính khoảng cách sau scaling",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Train có A=(0,100) lớp 0, B=(2,0) lớp 1; query Q=(0,0). Với 1-NN Euclidean, trước scaling chọn lớp nào? Nếu chia tọa độ thứ hai cho 100, chọn lớp nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Trước lớp 1, sau lớp 0"
+      },
+      {
+        "letter": "B",
+        "text": "Trước lớp 0, sau lớp 1"
+      },
+      {
+        "letter": "C",
+        "text": "Cả hai là lớp 1"
+      },
+      {
+        "letter": "D",
+        "text": "Cả hai là lớp 0"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Ban đầu d(Q,A)=100, d(Q,B)=2; sau đổi thang d(Q,A)=1, d(Q,B)=2.",
+    "incorrectExplanations": {
+      "B": "Đã đảo hai so sánh khoảng cách.",
+      "C": "Sau scaling điểm A gần hơn Q.",
+      "D": "Trước scaling điểm B gần hơn Q."
+    },
+    "takeaway": "Scaling có thể thay láng giềng thực sự, không chỉ thay cách in giá trị."
+  },
+  {
+    "id": 234,
+    "difficulty": "hard",
+    "title": "Decision Tree: chọn split theo Gini",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Node có 4 mẫu lớp 0 và 4 lớp 1. Split S tạo hai con (3,1) và (1,3); split T tạo (4,0) và (0,4). Chỉ xét giảm Gini có trọng số, split nào tốt hơn?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "S vì mỗi node con vẫn có hai lớp"
+      },
+      {
+        "letter": "B",
+        "text": "T, giảm Gini 0,5 so với 0,125 của S"
+      },
+      {
+        "letter": "C",
+        "text": "Hai split luôn ngang nhau vì đều chia 4–4 mẫu"
+      },
+      {
+        "letter": "D",
+        "text": "T nhưng giảm Gini chỉ 0,125"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Node cha Gini=0,5; S còn 0,375, T còn 0 nên T giảm nhiều hơn.",
+    "incorrectExplanations": {
+      "A": "Cây muốn tăng độ thuần theo tiêu chí đã cho, không muốn duy trì trộn lớp.",
+      "C": "Số lượng con giống nhau nhưng phân bố lớp khác nhau.",
+      "D": "Đó là mức giảm của S; T tạo hai node thuần."
+    },
+    "takeaway": "Chất lượng split phụ thuộc impurity có trọng số, không chỉ kích thước hai nhánh."
+  },
+  {
+    "id": 235,
+    "difficulty": "hard",
+    "title": "SVM: tìm lỗi trong grid search",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Nhóm chạy StandardScaler ngoài CV rồi GridSearchCV cho RBF-SVM; grid tăng C, gamma chỉ cho điểm train tốt hơn, validation giảm. Sửa nào giải quyết cả hai vấn đề chính?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Giữ scaler toàn dữ liệu, chỉ tăng gamma thêm"
+      },
+      {
+        "letter": "B",
+        "text": "Fit scaler trên validation rồi dùng cho train"
+      },
+      {
+        "letter": "C",
+        "text": "Đưa scaler vào Pipeline trong CV và mở grid sang C/gamma nhỏ hơn"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn cấu hình theo train accuracy cao nhất"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Loại rò rỉ thống kê giữa fold và kiểm tra các ranh giới ít phức tạp hơn.",
+    "incorrectExplanations": {
+      "A": "Không sửa leakage và có thể làm overfit nặng hơn.",
+      "B": "Đảo vai trò dữ liệu và vẫn để validation tác động train.",
+      "D": "Không xử lý khả năng khái quát kém đang quan sát."
+    },
+    "takeaway": "Chẩn đoán pipeline trước rồi mới diễn giải kết quả tuning của mô hình."
+  },
+  {
+    "id": 236,
+    "difficulty": "hard",
+    "title": "Random Forest: tương quan sai số",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "100 cây sâu trong ensemble gần như luôn sai trên đúng cùng các mẫu. Thêm 900 bản sao của cùng các cây có bảo đảm giảm mạnh lỗi không?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Có, vì lỗi luôn giảm tuyến tính theo số cây"
+      },
+      {
+        "letter": "B",
+        "text": "Có, vì 1000 phiếu giống nhau trở thành bằng chứng độc lập"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ cần lấy ngẫu nhiên nhãn test cho các cây mới"
+      },
+      {
+        "letter": "D",
+        "text": "Không; cần đa dạng sai số và xem lại đặc trưng, max_features hoặc cách lấy mẫu"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Voting không sửa được lỗi mà hầu hết cây cùng mắc; thêm bản sao không tạo thông tin mới.",
+    "incorrectExplanations": {
+      "A": "Không có quy luật bảo đảm như vậy.",
+      "B": "Các dự đoán tương quan không phải 1000 bằng chứng độc lập.",
+      "C": "Làm sai bài toán và rò rỉ test."
+    },
+    "takeaway": "Giảm variance bằng ensemble phụ thuộc cả số mô hình và tương quan giữa chúng."
+  },
+  {
+    "id": 237,
+    "difficulty": "hard",
+    "title": "Gradient Boosting: kiểm soát sức chứa",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Boosting 1000 cây sâu có train loss gần 0; validation tốt nhất ở cây 180 rồi xấu dần. Ngân sách thử nghiệm hạn chế. Cách chọn baseline tiếp theo có căn cứ?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Giữ checkpoint gần 180 theo validation, thử cây nông hơn hoặc regularization và theo dõi early stopping"
+      },
+      {
+        "letter": "B",
+        "text": "Bắt buộc dùng cây thứ 1000 vì train loss nhỏ nhất"
+      },
+      {
+        "letter": "C",
+        "text": "Giảm learning rate nhưng giữ mọi thứ và khẳng định luôn hội tụ cùng chất lượng"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn số cây bằng test loss sau mỗi vòng"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Dấu hiệu overfit nằm cả số bước cộng và sức chứa cây thành phần.",
+    "incorrectExplanations": {
+      "B": "Bỏ qua xu hướng validation.",
+      "C": "Learning rate tương tác số cây; phải kiểm chứng, không có bảo đảm chung.",
+      "D": "Test bị dùng như validation."
+    },
+    "takeaway": "Trong boosting, learning rate, độ sâu và số cây phải được xét cùng nhau."
+  },
+  {
+    "id": 238,
+    "difficulty": "hard",
+    "title": "K-Means: inertia và lựa chọn k",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Inertia trên cùng dữ liệu giảm khi k từ 2 lên 20. Nhóm kết luận k=20 tối ưu vì inertia nhỏ nhất. Nhận xét nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Inertia phải tăng khi k tăng nên code chắc chắn sai"
+      },
+      {
+        "letter": "B",
+        "text": "Inertia thường giảm khi tăng k; cần thêm tiêu chí tách cụm, độ ổn định và ý nghĩa sử dụng"
+      },
+      {
+        "letter": "C",
+        "text": "Inertia nhỏ nhất chứng minh cụm là nhãn thật"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ chọn k bằng số chiều dữ liệu bất kể nội dung"
+      }
+    ],
+    "answer": "B",
+    "explanation": "k gần số điểm có thể cho inertia rất nhỏ nhưng không phải phân nhóm hữu ích.",
+    "incorrectExplanations": {
+      "A": "Chia nhiều cụm cho phép giảm khoảng cách tới tâm.",
+      "C": "K-Means không dùng nhãn và mục tiêu hình học không chứng minh ý nghĩa lớp.",
+      "D": "Không có quy tắc chung k phải bằng số chiều."
+    },
+    "takeaway": "Không so các k chỉ bằng một mục tiêu có lợi tự nhiên cho k lớn."
+  },
+  {
+    "id": 239,
+    "difficulty": "hard",
+    "title": "PCA: mất tín hiệu ít phương sai",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hai feature đã có đơn vị mang ý nghĩa: x1 phương sai 100 nhưng là nhiễu độc lập nhãn; x2 phương sai 0,01 và dấu của x2 quyết định nhãn. PCA không scaling giữ một thành phần. Điều gì có thể xảy ra?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chắc chắn giữ x2 vì PCA biết nhãn"
+      },
+      {
+        "letter": "B",
+        "text": "Giữ 99% phương sai luôn bảo đảm 99% accuracy"
+      },
+      {
+        "letter": "C",
+        "text": "Giữ chủ yếu x1 và mất tín hiệu nhãn; cần đánh giá downstream, cân nhắc scaling hoặc không giảm chiều"
+      },
+      {
+        "letter": "D",
+        "text": "Fit PCA trên test có nhãn sẽ làm phép đánh giá hợp lệ hơn"
+      }
+    ],
+    "answer": "C",
+    "explanation": "PCA tối đa phương sai đầu vào, không tối đa khả năng phân loại.",
+    "incorrectExplanations": {
+      "A": "PCA không dùng y trong mục tiêu chuẩn.",
+      "B": "Hai phần trăm đo hai đại lượng khác nhau.",
+      "D": "Dùng test để chọn biến đổi gây leakage."
+    },
+    "takeaway": "Phương sai được giữ lại không phải tỷ lệ thông tin dự đoán được giữ lại."
+  },
+  {
+    "id": 240,
+    "difficulty": "hard",
+    "title": "PCA: chuẩn hóa và tránh leakage",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Muốn impute, chuẩn hóa, PCA rồi Logistic Regression; cần tuning số thành phần và C bằng CV. Pipeline nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "PCA fit toàn bộ X trước rồi CV phần còn lại"
+      },
+      {
+        "letter": "B",
+        "text": "Fit PCA riêng train và test với cùng k"
+      },
+      {
+        "letter": "C",
+        "text": "Chọn k dựa trên accuracy test rồi CV C"
+      },
+      {
+        "letter": "D",
+        "text": "Imputer → StandardScaler → PCA → LogisticRegression, toàn bộ trong GridSearchCV"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Mỗi fold học tất cả thống kê chỉ trên train của fold; hai siêu tham số được chọn trong cùng quy trình.",
+    "incorrectExplanations": {
+      "A": "Validation đã ảnh hưởng các trục PCA.",
+      "B": "Hai hệ trục có thể khác nhau; classifier cần cùng phép chiếu đã học.",
+      "C": "Test đã tham gia chọn một phần mô hình."
+    },
+    "takeaway": "Biến đổi không dùng nhãn vẫn có thể gây leakage nếu học từ validation/test."
+  },
+  {
+    "id": 241,
+    "difficulty": "hard",
+    "title": "t-SNE/UMAP: đánh giá embedding cho mẫu mới",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Nhóm vẽ t-SNE trên toàn train+test, dùng tọa độ 2D train fit classifier rồi báo test. Muốn pipeline quy nạp triển khai cho mẫu mới, nên thiết kế lại thế nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chọn phép biến đổi có transform cho mẫu mới, fit chỉ trên train; tuning trong validation và so baseline ở không gian gốc"
+      },
+      {
+        "letter": "B",
+        "text": "Tiếp tục fit t-SNE toàn dữ liệu vì không dùng nhãn nên chắc chắn không leakage"
+      },
+      {
+        "letter": "C",
+        "text": "Đổi seed t-SNE đến khi test đẹp nhất"
+      },
+      {
+        "letter": "D",
+        "text": "Dùng ảnh scatterplot làm bằng chứng accuracy duy nhất"
+      }
+    ],
+    "answer": "A",
+    "explanation": "UMAP có transform; phải giữ quy trình đưa mẫu mới vào mà không refit chung test.",
+    "incorrectExplanations": {
+      "B": "Phép nhúng vẫn học từ phân phối test và không mô phỏng pipeline quy nạp đã yêu cầu.",
+      "C": "Test trở thành tiêu chí tuning.",
+      "D": "Không đo dự đoán trên mẫu độc lập."
+    },
+    "takeaway": "Xác định tác vụ quy nạp hay transductive trước khi dùng phương pháp nhúng."
+  },
+  {
+    "id": 242,
+    "difficulty": "hard",
+    "title": "DBSCAN: cùng eps, mật độ khác nhau",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Dữ liệu gồm một cụm rất đặc, một cụm thưa và nhiễu. eps nhỏ làm cụm thưa thành noise; eps lớn nối cụm đặc với nhiễu. Kết luận phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Cứ tăng eps mãi chắc chắn sẽ có đúng hai cụm sạch"
+      },
+      {
+        "letter": "B",
+        "text": "Một eps toàn cục có thể không phù hợp mật độ khác nhau; kiểm tra metric/scaling và cân nhắc phương pháp khác trong phạm vi"
+      },
+      {
+        "letter": "C",
+        "text": "Đặt min_samples bằng số lớp thật bảo đảm đúng"
+      },
+      {
+        "letter": "D",
+        "text": "Chuyển mọi noise vào cụm đặc là khôi phục nhãn đúng"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Vấn đề là giả định mật độ và biểu diễn; không có eps luôn đúng cho mọi cấu trúc.",
+    "incorrectExplanations": {
+      "A": "eps rất lớn có thể gộp tất cả vào một cụm.",
+      "C": "min_samples là điều kiện mật độ, không phải số cụm.",
+      "D": "Không có căn cứ hình học hoặc nhãn cho việc gán như vậy."
+    },
+    "takeaway": "Chẩn đoán giả định của thuật toán khi tuning đơn tham số không giải quyết được cấu trúc dữ liệu."
+  },
+  {
+    "id": 243,
+    "difficulty": "hard",
+    "title": "Hierarchical Clustering: single-link chaining",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hai nhóm điểm đặc được nối bằng một chuỗi điểm thưa. Single linkage gộp hai nhóm sớm. Can thiệp nào có căn cứ?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Đổi thứ tự hiển thị lá rồi coi như đã đổi cụm"
+      },
+      {
+        "letter": "B",
+        "text": "Giữ nguyên cây và chỉ đổi màu nhãn để sửa tiêu chí"
+      },
+      {
+        "letter": "C",
+        "text": "Thử complete/average linkage và kiểm tra dendrogram, scaling, khoảng cách"
+      },
+      {
+        "letter": "D",
+        "text": "Tăng số chiều bằng các cột nhiễu giống nhau ở mọi thử nghiệm"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Single linkage dựa cặp gần nhất nên dễ nối qua chuỗi; linkage khác thay tiêu chí gộp.",
+    "incorrectExplanations": {
+      "A": "Xoay nhánh hiển thị không đổi các bước hợp nhất.",
+      "B": "Không thay phép phân cụm.",
+      "D": "Không nhắm cơ chế chaining, có thể làm khoảng cách kém hữu ích."
+    },
+    "takeaway": "Linkage là giả định về khoảng cách giữa hai tập điểm, ảnh hưởng hình dạng cụm."
+  },
+  {
+    "id": 244,
+    "difficulty": "hard",
+    "title": "Spectral Clustering: đồ thị bị rời rạc",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Spectral Clustering dùng k-NN graph quá thưa tạo rất nhiều thành phần không liên thông ngoài ý muốn. Hai vòng thật bị vỡ thành nhiều mảnh. Việc cần kiểm tra trước tiên?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ tăng n_clusters lên bằng số mẫu"
+      },
+      {
+        "letter": "B",
+        "text": "Bỏ tọa độ rồi dùng chỉ số dòng làm khoảng cách"
+      },
+      {
+        "letter": "C",
+        "text": "Khẳng định mọi thành phần rời là lớp ngữ nghĩa thật"
+      },
+      {
+        "letter": "D",
+        "text": "Độ liên thông của graph và thử tăng số láng giềng có kiểm soát"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Đồ thị là biểu diễn đầu vào của spectral; quá thưa có thể cắt đứt các quan hệ cần thiết.",
+    "incorrectExplanations": {
+      "A": "Không khôi phục cấu trúc hai vòng mong muốn.",
+      "B": "Mất hình học dữ liệu.",
+      "C": "Rời rạc có thể do tham số graph, không phải ngữ nghĩa."
+    },
+    "takeaway": "Với phương pháp đồ thị, chất lượng graph quyết định cấu trúc mà thuật toán nhìn thấy."
+  },
+  {
+    "id": 245,
+    "difficulty": "hard",
+    "title": "Imputation chuỗi: nhìn vào tương lai",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Dự đoán sự kiện tại thời điểm t từ dữ liệu đến t. Code nội suy missing dùng cả điểm tại t+2 trước khi tạo mẫu train và test. Sửa nào phù hợp triển khai online?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dùng thông tin đã có tới t, ví dụ forward-fill kèm tuổi của giá trị và missing mask, rồi đánh giá theo thời gian"
+      },
+      {
+        "letter": "B",
+        "text": "Giữ nội suy hai phía và chỉ bỏ cột timestamp"
+      },
+      {
+        "letter": "C",
+        "text": "Dùng backward-fill từ tương lai vì luôn chính xác hơn"
+      },
+      {
+        "letter": "D",
+        "text": "Fit imputer trên toàn test vì không nhìn y"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Không mượn quan sát tương lai; các đặc trưng bổ sung thể hiện dữ liệu cũ/thiếu.",
+    "incorrectExplanations": {
+      "B": "Giá trị điền đã chứa thông tin t+2.",
+      "C": "Độ chính xác ngoại tuyến không bảo đảm tính khả dụng online.",
+      "D": "Vẫn dùng thông tin chưa có lúc dự đoán."
+    },
+    "takeaway": "Một phép tiền xử lý hợp lệ ngoại tuyến có thể không hợp lệ trong dự đoán thời gian thực."
+  },
+  {
+    "id": 246,
+    "difficulty": "hard",
+    "title": "Đặc trưng chuỗi không đều: pooling có mất thông tin",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Hai chuỗi `[0,0,10]` và `[10,0,0]` có cùng mean, max và độ lệch chuẩn nhưng nhãn phụ thuộc tăng/giảm theo thời gian. Cách bổ sung phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ thêm tổng vì tổng chắc chắn phân biệt"
+      },
+      {
+        "letter": "B",
+        "text": "Giữ thông tin thứ tự bằng slope, chênh cuối-đầu hoặc encoder chuỗi có vị trí"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ padding dài hơn rồi mean pooling không mask"
+      },
+      {
+        "letter": "D",
+        "text": "Thay nhãn để hai chuỗi có cùng lớp"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Các thống kê bất biến hoán vị hiện tại không phân biệt hai chuỗi; cần đặc trưng có thứ tự.",
+    "incorrectExplanations": {
+      "A": "Cả hai tổng đều bằng 10.",
+      "C": "Không khôi phục thứ tự và có thể thêm sai lệch theo độ dài.",
+      "D": "Thay đổi bài toán thay vì cải thiện biểu diễn."
+    },
+    "takeaway": "Pooling gọn dữ liệu nhưng cần kiểm tra xem có loại bỏ tín hiệu quyết định nhãn không."
+  },
+  {
+    "id": 247,
+    "difficulty": "hard",
+    "title": "GPU: đánh giá nút thắt thực tế",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Model nhỏ chạy GPU chậm hơn CPU. Profiling cho thấy 80% thời gian ở chuyển từng mẫu CPU→GPU, compute chỉ 5%. Can thiệp nào nhắm đúng nút thắt?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mua GPU có compute gấp đôi và bảo đảm nhanh gấp đôi"
+      },
+      {
+        "letter": "B",
+        "text": "Tăng số lớp cho GPU bận hơn rồi coi là tối ưu latency"
+      },
+      {
+        "letter": "C",
+        "text": "Gộp batch, giảm số lần truyền và benchmark lại; giữ CPU nếu tổng latency vẫn tốt hơn"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ đo kernel CUDA, bỏ thời gian truyền khi mục tiêu là end-to-end"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Tăng hiệu quả truyền dữ liệu có thể hữu ích, nhưng model nhỏ không mặc định hưởng lợi từ GPU.",
+    "incorrectExplanations": {
+      "A": "Compute chỉ 5% nên không thể suy ra tăng tốc tổng như vậy.",
+      "B": "Thay bài toán tính và có thể làm chậm thêm.",
+      "D": "Không đo đúng đại lượng cần tối ưu."
+    },
+    "takeaway": "Tối ưu dựa trên profiling và metric triển khai, không chỉ tên thiết bị."
+  },
+  {
+    "id": 248,
+    "difficulty": "hard",
+    "title": "Pipeline tổng hợp: leakage trong từ vựng và tuning",
+    "category": "A",
+    "categoryName": "Kỹ năng nền tảng & Học máy cổ điển",
+    "prompt": "Phân loại văn bản bằng bag-of-words + Logistic Regression. Nhóm xây vocab bằng cả corpus test, chọn C bằng test F1 rồi giữ nguyên test để báo cáo. Phương án khắc phục đầy đủ nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ đổi random_state của classifier rồi báo lại cùng test"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ bỏ từ xuất hiện một lần, vẫn fit vocab toàn corpus và chọn C theo test"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ tăng C đến khi train F1=1"
+      },
+      {
+        "letter": "D",
+        "text": "Vectorizer và classifier trong Pipeline, tuning trên train/CV, đánh giá cuối trên test độc lập chưa dùng"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Cả từ vựng và lựa chọn C đều phải tách khỏi test; test đã dùng cần thay bằng tập giữ riêng mới cho ước lượng độc lập.",
+    "incorrectExplanations": {
+      "A": "Không xóa ảnh hưởng của vocab và tuning đã nhìn test.",
+      "B": "Cả hai nguồn ảnh hưởng vẫn còn.",
+      "C": "Không sửa leakage hoặc đánh giá khái quát."
+    },
+    "takeaway": "Kiểm toán mọi quyết định dùng dữ liệu, gồm cả bước không giám sát và lựa chọn thủ công."
+  },
+  {
+    "id": 249,
+    "difficulty": "hard",
+    "title": "Backprop: đạo hàm qua hai lớp",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Mạng scalar `z=w1*x`, `h=ReLU(z)`, `yhat=w2*h`, `L=(yhat-y)²/2`. Tại x=2,w1=1,w2=3,y=4, gradient theo w1 là bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "12"
+      },
+      {
+        "letter": "B",
+        "text": "6"
+      },
+      {
+        "letter": "C",
+        "text": "4"
+      },
+      {
+        "letter": "D",
+        "text": "0"
+      }
+    ],
+    "answer": "A",
+    "explanation": "z=h=2, yhat=6; dL/dyhat=2, dyhat/dh=3, dh/dz=1, dz/dw1=2; tích là 12.",
+    "incorrectExplanations": {
+      "B": "Bỏ hệ số x=2 trong đường truyền tới w1.",
+      "C": "Đây là gradient theo w2: `(6−4)*h=4`, không phải w1.",
+      "D": "ReLU ở z=2 dương nên không chặn gradient."
+    },
+    "takeaway": "Vẽ đường phụ thuộc và nhân các đạo hàm cục bộ; phân biệt gradient theo từng tham số."
+  },
+  {
+    "id": 250,
+    "difficulty": "hard",
+    "title": "Gradient accumulation: batch cuối nhỏ",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Muốn gradient tương đương mean loss trên 10 mẫu, chia thành micro-batch 4,4,2 và chỉ step một lần. Không có dropout/BatchNorm, loss cộng được theo mẫu. Nếu mỗi micro-batch trả mean loss, cần backward thế nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chia mọi loss cho 3"
+      },
+      {
+        "letter": "B",
+        "text": "Nhân ba loss lần lượt 0,4;0,4;0,2 rồi backward, zero_grad một lần trước cả nhóm"
+      },
+      {
+        "letter": "C",
+        "text": "Backward nguyên ba mean loss rồi step"
+      },
+      {
+        "letter": "D",
+        "text": "Zero_grad trước từng micro-batch rồi chỉ step sau micro-batch cuối"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Trọng số theo số mẫu cho tổng gradient trung bình đúng 10 mẫu.",
+    "incorrectExplanations": {
+      "A": "Cho batch 2 mẫu cùng trọng số batch 4 mẫu, sai trung bình theo mẫu.",
+      "C": "Cộng ba trung bình không phải mean của 10 mẫu.",
+      "D": "Xóa gradient hai batch đầu nên chỉ còn batch cuối."
+    },
+    "takeaway": "Tích lũy gradient cần xét reduction, số mẫu và thời điểm zero_grad/step."
+  },
+  {
+    "id": 251,
+    "difficulty": "hard",
+    "title": "Autograd: detach nhầm đường học",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Code `features=encoder(x).detach(); logits=head(features); loss.backward()` dùng optimizer gồm encoder và head. Vì sao encoder không học?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Optimizer chứa encoder là đủ dù đồ thị bị cắt"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ tăng learning rate encoder sẽ sửa"
+      },
+      {
+        "letter": "C",
+        "text": "Detach cắt đồ thị từ features về encoder; bỏ detach nếu muốn fine-tune encoder"
+      },
+      {
+        "letter": "D",
+        "text": "Phải đổi mọi input thành requires_grad=True mới học được tham số"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Head vẫn nhận gradient qua features như hằng đầu vào, nhưng encoder không còn đường từ loss.",
+    "incorrectExplanations": {
+      "A": "Optimizer không tự tạo gradient cho đường phụ thuộc đã bị detach.",
+      "B": "Không có gradient thì tăng learning rate không khôi phục đường học.",
+      "D": "Tham số encoder có thể nhận gradient mà không cần gradient của input, nếu không detach."
+    },
+    "takeaway": "Danh sách tham số optimizer và đồ thị autograd đều phải cho phép đường cập nhật mong muốn."
+  },
+  {
+    "id": 252,
+    "difficulty": "hard",
+    "title": "MLP: nhiều lớp nhưng vẫn tuyến tính",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Hai lớp `h=W1*x+b1`, `y=W2*h+b2` không activation. Nhóm tăng hidden size để học ranh giới XOR. Nhận xét đúng nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Cứ hidden size đủ lớn thì chắc chắn học mọi ranh giới dù không activation"
+      },
+      {
+        "letter": "B",
+        "text": "Bias khiến hợp thành không thể viết thành một lớp affine"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ đổi MSE sang cross-entropy sẽ tạo phi tuyến ẩn cần thiết"
+      },
+      {
+        "letter": "D",
+        "text": "Toàn mạng vẫn affine: W2*W1*x + W2*b1+b2; cần phi tuyến để vượt giới hạn đó"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Thêm chiều ẩn không thay tính affine của hợp thành.",
+    "incorrectExplanations": {
+      "A": "Họ hàm vẫn affine bất kể độ rộng.",
+      "B": "Hai bias gộp thành `W2*b1+b2`.",
+      "C": "Loss thay mục tiêu tối ưu, không làm feature map tuyến tính trở thành phi tuyến."
+    },
+    "takeaway": "Sức biểu diễn phụ thuộc phép biến đổi giữa các lớp, không chỉ số lượng tham số."
+  },
+  {
+    "id": 253,
+    "difficulty": "hard",
+    "title": "Cross-entropy: softmax ổn định",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Logits của ba lớp là `[1000,1001,999]`. Tính softmax trực tiếp bằng exp gây overflow. Phép biến đổi nào giữ nguyên xác suất nhưng ổn định hơn?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Trừ max logit trước khi exp, được [-1,0,-2]"
+      },
+      {
+        "letter": "B",
+        "text": "Chia mọi logit cho 1001"
+      },
+      {
+        "letter": "C",
+        "text": "Clip mọi logit về 1"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ lấy argmax rồi dùng như softmax cho backward"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Nhân cả tử và mẫu với cùng hệ số exp(−1001) không đổi tỷ lệ, nhưng tránh exp số quá lớn.",
+    "incorrectExplanations": {
+      "B": "Đổi chênh lệch logits nên đổi phân phối, tương tự thay temperature.",
+      "C": "Làm ba giá trị bằng nhau và mất thứ tự/độ chênh.",
+      "D": "Mất phân phối score và đường gradient của softmax."
+    },
+    "takeaway": "Dùng loss/log-softmax ổn định từ thư viện thay vì exp thủ công không kiểm soát."
+  },
+  {
+    "id": 254,
+    "difficulty": "hard",
+    "title": "MSE: broadcasting và chẩn đoán gradient",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Hồi quy một đầu ra có train loss gần hằng dù model thay đổi theo input. Kiểm tra thấy pred `(B,1)`, y `(B,)`; B>1. Can thiệp nào cần làm trước khi tăng độ sâu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Thêm 20 lớp mà giữ loss sai shape"
+      },
+      {
+        "letter": "B",
+        "text": "Căn shape pred và y giống nhau, kiểm tra loss trên vài cặp mẫu rồi train lại"
+      },
+      {
+        "letter": "C",
+        "text": "Chuyển y sang integer dù mục tiêu liên tục"
+      },
+      {
+        "letter": "D",
+        "text": "Tăng weight decay tới khi pred hằng"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Broadcasting có thể tối ưu so từng dự đoán với mọi nhãn, kéo về trung bình thay vì quan hệ từng mẫu.",
+    "incorrectExplanations": {
+      "A": "Tăng năng lực không sửa mục tiêu ghép mẫu sai.",
+      "C": "Dtype integer không sửa broadcasting và có thể mất thông tin.",
+      "D": "Củng cố biểu hiện xấu thay vì sửa lỗi loss."
+    },
+    "takeaway": "Trước khi quy lỗi cho kiến trúc, kiểm tra bài toán loss mà code thực sự tính."
+  },
+  {
+    "id": 255,
+    "difficulty": "hard",
+    "title": "Mask mean pooling: lệch do độ dài",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Hai câu có cùng ba token thật, encoder trả cùng embedding tại token thật. Câu thứ hai bị padding thêm 20 vị trí có vector khác 0. Muốn biểu diễn pooling không đổi vì padding, cần gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ đặt token ID padding bằng 0 rồi mean toàn chuỗi"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ mask loss ở cuối"
+      },
+      {
+        "letter": "C",
+        "text": "Mask embedding padding khỏi tổng và chia số token thật; mask attention theo yêu cầu encoder"
+      },
+      {
+        "letter": "D",
+        "text": "Lấy tổng không chia số token thật để mọi độ dài luôn tương đương"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Chỉ bỏ khỏi tổng mà chia chiều dài padded vẫn sai; mask encoder và mask pooling giải quyết hai vị trí tác động.",
+    "incorrectExplanations": {
+      "A": "ID=0 không bảo đảm hidden state=0 và mẫu số vẫn sai.",
+      "B": "Không loại ảnh hưởng padding khỏi biểu diễn dùng cho classifier.",
+      "D": "Không có tính chuẩn hóa theo độ dài và không đúng mean pooling yêu cầu."
+    },
+    "takeaway": "Padding có thể ảnh hưởng attention, pooling và loss; mask ở đúng từng bước."
+  },
+  {
+    "id": 256,
+    "difficulty": "hard",
+    "title": "Attention: kích thước và mask",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Một head có Q `(2,5,8)`, K `(2,7,8)`, V `(2,7,12)`. Hai batch độc lập. Shape score trước softmax và output là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Score (2,8,8), output (2,7,12)"
+      },
+      {
+        "letter": "B",
+        "text": "Score (2,5,5), output (2,5,8)"
+      },
+      {
+        "letter": "C",
+        "text": "Không hợp lệ vì số query khác số key"
+      },
+      {
+        "letter": "D",
+        "text": "Score (2,5,7), output (2,5,12)"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Q nhân K chuyển vị hai chiều cuối tạo query×key; weights nhân V giữ chiều query và chiều value.",
+    "incorrectExplanations": {
+      "A": "Nhầm chiều embedding với số vị trí query/key.",
+      "B": "Chỉ phù hợp một số shape self-attention khác, không phải dữ liệu đề.",
+      "C": "Cross-attention cho phép số query và key khác nhau; chiều Q/K mới phải khớp."
+    },
+    "takeaway": "Attention nối hai tập vị trí qua chiều đặc trưng Q/K chung, rồi tổng hợp V theo query."
+  },
+  {
+    "id": 257,
+    "difficulty": "hard",
+    "title": "Transformer: chi phí khi tăng độ phân giải",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Ảnh đầu vào tăng mỗi chiều gấp đôi, patch size cố định. Với self-attention toàn cục, bỏ CLS và giữ số head, độ rộng như cũ, số phần tử ma trận attention mỗi head tăng bao nhiêu lần?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "16 lần"
+      },
+      {
+        "letter": "B",
+        "text": "2 lần"
+      },
+      {
+        "letter": "C",
+        "text": "4 lần"
+      },
+      {
+        "letter": "D",
+        "text": "8 lần"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Số patch tăng 4 lần; ma trận có N*N phần tử nên tăng 4²=16 lần.",
+    "incorrectExplanations": {
+      "B": "Chỉ tính tăng một chiều ảnh, chưa tính lưới patch và bình phương attention.",
+      "C": "Đây là mức tăng số token, không phải số cặp token.",
+      "D": "Không theo quan hệ bình phương của N ở attention toàn cục."
+    },
+    "takeaway": "Chi phí attention theo số token có thể tăng nhanh hơn diện tích đầu vào."
+  },
+  {
+    "id": 258,
+    "difficulty": "hard",
+    "title": "Causal mask: sửa leakage trong LM",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "LM dự đoán token kế tiếp có validation loss gần 0 nhưng sinh tự hồi quy rất kém. Kiểm tra decoder self-attention đang nhìn cả chuỗi target thật. Sửa nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ giảm temperature lúc sinh"
+      },
+      {
+        "letter": "B",
+        "text": "Áp causal mask, kiểm tra shift target đúng một lần và loại padding khỏi loss"
+      },
+      {
+        "letter": "C",
+        "text": "Cho model xem thêm token tương lai khi báo validation để ổn định hơn"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ tăng số epoch trên pipeline cũ"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Ngăn nhìn tương lai, khớp điều kiện suy luận và tránh loss bị padding chi phối.",
+    "incorrectExplanations": {
+      "A": "Không sửa leakage trong quá trình học và đánh giá.",
+      "C": "Tăng sự lệch giữa validation và suy luận.",
+      "D": "Học tốt hơn một bài toán sai điều kiện."
+    },
+    "takeaway": "Validation phải mô phỏng thông tin thật sự có khi model được sử dụng."
+  },
+  {
+    "id": 259,
+    "difficulty": "hard",
+    "title": "Autoencoder: anomaly score theo train",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Autoencoder train chỉ trên dữ liệu bình thường. Muốn báo bất thường bằng reconstruction error nhưng validation có nhãn ít. Thiết kế nào hợp lý?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mặc định error cao luôn là bất thường thật trong mọi miền"
+      },
+      {
+        "letter": "B",
+        "text": "Train autoencoder công suất rất lớn trên cả test rồi báo error thấp"
+      },
+      {
+        "letter": "C",
+        "text": "Chọn ngưỡng bằng validation đại diện cho chi phí FP/FN, rồi khóa và đánh giá trên test độc lập"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn ngưỡng sao cho test accuracy cao nhất rồi gọi test độc lập"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Reconstruction error chỉ là score; ngưỡng và mức khái quát cần kiểm chứng.",
+    "incorrectExplanations": {
+      "A": "Đổi miền hoặc nhiễu có thể làm dữ liệu bình thường khó tái tạo.",
+      "B": "Làm leakage và có thể học tái tạo cả bất thường.",
+      "D": "Test đã dùng để chọn quyết định."
+    },
+    "takeaway": "Autoencoder không tự tạo ranh giới bất thường có ý nghĩa chỉ vì có reconstruction loss."
+  },
+  {
+    "id": 260,
+    "difficulty": "hard",
+    "title": "Adam và L2: không đồng nhất AdamW",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Nhóm thay Adam cộng L2 vào loss bằng AdamW với cùng learning rate và cùng hệ số số học, kỳ vọng mọi trọng số sau mỗi bước giống hệt. Nhận xét đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Luôn giống nhau vì cả hai có chữ weight"
+      },
+      {
+        "letter": "B",
+        "text": "AdamW hoàn toàn bỏ gradient loss"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ khác nhau khi train trên GPU"
+      },
+      {
+        "letter": "D",
+        "text": "Không bảo đảm; L2 trong gradient đi qua moment/adaptive scaling, AdamW tách bước decay"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Hai cơ chế không tương đương nói chung khi optimizer thích nghi.",
+    "incorrectExplanations": {
+      "A": "Tên gọi không chứng minh phương trình cập nhật giống nhau.",
+      "B": "AdamW vẫn tối ưu loss bằng gradient thích nghi.",
+      "C": "Khác cơ chế cập nhật, không phụ thuộc riêng loại thiết bị."
+    },
+    "takeaway": "Khi đổi optimizer, phải tuning lại và kiểm tra quy ước regularization."
+  },
+  {
+    "id": 261,
+    "difficulty": "hard",
+    "title": "Dropout: train loss cao hơn validation",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Model dùng dropout train p=0,5; validation tắt dropout. Không có leakage, hai tập cùng phân phối. Train loss hơi cao hơn validation loss. Kết luận phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Điều này có thể do regularization/noise lúc train; so thêm train ở eval mode để chẩn đoán"
+      },
+      {
+        "letter": "B",
+        "text": "Chắc chắn validation bị sai vì train loss luôn phải thấp hơn"
+      },
+      {
+        "letter": "C",
+        "text": "Bật dropout trên validation bắt buộc sẽ làm đánh giá đúng hơn"
+      },
+      {
+        "letter": "D",
+        "text": "Xóa mọi regularization ngay vì model chắc chắn underfit"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Loss hai chế độ không đo chính xác cùng mạng hiệu dụng.",
+    "incorrectExplanations": {
+      "B": "Không có định luật như vậy khi điều kiện tính khác nhau.",
+      "C": "Đánh giá thông thường dùng eval; bật lại thay điều kiện suy luận.",
+      "D": "Chưa đủ bằng chứng; cần so điều kiện và xu hướng đầy đủ."
+    },
+    "takeaway": "So loss cần kiểm tra chế độ, augmentation, regularization và cách lấy trung bình."
+  },
+  {
+    "id": 262,
+    "difficulty": "hard",
+    "title": "Early stopping: tránh dùng test như validation",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Nhóm lưu checkpoint có test F1 cao nhất mỗi epoch và báo chính test F1 đó. Muốn kết quả dùng để so model đáng tin hơn, cần gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Đổi tên biến test_loader thành val_loader rồi giữ báo cáo cũ"
+      },
+      {
+        "letter": "B",
+        "text": "Validation riêng để chọn checkpoint; test giữ độc lập để đánh giá cuối"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ lấy trung bình top 3 test F1 đã quan sát"
+      },
+      {
+        "letter": "D",
+        "text": "Tăng patience trên cùng test để hợp lệ hóa"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Chọn epoch là một dạng lựa chọn mô hình nên không dùng test.",
+    "incorrectExplanations": {
+      "A": "Đổi tên không tạo ra một tập độc lập mới.",
+      "C": "Vẫn chọn theo test, không loại thiên lệch.",
+      "D": "Vẫn để test điều khiển huấn luyện."
+    },
+    "takeaway": "Checkpoint, ngưỡng và prompt đều là quyết định mô hình phải tách khỏi test."
+  },
+  {
+    "id": 263,
+    "difficulty": "hard",
+    "title": "BatchNorm: đóng băng tham số chưa đủ",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Fine-tune head với backbone chứa BatchNorm. Đã đặt requires_grad=False cho mọi tham số backbone nhưng gọi model.train() ở mỗi epoch. Running mean backbone vẫn đổi. Cách giải thích/sửa đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "requires_grad=False phải tự khóa mọi buffer, nên quan sát là bất khả thi"
+      },
+      {
+        "letter": "B",
+        "text": "Gọi no_grad riêng cho target là đủ"
+      },
+      {
+        "letter": "C",
+        "text": "Running statistics là buffer, không phụ thuộc requires_grad; đặt backbone.eval() sau model.train() nếu muốn giữ nguyên"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ loại backbone khỏi optimizer thì running mean sẽ tự dừng"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Freeze tham số chỉ chặn gradient, không ngăn cập nhật trạng thái BatchNorm ở train mode.",
+    "incorrectExplanations": {
+      "A": "Buffer và tham số có cơ chế cập nhật khác nhau.",
+      "B": "Không đổi chế độ BatchNorm.",
+      "D": "Running stats cập nhật khi forward ở train, không qua optimizer."
+    },
+    "takeaway": "Đóng băng một module cần xét cả tham số, buffer và chế độ train/eval."
+  },
+  {
+    "id": 264,
+    "difficulty": "hard",
+    "title": "Khởi tạo ReLU: chết nhiều neuron",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "MLP sâu có nhiều neuron luôn nhận z âm trên mọi mẫu; gradient qua chúng bằng 0. Bias khởi tạo âm lớn, dữ liệu chưa chuẩn hóa. Hướng xử lý có căn cứ nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Tăng độ âm của mọi bias để neuron chết ổn định hơn"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ tăng số epoch bảo đảm mọi neuron tự sống lại"
+      },
+      {
+        "letter": "C",
+        "text": "Đặt mọi weight giống hệt nhau để tăng đa dạng"
+      },
+      {
+        "letter": "D",
+        "text": "Kiểm tra phân phối z/gradient, chuẩn hóa đầu vào và dùng khởi tạo phù hợp ReLU, tránh bias âm cực đoan"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Can thiệp trực tiếp vào việc activation luôn rơi ở miền đạo hàm 0.",
+    "incorrectExplanations": {
+      "A": "Làm tín hiệu khó đi vào miền dương hơn.",
+      "B": "Gradient qua ReLU đang 0 nên không có bảo đảm hồi phục.",
+      "C": "Ngược với mục tiêu phá đối xứng."
+    },
+    "takeaway": "Quan sát activation và gradient theo lớp giúp phân biệt vấn đề khởi tạo với thiếu dữ liệu."
+  },
+  {
+    "id": 265,
+    "difficulty": "hard",
+    "title": "PEFT: đếm tham số low-rank",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Một ma trận weight 512x512 được giữ cố định. Adapter dùng ΔW=B*A, A shape `(8,512)`, B `(512,8)`, không bias. Có bao nhiêu tham số trainable cho adapter này?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "8.192"
+      },
+      {
+        "letter": "B",
+        "text": "262.144"
+      },
+      {
+        "letter": "C",
+        "text": "4.096"
+      },
+      {
+        "letter": "D",
+        "text": "270.336"
+      }
+    ],
+    "answer": "A",
+    "explanation": "A có 4096 và B có 4096; không tính lại 262144 weight nền đã đóng băng.",
+    "incorrectExplanations": {
+      "B": "Đây là số phần tử ma trận đầy đủ, không phải hai factor trainable.",
+      "C": "Chỉ đếm một trong hai factor.",
+      "D": "Đã cộng weight nền dù đề nêu giữ cố định."
+    },
+    "takeaway": "Low-rank adaptation giảm số tham số học, nhưng vẫn cần forward và bộ nhớ cho model nền."
+  },
+  {
+    "id": 266,
+    "difficulty": "hard",
+    "title": "Fine-tuning: optimizer quên nhóm mới",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Ban đầu train head với optimizer chỉ chứa head.parameters(). Sau đó mở requires_grad=True cho backbone nhưng giữ nguyên optimizer. Vì sao backbone chưa đổi dù có gradient?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "requires_grad=True tự thêm mọi tham số vào mọi optimizer"
+      },
+      {
+        "letter": "B",
+        "text": "Optimizer chưa có tham số backbone; cần thêm param group hoặc tạo optimizer phù hợp"
+      },
+      {
+        "letter": "C",
+        "text": "Phải gọi argmax trước backward để encoder được cập nhật"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ chuyển head sang CPU"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Có gradient chưa đủ; step chỉ cập nhật các tham số đã đăng ký.",
+    "incorrectExplanations": {
+      "A": "Optimizer giữ danh sách riêng, không tự theo dõi mọi thay đổi.",
+      "C": "Argmax không khôi phục đăng ký tham số và có thể cắt đường gradient.",
+      "D": "Không xử lý optimizer và còn tạo lỗi device."
+    },
+    "takeaway": "Kiểm tra requires_grad, đường autograd, danh sách optimizer và learning rate khi tham số không đổi."
+  },
+  {
+    "id": 267,
+    "difficulty": "hard",
+    "title": "Mini-batch và BatchNorm: không hoàn toàn tương đương",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Tích lũy gradient từ 8 micro-batch nhỏ để mô phỏng một batch lớn, model có BatchNorm train mode. Vì sao kết quả không nhất thiết trùng batch lớn dù đã chia loss đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Gradient accumulation không bao giờ có thể dùng với mạng nơ-ron"
+      },
+      {
+        "letter": "B",
+        "text": "Chia loss đúng bắt buộc làm mọi trạng thái model giống nhau"
+      },
+      {
+        "letter": "C",
+        "text": "BatchNorm tính thống kê riêng từng micro-batch nên forward và gradient khác"
+      },
+      {
+        "letter": "D",
+        "text": "Chuyển dtype target sang long luôn làm hai quy trình trùng nhau"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Tích lũy chỉ gộp gradient, không hợp nhất các batch statistics đã dùng trong forward.",
+    "incorrectExplanations": {
+      "A": "Vẫn dùng được, chỉ không bảo đảm tương đương tuyệt đối trong điều kiện này.",
+      "B": "Không thay cơ chế thống kê phụ thuộc batch.",
+      "D": "Dtype target không gộp running statistics."
+    },
+    "takeaway": "Tương đương gradient theo mẫu cần xét cả các phép toán và trạng thái phụ thuộc batch."
+  },
+  {
+    "id": 268,
+    "difficulty": "hard",
+    "title": "Softmax: confidence tăng nhưng accuracy giữ nguyên",
+    "category": "B",
+    "categoryName": "Mạng nơ-ron & Học sâu",
+    "prompt": "Nhân mọi logits phân loại đơn nhãn với hệ số dương 10. Trên cùng dữ liệu, argmax không đổi nhưng log loss có thể thay đổi. Kết luận đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Accuracy luôn tăng vì xác suất lớn nhất cao hơn"
+      },
+      {
+        "letter": "B",
+        "text": "Log loss luôn giảm cho mọi mẫu"
+      },
+      {
+        "letter": "C",
+        "text": "Nhân logits với số dương tương đương đổi nhãn thật"
+      },
+      {
+        "letter": "D",
+        "text": "Accuracy giữ nguyên; độ sắc của xác suất thay đổi nên log loss có thể tăng hoặc giảm"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Hệ số dương giữ thứ tự logits, nhưng làm mô hình tự tin hơn, kể cả ở những mẫu sai.",
+    "incorrectExplanations": {
+      "A": "Nhãn argmax vẫn y nguyên.",
+      "B": "Ở mẫu dự đoán sai, tăng tự tin có thể phạt nặng hơn.",
+      "C": "Không thay target hoặc thứ tự lớp."
+    },
+    "takeaway": "Độ đúng của nhãn và chất lượng xác suất là hai khía cạnh khác nhau."
+  },
+  {
+    "id": 269,
+    "difficulty": "hard",
+    "title": "Convolution: hai lớp và receptive field",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Hai lớp convolution liên tiếp đều kernel=3, stride=1, dilation=1; không pooling. Xét pixel đầu ra ở xa biên. Receptive field theo mỗi chiều so với input gốc là bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "5"
+      },
+      {
+        "letter": "B",
+        "text": "6"
+      },
+      {
+        "letter": "C",
+        "text": "9"
+      },
+      {
+        "letter": "D",
+        "text": "3"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Lớp đầu nhìn 3 vị trí; lớp hai ghép 3 vị trí lân cận có receptive field chồng nhau, tổng 3+2=5.",
+    "incorrectExplanations": {
+      "B": "Cộng 3+3 mà không trừ phần chồng lấp.",
+      "C": "Nhân hai kích thước kernel như các vùng không chồng lấp.",
+      "D": "Bỏ qua việc lớp thứ hai mở rộng phạm vi input ảnh hưởng."
+    },
+    "takeaway": "Receptive field tăng theo kernel và bước nhảy tích lũy của các lớp trước."
+  },
+  {
+    "id": 270,
+    "difficulty": "hard",
+    "title": "Convolution/pooling: đếm đầu vào Linear",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Input NCHW `(8,3,32,32)`, Conv2d(3,8,kernel=3,padding=1,stride=1), rồi MaxPool2d(2,2), flatten từ dim=1. Linear kế tiếp nhận in_features bao nhiêu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "16.384"
+      },
+      {
+        "letter": "B",
+        "text": "2.048"
+      },
+      {
+        "letter": "C",
+        "text": "8.192"
+      },
+      {
+        "letter": "D",
+        "text": "768"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Conv giữ 32x32 với 8 kênh; pool thành 16x16; mỗi mẫu có 8*16*16 phần tử.",
+    "incorrectExplanations": {
+      "A": "Đã nhân thêm batch size 8 vào số feature của mỗi mẫu.",
+      "C": "Bỏ qua giảm kích thước không gian do pooling.",
+      "D": "Nhầm số kênh output với số kênh input và sai độ phân giải sau pool."
+    },
+    "takeaway": "Tách batch dimension khỏi số feature khi nối CNN với fully connected layer."
+  },
+  {
+    "id": 271,
+    "difficulty": "hard",
+    "title": "IoU và NMS: hai hộp cùng lớp",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Hai box cùng lớp, score 0,9 và 0,8, IoU=0,7. Greedy NMS chuẩn dùng ngưỡng IoU=0,5, không có box khác. Kết quả và rủi ro ở cảnh đông là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Giữ cả hai vì score đều trên 0,5"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ giữ box 0,8 vì score thấp ít trùng hơn"
+      },
+      {
+        "letter": "C",
+        "text": "Giữ box 0,9, loại box 0,8; có thể loại nhầm một vật thật bị che khuất"
+      },
+      {
+        "letter": "D",
+        "text": "Loại cả hai vì IoU lớn"
+      }
+    ],
+    "answer": "C",
+    "explanation": "NMS ưu tiên score cao và xóa box trùng vượt ngưỡng, nhưng hai vật gần nhau cũng có thể overlap mạnh.",
+    "incorrectExplanations": {
+      "A": "Đề cho ngưỡng IoU, không phải chỉ ngưỡng confidence.",
+      "B": "Greedy NMS thường bắt đầu từ score cao nhất.",
+      "D": "NMS giữ box đang được chọn làm đại diện."
+    },
+    "takeaway": "Phân biệt ngưỡng score và ngưỡng overlap; kiểm tra hậu xử lý trên cảnh đông."
+  },
+  {
+    "id": 272,
+    "difficulty": "hard",
+    "title": "Detection: matching không cho đếm trùng TP",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Một ảnh có một ground-truth box. Hai dự đoán cùng lớp đều IoU đạt ngưỡng, scores 0,9 và 0,8. Khi đánh giá detection một-một theo score, nên đếm thế nào?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2 TP vì cả hai IoU đạt"
+      },
+      {
+        "letter": "B",
+        "text": "0 TP và 2 FN"
+      },
+      {
+        "letter": "C",
+        "text": "1 TP và 1 TN"
+      },
+      {
+        "letter": "D",
+        "text": "1 TP và 1 FP"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Dự đoán score cao khớp ground truth; dự đoán trùng không được dùng lại cùng ground truth để tạo TP thứ hai.",
+    "incorrectExplanations": {
+      "A": "Đếm trùng một vật làm phóng đại recall/precision.",
+      "B": "Có dự đoán hợp lệ nên không bỏ lỡ ground truth.",
+      "C": "Detection không coi box dư là true negative theo cách này; nó là FP."
+    },
+    "takeaway": "Đánh giá detection cần matching với ground truth, không chỉ kiểm tra từng box độc lập."
+  },
+  {
+    "id": 273,
+    "difficulty": "hard",
+    "title": "YOLO/SSD/DETR: so sánh công bằng",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Detector A dùng ảnh 1280px trên GPU lớn, detector B dùng 640px trên CPU; A có mAP cao hơn và FPS cao hơn. Muốn chọn cho camera nhúng giới hạn RAM, điều gì cần làm?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Đo lại các ứng viên với pipeline và phần cứng đích, kiểm tra độ phân giải, mAP và latency/RAM"
+      },
+      {
+        "letter": "B",
+        "text": "Kết luận mọi checkpoint của họ A đều thắng B"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ xếp theo mAP, bỏ RAM vì đã có GPU benchmark"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ so số layer rồi suy ra FPS chính xác"
+      }
+    ],
+    "answer": "A",
+    "explanation": "So sánh cũ trộn khác biệt model với input và phần cứng, chưa trả lời ràng buộc triển khai.",
+    "incorrectExplanations": {
+      "B": "Một phép đo không kiểm soát không chứng minh ưu thế cả họ model.",
+      "C": "Thiết bị đích có ràng buộc RAM và latency riêng.",
+      "D": "Operator, kích thước feature map và runtime cũng quyết định tốc độ."
+    },
+    "takeaway": "Đánh giá các họ detector bằng cùng tác vụ và ràng buộc thực tế, tránh khẳng định theo tên."
+  },
+  {
+    "id": 274,
+    "difficulty": "hard",
+    "title": "Segmentation: Dice và IoU",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Mask dự đoán có 40 pixel dương; mask thật có 60; phần giao 30. Cặp (Dice, IoU) nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "(3/7; 0,60)"
+      },
+      {
+        "letter": "B",
+        "text": "(0,60; 3/7)"
+      },
+      {
+        "letter": "C",
+        "text": "(0,75; 0,50)"
+      },
+      {
+        "letter": "D",
+        "text": "(0,30; 0,30)"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Dice=2*30/(40+60)=0,60; IoU=30/(40+60−30)=3/7.",
+    "incorrectExplanations": {
+      "A": "Đảo hai công thức.",
+      "C": "Đây là precision và recall của pixel dương, không phải Dice và IoU.",
+      "D": "Không chuẩn hóa theo đúng mẫu số của mỗi độ đo."
+    },
+    "takeaway": "Dice và IoU cùng đo overlap nhưng có mẫu số khác nhau."
+  },
+  {
+    "id": 275,
+    "difficulty": "hard",
+    "title": "U-Net: resize mask nhiều lớp",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Mask segmentation chứa ID nguyên 0,1,2. Pipeline resize mask bằng bilinear rồi làm tròn; vùng biên xuất hiện ID không phản ánh lớp ban đầu. Cách sửa đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dùng blur mạnh hơn trước khi làm tròn"
+      },
+      {
+        "letter": "B",
+        "text": "Chuyển mask thành float rồi coi mọi giá trị giữa 0 và 2 là lớp mới"
+      },
+      {
+        "letter": "C",
+        "text": "Dùng nội suy nearest-neighbor cho mask nhãn và đồng bộ hình học với ảnh"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ resize ảnh, giữ mask ở kích thước cũ"
+      }
+    ],
+    "answer": "C",
+    "explanation": "ID lớp là hạng mục, không nên trộn số học như cường độ ảnh.",
+    "incorrectExplanations": {
+      "A": "Trộn các lớp nhiều hơn, không bảo toàn nhãn.",
+      "B": "Thay đổi tập nhãn vô nghĩa.",
+      "D": "Làm lệch tương ứng pixel khi kích thước không khớp."
+    },
+    "takeaway": "Phân biệt nội suy ảnh liên tục với nội suy chỉ số lớp rời rạc."
+  },
+  {
+    "id": 276,
+    "difficulty": "hard",
+    "title": "Segmentation: chọn loss và shape",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "U-Net phân đoạn đơn nhãn 4 lớp cho mỗi pixel, logits `(B,4,H,W)`, mask `(B,H,W)` long, ID 0–3. Thiết kế loss phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Argmax logits trước loss để đơn giản hóa gradient"
+      },
+      {
+        "letter": "B",
+        "text": "BCEWithLogitsLoss với mask chỉ số giữ shape (B,H,W) không chuyển đổi"
+      },
+      {
+        "letter": "C",
+        "text": "Softmax theo chiều batch rồi MSE với ID lớp"
+      },
+      {
+        "letter": "D",
+        "text": "CrossEntropyLoss trên logits và mask chỉ số, có thể cân trọng số lớp theo train"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Class axis là chiều 1; mỗi pixel có một nhãn trong 4 lớp.",
+    "incorrectExplanations": {
+      "A": "Argmax loại score và không cho đường học hữu ích.",
+      "B": "BCE yêu cầu target tương thích đầu ra nhị phân theo từng kênh; shape/ý nghĩa hiện tại không khớp.",
+      "C": "Trộn xác suất giữa các mẫu và coi ID có khoảng cách số."
+    },
+    "takeaway": "Ngữ nghĩa nhãn theo pixel quyết định trục class, dtype target và loss."
+  },
+  {
+    "id": 277,
+    "difficulty": "hard",
+    "title": "Augmentation: bảo toàn nhãn theo miền",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Phân loại chữ số gồm 6 và 9. Nhóm xoay ảnh 180 độ nhưng giữ nhãn, coi như augmentation an toàn. Nhận xét phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Biến đổi có thể đổi ngữ nghĩa 6↔9 nên cần giới hạn hoặc cập nhật nhãn có căn cứ"
+      },
+      {
+        "letter": "B",
+        "text": "Mọi phép quay luôn bảo toàn mọi nhãn phân loại"
+      },
+      {
+        "letter": "C",
+        "text": "Tăng xác suất quay lên 1 sẽ tự sửa nhiễu nhãn"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ kiểm tra ảnh có cùng số pixel là đủ"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Augmentation phải bảo toàn target đối với tác vụ cụ thể.",
+    "incorrectExplanations": {
+      "B": "Không đúng khi hướng là tín hiệu quyết định lớp.",
+      "C": "Có thể tạo hệ thống nhãn sai lớn hơn.",
+      "D": "Kích thước không bảo đảm nội dung mang cùng nhãn."
+    },
+    "takeaway": "Một augmentation tốt cho miền này có thể phá nhãn ở miền khác."
+  },
+  {
+    "id": 278,
+    "difficulty": "hard",
+    "title": "Transfer learning: validation đổi miền",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "ResNet pretrained cho val 95% trên ảnh cùng studio nhưng 63% trên ảnh điện thoại thật. Tuning nhiều epoch trên studio không cải thiện điện thoại. Ưu tiên nào hợp lý?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ báo 95% vì pretrained luôn khái quát mọi camera"
+      },
+      {
+        "letter": "B",
+        "text": "Xây validation đại diện ảnh điện thoại, kiểm tra preprocessing và thích nghi bằng dữ liệu/augmentation hợp lệ"
+      },
+      {
+        "letter": "C",
+        "text": "Chuẩn hóa mỗi ảnh điện thoại bằng thống kê của nhãn thật của ảnh"
+      },
+      {
+        "letter": "D",
+        "text": "Đổi nhãn ảnh điện thoại theo dự đoán cũ để accuracy tăng"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Có dấu hiệu domain shift; tối ưu studio không đo đúng phân phối triển khai.",
+    "incorrectExplanations": {
+      "A": "Bỏ qua bằng chứng miền đích.",
+      "C": "Không khả dụng khi suy luận và rò rỉ nhãn.",
+      "D": "Làm sai đánh giá thay vì sửa khái quát."
+    },
+    "takeaway": "Phân phối validation phải gần điều kiện sử dụng nếu dùng nó để chọn mô hình."
+  },
+  {
+    "id": 279,
+    "difficulty": "hard",
+    "title": "CLIP: vector chuẩn hóa và cosine",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Embedding ảnh i=(3,4), hai embedding text a=(6,8), b=(0,10). Theo cosine similarity, a hay b khớp hơn và vì sao?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "b, vì norm của b lớn hơn norm của i"
+      },
+      {
+        "letter": "B",
+        "text": "Hai mô tả luôn hòa vì norm của a và b đều bằng 10"
+      },
+      {
+        "letter": "C",
+        "text": "a, vì cosine(i,a)=1 còn cosine(i,b)=0,8"
+      },
+      {
+        "letter": "D",
+        "text": "Không thể so vì ảnh và text phải có số chiều khác nhau"
+      }
+    ],
+    "answer": "C",
+    "explanation": "a cùng hướng với i; độ lớn vector không quyết định cosine.",
+    "incorrectExplanations": {
+      "A": "Norm lớn không đồng nghĩa hướng gần hơn.",
+      "B": "Cùng norm vẫn có góc khác nhau với ảnh.",
+      "D": "Encoder CLIP tạo embedding trong không gian chung cùng chiều."
+    },
+    "takeaway": "Khi dùng cosine, chuẩn hóa vector hoặc chia tích vô hướng cho tích norm."
+  },
+  {
+    "id": 280,
+    "difficulty": "hard",
+    "title": "CLIP: lựa chọn prompt và test",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Nhóm thử 100 bộ prompt cho CLIP zero-shot, chọn bộ có test accuracy cao nhất rồi báo là zero-shot test độc lập. Cách làm đúng hơn?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Không cập nhật weight nên dùng test chọn prompt luôn hợp lệ"
+      },
+      {
+        "letter": "B",
+        "text": "Đổi tên prompt thành label để loại thiên lệch"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ báo tốt nhất trong 100 bộ và bỏ số lần thử"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn prompt trên tập phát triển, khóa template và đo trên test chưa dùng"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Không train weight vẫn có lựa chọn theo dữ liệu; prompt tuning theo test làm lệch đánh giá.",
+    "incorrectExplanations": {
+      "A": "Lựa chọn thủ công vẫn đưa thông tin test vào hệ thống.",
+      "B": "Đổi tên không đổi việc sử dụng test.",
+      "C": "Che mất quá trình lựa chọn không tạo đánh giá độc lập."
+    },
+    "takeaway": "Quy trình đánh giá bao gồm cả lựa chọn prompt, preprocessing và hậu xử lý."
+  },
+  {
+    "id": 281,
+    "difficulty": "hard",
+    "title": "Self-supervised vision: positive sai ngữ nghĩa",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Dataset ảnh có đối tượng rất nhỏ ở góc; hai crop ngẫu nhiên của cùng ảnh thường chỉ một crop chứa vật. Contrastive pretraining lại kéo hai view sát nhau. Nguy cơ và điều chỉnh nào hợp lý?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Positive có thể mất tín hiệu vật; thiết kế crop giữ vùng liên quan và kiểm tra downstream"
+      },
+      {
+        "letter": "B",
+        "text": "Hai crop cùng ảnh luôn có cùng thông tin cho mọi tác vụ"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ dùng embedding hằng sẽ giải quyết tốt mọi phân loại"
+      },
+      {
+        "letter": "D",
+        "text": "Tăng độ crop đến khi không còn vật là cách tối ưu chắc chắn"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Bất biến được học có thể xóa đặc trưng quan trọng nếu view chỉ còn nền.",
+    "incorrectExplanations": {
+      "B": "Không đúng khi vật bị crop mất.",
+      "C": "Collapse làm mất khả năng phân biệt.",
+      "D": "Càng có nguy cơ học nền thay vật."
+    },
+    "takeaway": "Thiết kế view tự giám sát phải xét loại thông tin cần giữ cho downstream."
+  },
+  {
+    "id": 282,
+    "difficulty": "hard",
+    "title": "GAN: ảnh giống dữ liệu train",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "GAN tạo ảnh đẹp nhưng nhiều ảnh gần trùng train. Muốn kiểm tra chất lượng trước dùng làm augmentation, cần ưu tiên gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ nhìn 5 ảnh đẹp nhất rồi kết luận đủ đa dạng"
+      },
+      {
+        "letter": "B",
+        "text": "Kiểm tra nearest neighbors với train, độ đa dạng và lợi ích trên validation thật tách nguồn"
+      },
+      {
+        "letter": "C",
+        "text": "Đưa ảnh sinh gần trùng train vào test để chứng minh model tốt"
+      },
+      {
+        "letter": "D",
+        "text": "Độ phân giải cao bảo đảm không thể ghi nhớ"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Phân biệt sinh hữu ích với ghi nhớ; augmentation chỉ có ích nếu cải thiện tổng quát.",
+    "incorrectExplanations": {
+      "A": "Mẫu chọn lọc không phát hiện sao chép hoặc collapse toàn bộ.",
+      "C": "Test mất độc lập nguồn nội dung.",
+      "D": "Kích thước ảnh không ngăn memorization."
+    },
+    "takeaway": "Ảnh sinh dùng trong học máy cũng phải được kiểm toán nguồn, đa dạng và hiệu quả đánh giá."
+  },
+  {
+    "id": 283,
+    "difficulty": "hard",
+    "title": "Diffusion: tốc độ sampling và chất lượng",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Hai cấu hình sampler cùng checkpoint: A 50 bước, B 10 bước. B nhanh hơn nhưng chi tiết kém trên tập prompt đánh giá. Cách quyết định phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "10 bước luôn đúng bằng chất lượng 50 bước với mọi sampler"
+      },
+      {
+        "letter": "B",
+        "text": "50 bước chắc chắn tốt nhất cho mọi thiết bị và ứng dụng"
+      },
+      {
+        "letter": "C",
+        "text": "Đo quality/latency trên yêu cầu thực tế, chọn cấu hình đáp ứng cả hai; không mặc định ít bước giữ nguyên chất lượng"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn bằng dung lượng file checkpoint vì hai sampler khác số bước"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Số bước và thuật toán sampling tương tác chất lượng/tốc độ, phải benchmark.",
+    "incorrectExplanations": {
+      "A": "Không có bảo đảm chung đó.",
+      "B": "Có thể vượt ngân sách latency; mục tiêu không chỉ chất lượng.",
+      "D": "Checkpoint như nhau nên dung lượng không giải thích khác biệt sampling."
+    },
+    "takeaway": "Phân biệt trọng số đã học với cách chạy quá trình sinh khi suy luận."
+  },
+  {
+    "id": 284,
+    "difficulty": "hard",
+    "title": "Dataset video: rò rỉ giữa frame",
+    "category": "C",
+    "categoryName": "Thị giác máy tính",
+    "prompt": "Trích một frame mỗi giây từ 20 video, random split frame đạt 99%; khi gặp video mới chỉ 70%. Cách đánh giá lại tốt nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ tăng khoảng cách tên file giữa train và test"
+      },
+      {
+        "letter": "B",
+        "text": "Thêm nhiều frame liên tiếp từ cùng video vào test"
+      },
+      {
+        "letter": "C",
+        "text": "Xóa camera ID khỏi bảng rồi giữ split cũ"
+      },
+      {
+        "letter": "D",
+        "text": "Chia theo video/phiên quay, giữ các frame cùng nguồn ở cùng tập và đánh giá trên video mới"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Frame gần nhau chia sẻ nền, nhân vật và điều kiện; random frame split không đo đúng khái quát sang video mới.",
+    "incorrectExplanations": {
+      "A": "Tên file khác không chứng minh nội dung độc lập.",
+      "B": "Có thể làm leakage mạnh hơn.",
+      "C": "Dấu hiệu camera và nội dung vẫn có trong pixel."
+    },
+    "takeaway": "Đơn vị chia ảnh/video cần theo nguồn độc lập phù hợp tình huống triển khai."
+  },
+  {
+    "id": 285,
+    "difficulty": "hard",
+    "title": "Tokenizer: so chi phí và perplexity công bằng",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Model A tách cùng văn bản thành 100 token, model B thành 160 token. Nhóm thấy perplexity B thấp hơn và suy ra B hiểu tốt hơn, chi phí cũng thấp hơn. Nhận xét đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Không suy ra trực tiếp; tokenizer khác làm đơn vị perplexity khác và chi phí còn phụ thuộc số token cùng đơn giá"
+      },
+      {
+        "letter": "B",
+        "text": "Perplexity thấp hơn luôn đồng nghĩa ít tiền hơn"
+      },
+      {
+        "letter": "C",
+        "text": "Cùng văn bản luôn có cùng số token ở mọi model"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ so số ký tự tên model để chọn"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Cần metric tác vụ trên cùng dữ liệu và tính chi phí theo cách tính thực tế của mỗi model.",
+    "incorrectExplanations": {
+      "B": "Perplexity không phải số token hoặc giá tính phí.",
+      "C": "Tokenizer và vocabulary khác nhau có thể chia khác nhau.",
+      "D": "Không đo chất lượng hoặc tài nguyên."
+    },
+    "takeaway": "Giữ đơn vị đo nhất quán và tách chất lượng dự đoán khỏi chi phí sử dụng."
+  },
+  {
+    "id": 286,
+    "difficulty": "hard",
+    "title": "BERT: mean pooling và token đặc biệt",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Hai câu được batch với padding khác độ dài. Nhóm mean tất cả hidden state kể cả PAD rồi dùng cosine cho tìm kiếm. Muốn baseline pooling có ý nghĩa hơn, cần gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Giữ PAD vì ID giống nhau sẽ tự triệt tiêu khi cộng"
+      },
+      {
+        "letter": "B",
+        "text": "Áp mask để chỉ gộp token mong muốn, chuẩn hóa phù hợp và đánh giá trên cặp truy vấn-tài liệu đại diện"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ lấy chiều embedding đầu tiên vì luôn là độ tương đồng"
+      },
+      {
+        "letter": "D",
+        "text": "Fit threshold bằng toàn bộ nhãn test rồi báo test nguyên vẹn"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Loại ảnh hưởng padding; encoder tiền huấn luyện không tự bảo đảm mọi pooling tối ưu cho similarity.",
+    "incorrectExplanations": {
+      "A": "Các hidden state có ngữ cảnh và không tự triệt tiêu.",
+      "C": "Không có ý nghĩa cố định như vậy cho một chiều.",
+      "D": "Thêm leakage vào bước quyết định."
+    },
+    "takeaway": "Pooling và mục tiêu tiền huấn luyện quyết định tính hữu ích của sentence embedding."
+  },
+  {
+    "id": 287,
+    "difficulty": "hard",
+    "title": "Text classification: nhãn ít nhưng tài liệu dài",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "BERT checkpoint giới hạn input 512 token; nhãn tài liệu thường do đoạn cuối quyết định. Cắt luôn 512 token đầu cho validation thấp. Can thiệp nào có căn cứ?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Tăng max_length tùy ý lên 50000 dù checkpoint không hỗ trợ"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ tăng epoch của pipeline đã cắt mất bằng chứng"
+      },
+      {
+        "letter": "C",
+        "text": "Chia thành chunk có ranh giới phù hợp, encode và tổng hợp có mask; đánh giá các chiến lược trên validation"
+      },
+      {
+        "letter": "D",
+        "text": "Đưa nhãn vào đầu tài liệu để model phân loại dễ hơn"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Giữ được bằng chứng ở cuối trong giới hạn model, rồi học/chọn cách gộp theo tác vụ.",
+    "incorrectExplanations": {
+      "A": "Không bảo đảm positional/input capacity của model đáp ứng.",
+      "B": "Không khôi phục thông tin không có trong input.",
+      "D": "Rò rỉ đích và không khả dụng khi dự đoán."
+    },
+    "takeaway": "Xác minh bằng chứng cho nhãn có nằm trong phần input thực tế mà model nhận hay không."
+  },
+  {
+    "id": 288,
+    "difficulty": "hard",
+    "title": "Multi-label: chọn ngưỡng theo lớp",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Phân loại nhiều nhãn có tần suất khác nhau; model trả 8 sigmoid scores. Muốn cải thiện macro-F1. Chiến lược nào hợp lệ?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dùng argmax bắt buộc đúng một nhãn"
+      },
+      {
+        "letter": "B",
+        "text": "Chọn ngưỡng từng lớp để test F1 cao nhất rồi báo chính test"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ tối ưu accuracy của nhãn phổ biến rồi khẳng định macro-F1 tăng"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn ngưỡng chung hoặc theo lớp trên validation, kiểm soát overfit và khóa trước test"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Một ngưỡng 0,5 không luôn tối ưu; nhiều ngưỡng cũng cần đủ dữ liệu để chọn đáng tin.",
+    "incorrectExplanations": {
+      "A": "Loại khả năng nhiều nhãn và mẫu không có nhãn.",
+      "B": "Test trở thành dữ liệu phát triển.",
+      "C": "Macro cho các lớp trọng số ngang nhau, không theo số mẫu lớp phổ biến."
+    },
+    "takeaway": "Ngưỡng là một phần của mô hình ra quyết định và cần quy trình lựa chọn riêng."
+  },
+  {
+    "id": 289,
+    "difficulty": "hard",
+    "title": "Teacher forcing: lệch train và suy luận",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Mô hình dịch train tốt với teacher forcing nhưng sai một từ sớm thì bản dịch tự sinh dễ lệch tiếp. Phát biểu nào phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Train thường nhận tiền tố đích thật, còn suy luận nhận các token tự sinh; phải đánh giá giải mã tự hồi quy"
+      },
+      {
+        "letter": "B",
+        "text": "Teacher forcing nghĩa là luôn có bản dịch chuẩn khi triển khai"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ cần báo token accuracy trên tiền tố thật để khẳng định mọi câu sinh đúng"
+      },
+      {
+        "letter": "D",
+        "text": "Cấp toàn bộ target thật cho decoder lúc test là đánh giá sinh hợp lệ"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Sai số có thể tích lũy khi phân phối tiền tố khác nhau; loss teacher-forced chưa đo hết chất lượng bản dịch sinh.",
+    "incorrectExplanations": {
+      "B": "Khi suy luận bản dịch đích chưa biết.",
+      "C": "Không đo tác động lỗi tích lũy và giải mã.",
+      "D": "Nhìn tương lai làm sai điều kiện sử dụng."
+    },
+    "takeaway": "Đánh giá mô hình chuỗi cần cả loss theo token và đầu ra sinh trong điều kiện thực tế."
+  },
+  {
+    "id": 290,
+    "difficulty": "hard",
+    "title": "Encoder-decoder: ba loại attention mask",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Dịch máy dùng source có PAD, target có PAD và teacher forcing. Decoder có self-attention cùng cross-attention. Cấu hình khái niệm nào đúng?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ mask source PAD, target được nhìn toàn bộ tương lai"
+      },
+      {
+        "letter": "B",
+        "text": "Self-attention đích chặn tương lai và PAD theo quy ước; cross-attention chặn source PAD; loss bỏ target PAD"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ bỏ PAD khỏi loss là đủ cho mọi attention"
+      },
+      {
+        "letter": "D",
+        "text": "Mask mọi token source thật và chỉ giữ PAD"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Mỗi mask xử lý một nơi có thể đưa thông tin không hợp lệ hoặc padding vào tính toán.",
+    "incorrectExplanations": {
+      "A": "Gây leakage trong next-token prediction của decoder.",
+      "C": "PAD vẫn có thể ảnh hưởng biểu diễn qua attention.",
+      "D": "Loại chính thông tin nguồn cần để dịch."
+    },
+    "takeaway": "Mask attention và ignore_index trong loss có mục đích khác nhau; đọc quy ước boolean của API cụ thể."
+  },
+  {
+    "id": 291,
+    "difficulty": "hard",
+    "title": "LM: trung bình loss theo token thật",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Hai batch có tổng NLL lần lượt 10 trên 10 token thật và 18 trên 30 token thật. Bỏ PAD. Mean token NLL toàn tập và perplexity là gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "0,8 và exp(0,8)"
+      },
+      {
+        "letter": "B",
+        "text": "28 và exp(28)"
+      },
+      {
+        "letter": "C",
+        "text": "0,7 và exp(0,7)"
+      },
+      {
+        "letter": "D",
+        "text": "0,7 và 0,7"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Tổng NLL=28 trên 40 token; phải trọng số theo số token thật.",
+    "incorrectExplanations": {
+      "A": "0,8 là trung bình hai mean batch 1 và 0,6, bỏ khác biệt số token.",
+      "B": "Chưa chia tổng số token thật.",
+      "D": "Perplexity là hàm mũ của mean NLL theo log tự nhiên."
+    },
+    "takeaway": "Khi batch có độ dài khác nhau, gộp tổng loss và số token thay vì trung bình các mean không trọng số."
+  },
+  {
+    "id": 292,
+    "difficulty": "hard",
+    "title": "LM qua API: đầu ra cấu trúc và đánh giá",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Ứng dụng cần trích 3 trường từ văn bản, đầu ra JSON phải hợp schema. Model có thể gọi qua API, chưa fine-tune. Cách xây baseline đáng tin cậy?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chỉ kiểm tra chuỗi bắt đầu bằng dấu {"
+      },
+      {
+        "letter": "B",
+        "text": "Một JSON hợp lệ chứng minh mọi trường đều đúng sự thật"
+      },
+      {
+        "letter": "C",
+        "text": "Chọn ví dụ test làm few-shot rồi báo nguyên test là độc lập"
+      },
+      {
+        "letter": "D",
+        "text": "Prompt/schema rõ ràng, dùng chế độ cấu trúc nếu có, validate JSON và đo cả đúng schema lẫn đúng nội dung trên tập giữ riêng"
+      }
+    ],
+    "answer": "D",
+    "explanation": "JSON hợp lệ chưa đồng nghĩa giá trị đúng; capability phải kiểm tra ở API/model cụ thể.",
+    "incorrectExplanations": {
+      "A": "Không bảo đảm parse được, đúng schema hoặc đúng nội dung.",
+      "B": "Schema chỉ kiểm cấu trúc/kiểu, không bảo đảm nội dung.",
+      "C": "Test đã ảnh hưởng prompt."
+    },
+    "takeaway": "Tách chất lượng định dạng, chất lượng nội dung và quy trình xử lý khi model không đáp ứng."
+  },
+  {
+    "id": 293,
+    "difficulty": "hard",
+    "title": "Mô hình mở và API: ràng buộc offline",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Hệ thống phải chạy khi mất mạng và dữ liệu không được rời máy; RAM giới hạn. Cách chọn mô hình ngôn ngữ phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Chọn checkpoint chạy cục bộ đáp ứng tài nguyên/chất lượng và benchmark offline, kiểm tra điều kiện sử dụng"
+      },
+      {
+        "letter": "B",
+        "text": "Gọi API từ xa rồi chỉ tắt lưu log là bảo đảm offline"
+      },
+      {
+        "letter": "C",
+        "text": "Chọn model lớn nhất bất kể RAM vì tải được file là chạy được"
+      },
+      {
+        "letter": "D",
+        "text": "Số tham số nhỏ nhất luôn có chất lượng tốt nhất"
+      }
+    ],
+    "answer": "A",
+    "explanation": "API từ xa không đáp ứng mất mạng; model cục bộ vẫn cần chứng minh đủ RAM và chất lượng.",
+    "incorrectExplanations": {
+      "B": "Vẫn cần mạng và truyền dữ liệu ra máy chủ.",
+      "C": "Bộ nhớ suy luận còn gồm weight và trạng thái/activation liên quan.",
+      "D": "Không có bảo đảm; cần đánh giá trên tác vụ."
+    },
+    "takeaway": "Chọn cách triển khai theo ràng buộc khả dụng và tài nguyên cùng metric tác vụ."
+  },
+  {
+    "id": 294,
+    "difficulty": "hard",
+    "title": "Audio: chia đoạn và rò rỉ người/phiên",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Một corpus lời nói mỗi người thu trong một phòng riêng. Random split đoạn đạt 98% cảm xúc; phòng mới giảm mạnh. Thiết kế kiểm chứng nào phù hợp nhất?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Xóa trường tên phòng nhưng giữ nguyên waveform và split"
+      },
+      {
+        "letter": "B",
+        "text": "Giữ người/phiên/phòng tách giữa các tập theo mục tiêu, kiểm tra mô hình có dựa vào nền âm thanh không"
+      },
+      {
+        "letter": "C",
+        "text": "Tăng số đoạn trùng từ mỗi bản ghi vào cả hai tập"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ chuẩn hóa âm lượng là bảo đảm xóa mọi đặc trưng phòng"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Phòng và người có thể tạo shortcut tương quan nhãn; cần đánh giá trên nguồn độc lập.",
+    "incorrectExplanations": {
+      "A": "Âm học của phòng vẫn tồn tại trong tín hiệu.",
+      "C": "Củng cố shortcut và rò rỉ.",
+      "D": "Room acoustics không chỉ là mức âm lượng."
+    },
+    "takeaway": "Split đúng nguồn là cách kiểm tra shortcut mà chỉ xóa metadata không giải quyết được."
+  },
+  {
+    "id": 295,
+    "difficulty": "hard",
+    "title": "Âm thanh: đổi sampling rate giả",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "File có 48.000 mẫu/giây được gán nhầm metadata 16.000 mẫu/giây mà không resample. Với 48.000 mẫu gốc một giây, model sẽ diễn giải thời lượng và pitch thế nào so với gốc?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Thời lượng vẫn 1 giây, pitch giữ nguyên"
+      },
+      {
+        "letter": "B",
+        "text": "Thời lượng thành 1/3 giây, pitch tăng 3 lần"
+      },
+      {
+        "letter": "C",
+        "text": "Thời lượng thành 3 giây, tần số nghe được giảm khoảng 3 lần"
+      },
+      {
+        "letter": "D",
+        "text": "Chỉ âm lượng tăng 3 lần"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Cùng số mẫu phát/diễn giải ở tốc độ bằng một phần ba làm thời gian kéo dài và pitch hạ.",
+    "incorrectExplanations": {
+      "A": "Điều đó cần resample đúng để số mẫu đổi theo sampling rate.",
+      "B": "Đây là hướng ngược, tương ứng diễn giải mẫu với sampling rate cao hơn.",
+      "D": "Sampling rate không trực tiếp là hệ số biên độ."
+    },
+    "takeaway": "Khai báo sampling rate phải khớp waveform; đổi metadata không thay thế resampling."
+  },
+  {
+    "id": 296,
+    "difficulty": "hard",
+    "title": "HuBERT: frozen encoder và audio pooling",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Muốn phân loại cảm xúc với HuBERT frozen. Audio có độ dài khác nhau; padding tạo thêm hidden frame. Pipeline nào hợp lý?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mean toàn bộ hidden frame kể cả PAD và bỏ mọi độ dài"
+      },
+      {
+        "letter": "B",
+        "text": "Chuyển waveform thành token chữ bằng cách ép int từng mẫu"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ đặt no_grad nhưng giữ dropout train để đặc trưng luôn ổn định"
+      },
+      {
+        "letter": "D",
+        "text": "Processor đúng checkpoint, encoder frozen ở eval, pooling mask theo độ dài hidden frame, train classifier"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Mask phải tương ứng độ dài sau downsampling của encoder, không mặc định cùng chiều waveform.",
+    "incorrectExplanations": {
+      "A": "Làm biểu diễn phụ thuộc lượng padding.",
+      "B": "Không phải tiền xử lý audio mà HuBERT được thiết kế để nhận.",
+      "C": "no_grad không tắt dropout; cần eval nếu muốn feature extractor ổn định."
+    },
+    "takeaway": "Audio encoder có thể đổi độ dài chuỗi; mask pooling cần phản ánh độ dài đầu ra thật."
+  },
+  {
+    "id": 297,
+    "difficulty": "hard",
+    "title": "ASR: WER gộp theo corpus",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "File A chuẩn 10 từ có 5 lỗi; file B chuẩn 90 từ có 9 lỗi. Corpus WER tính gộp là bao nhiêu, nếu các lỗi đã được xác định theo cùng chuẩn?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "14%"
+      },
+      {
+        "letter": "B",
+        "text": "30%"
+      },
+      {
+        "letter": "C",
+        "text": "10%"
+      },
+      {
+        "letter": "D",
+        "text": "50%"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Cộng 14 lỗi chia tổng 100 từ chuẩn; không cho hai file trọng số ngang nhau.",
+    "incorrectExplanations": {
+      "B": "Đây là trung bình không trọng số của WER 50% và 10%.",
+      "C": "Chỉ lấy WER file dài và bỏ file A.",
+      "D": "Chỉ lấy WER file ngắn và bỏ file B."
+    },
+    "takeaway": "Phân biệt corpus WER theo tổng từ với trung bình WER theo file và nêu rõ cách tổng hợp."
+  },
+  {
+    "id": 298,
+    "difficulty": "hard",
+    "title": "Whisper: chép lời hay dịch sang tiếng Anh",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Một checkpoint Whisper đa ngôn ngữ hỗ trợ cả transcription và translation. Input tiếng Việt nhưng cấu hình task=translate sinh tiếng Anh. Muốn transcript tiếng Việt, cần làm gì?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Đổi nhãn đánh giá thành tiếng Anh rồi gọi là transcript tiếng Việt"
+      },
+      {
+        "letter": "B",
+        "text": "Chọn task transcription và ngôn ngữ phù hợp nếu API yêu cầu, kiểm tra processor/decoder config"
+      },
+      {
+        "letter": "C",
+        "text": "Chỉ tăng sampling rate để model trả tiếng Việt"
+      },
+      {
+        "letter": "D",
+        "text": "Mặc định mọi checkpoint mang tên Whisper có cùng hỗ trợ ngôn ngữ"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Hai tác vụ có mục tiêu đầu ra khác nhau; đây có thể là cấu hình tác vụ thay vì lỗi nhận dạng ngôn ngữ.",
+    "incorrectExplanations": {
+      "A": "Thay đổi mục tiêu, không đáp ứng yêu cầu.",
+      "C": "Sampling rate không chọn tác vụ dịch hay chép lời.",
+      "D": "Cần kiểm tra checkpoint cụ thể, có biến thể chỉ tiếng Anh."
+    },
+    "takeaway": "Kiểm tra model variant, language và task trước khi kết luận model audio không đủ năng lực."
+  },
+  {
+    "id": 299,
+    "difficulty": "hard",
+    "title": "Audio-language: transcript có thể mất thông tin",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Muốn hỏi liệu giọng người nói trong audio nghe tức giận hay bình thản. Pipeline chỉ dùng ASR rồi text-only LM. Hạn chế chính và phép so sánh phù hợp?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Transcript luôn lưu chính xác mọi cao độ và cường độ"
+      },
+      {
+        "letter": "B",
+        "text": "LM văn bản chắc chắn suy ra mọi cảm xúc thật từ cùng một câu"
+      },
+      {
+        "letter": "C",
+        "text": "Transcript mất ngữ điệu; so với hệ nhận audio trực tiếp như checkpoint Qwen-Audio/Voxtral phù hợp trên tập có nhãn"
+      },
+      {
+        "letter": "D",
+        "text": "Chọn model theo WER thấp nhất bảo đảm emotion accuracy cao nhất"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Nội dung từ không giữ đầy đủ prosody; cần đánh giá khả năng nghe âm thanh cho tác vụ này.",
+    "incorrectExplanations": {
+      "A": "Chuỗi từ thường không giữ các đặc điểm âm học đó.",
+      "B": "Cùng câu có thể được nói với ngữ điệu khác nhau.",
+      "D": "WER đo chép từ, không trực tiếp đo nhận cảm xúc."
+    },
+    "takeaway": "Tác vụ phụ thuộc tín hiệu phi ngôn từ cần biểu diễn giữ được âm thanh liên quan."
+  },
+  {
+    "id": 300,
+    "difficulty": "hard",
+    "title": "Audio/VLM: so model theo tác vụ và ngôn ngữ",
+    "category": "D",
+    "categoryName": "Xử lý ngôn ngữ tự nhiên & Âm thanh",
+    "prompt": "Hai audio-language checkpoint cho câu trả lời trôi chảy nhưng khác nhau trên audio tiếng Việt có tiếng ồn. Nhóm định chọn model dựa một demo tiếng Anh sạch. Quy trình nào phù hợp hơn?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mọi model đa phương thức có khả năng audio tiếng Việt ngang nhau"
+      },
+      {
+        "letter": "B",
+        "text": "Chỉ đo độ dài câu trả lời; càng dài càng đúng"
+      },
+      {
+        "letter": "C",
+        "text": "Dùng câu trả lời model lớn làm nhãn chuẩn duy nhất mà không kiểm tra"
+      },
+      {
+        "letter": "D",
+        "text": "Tạo tập tiếng Việt đại diện có nhiễu, rubric theo câu hỏi, đo đúng nội dung, lỗi và latency với cùng điều kiện"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Demo khác ngôn ngữ/điều kiện không đại diện miền đích; cần capability của đúng checkpoint.",
+    "incorrectExplanations": {
+      "A": "Input đa phương thức không bảo đảm năng lực đồng đều.",
+      "B": "Độ dài không đo tính đúng nội dung audio.",
+      "C": "Có thể truyền lỗi model vào đánh giá, không có ground truth đáng tin."
+    },
+    "takeaway": "Đánh giá multimodal phải khớp modality, ngôn ngữ, điều kiện thu và đầu ra thực tế cần dùng."
   }
 ];

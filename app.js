@@ -5,11 +5,18 @@
   const STORAGE_KEY = 'uet-ai-practice-v1';
   const $ = id => document.getElementById(id);
   const categories = [...new Map(questions.map(q => [q.category, { id: q.category, name: q.categoryName }])).values()];
+  const difficulties = [
+    { id: 'easy', name: 'Dễ', description: 'Nắm nền tảng · 140 câu ôn tập ban đầu.' },
+    { id: 'medium', name: 'Trung bình', description: 'Vận dụng kiến thức, đọc mã và tính nhanh.' },
+    { id: 'hard', name: 'Khó', description: 'Kết hợp kiến thức, chẩn đoán và cân nhắc giải pháp.' },
+  ];
   let storageAvailable = true;
   let answers = {};
+  let optionOrders = {};
   let bookmarks = new Set();
   let currentId = questions[0].id;
   let category = 'all';
+  let difficulty = 'easy';
   let filter = 'all';
   let search = '';
   let order = questions.map(q => q.id);
@@ -18,6 +25,51 @@
   let visibleIds = [];
   const mobileLayout = window.matchMedia('(max-width: 760px)');
   let directoryOpen = false;
+
+  function shuffled(items) {
+    const result = [...items];
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+  }
+
+  function newOptionOrders() {
+    // Balance correct positions, then independently shuffle the distractors.
+    return Object.fromEntries(difficulties.flatMap(level => {
+      const bank = questions.filter(q => q.difficulty === level.id);
+      const positions = shuffled(bank.map((_, i) => i % 4));
+      return bank.map((q, i) => {
+        const sequence = shuffled(q.options.filter(o => o.letter !== q.answer).map(o => o.letter));
+        sequence.splice(positions[i], 0, q.answer);
+        return [q.id, sequence];
+      });
+    }));
+  }
+
+  function validOptionOrders(orders) {
+    return orders && typeof orders === 'object' && questions.every(q => validOptionOrder(orders[q.id]));
+  }
+
+  function validOptionOrder(sequence) {
+    return Array.isArray(sequence) && sequence.length === 4 && new Set(sequence).size === 4 && sequence.every(letter => /^[A-D]$/.test(letter));
+  }
+
+  function displayedQuestion(source) {
+    const sequence = optionOrders[source.id];
+    const labels = Object.fromEntries(sequence.map((letter, i) => [letter, 'ABCD'[i]]));
+    return {
+      ...source,
+      answer: labels[source.answer],
+      options: sequence.map(sourceLetter => ({
+        ...source.options.find(o => o.letter === sourceLetter),
+        sourceLetter,
+        letter: labels[sourceLetter],
+      })),
+      incorrectExplanations: Object.fromEntries(Object.entries(source.incorrectExplanations).map(([letter, text]) => [labels[letter], text])),
+    };
+  }
 
   function updateDirectory() {
     const expanded = !mobileLayout.matches || directoryOpen;
@@ -36,14 +88,22 @@
       bookmarks = new Set((Array.isArray(saved.bookmarks) ? saved.bookmarks : []).filter(id => byId.has(id)));
       if (byId.has(saved.currentId)) currentId = saved.currentId;
       if (categories.some(c => c.id === saved.category)) category = saved.category;
+      if (difficulties.some(d => d.id === saved.difficulty)) difficulty = saved.difficulty;
+      // Keep existing permutations when extending the bank; fill only new IDs.
+      const generated = newOptionOrders();
+      optionOrders = Object.fromEntries(questions.map(q => [q.id,
+        validOptionOrder(saved.optionOrders?.[q.id]) ? saved.optionOrders[q.id] : generated[q.id]]));
     }
   } catch { storageAvailable = false; }
+  if (!validOptionOrders(optionOrders)) optionOrders = newOptionOrders();
 
   function save() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ answers, bookmarks: [...bookmarks], currentId, category })); }
+    // Answers retain their source option IDs so old progress survives relabeling.
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ answers, optionOrders, bookmarks: [...bookmarks], currentId, category, difficulty })); }
     catch { storageAvailable = false; }
+    $('storage-note').hidden = storageAvailable;
     $('storage-note').textContent = storageAvailable
-      ? 'Tiến độ được tự động lưu trên trình duyệt này.'
+      ? ''
       : 'Trình duyệt không lưu được tiến độ. Bạn vẫn có thể luyện tập trong phiên này.';
   }
 
@@ -68,6 +128,7 @@
   }
 
   function matches(q) {
+    if (q.difficulty !== difficulty) return false;
     if (category !== 'all' && q.category !== category) return false;
     if (filter === 'unanswered' && answers[q.id]) return false;
     if (filter === 'wrong' && (!answers[q.id] || answers[q.id] === q.answer)) return false;
@@ -85,30 +146,51 @@
     if (!visibleIds.includes(currentId)) currentId = visibleIds[0] || null;
     render();
     $('question-card').scrollTop = 0;
+    $('question-grid').scrollTop = 0;
   }
 
   function renderCategories() {
+    $('bank-total').textContent = questions.length;
     $('categories').replaceChildren();
     for (const c of [{ id: 'all', name: 'Tất cả câu hỏi' }, ...categories]) {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'category-button' + (c.id === category ? ' active' : '');
       button.setAttribute('aria-pressed', String(c.id === category));
-      button.innerHTML = `<span class="category-icon" aria-hidden="true">${c.id === 'all' ? '▦' : c.id}</span><span class="category-name">${escapeHtml(c.name)}</span><span class="count">${questions.filter(q => c.id === 'all' || q.category === c.id).length}</span>`;
+      button.innerHTML = `<span class="category-icon" aria-hidden="true">${c.id === 'all' ? '▦' : c.id}</span><span class="category-name">${escapeHtml(c.name)}</span><span class="count">${questions.filter(q => q.difficulty === difficulty && (c.id === 'all' || q.category === c.id)).length}</span>`;
       button.addEventListener('click', () => { category = c.id; refreshList(); });
       $('categories').append(button);
     }
   }
 
+  function renderDifficulties() {
+    $('difficulties').replaceChildren();
+    for (const level of difficulties) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'difficulty-button' + (difficulty === level.id ? ' active' : '');
+      button.dataset.difficulty = level.id;
+      button.setAttribute('aria-pressed', String(difficulty === level.id));
+      button.innerHTML = `<span>${level.name}</span><span class="count">${questions.filter(q => q.difficulty === level.id).length}</span>`;
+      button.addEventListener('click', () => {
+        difficulty = level.id;
+        search = ''; $('question-search').value = '';
+        refreshList();
+      });
+      $('difficulties').append(button);
+    }
+    $('difficulty-description').textContent = difficulties.find(d => d.id === difficulty).description;
+  }
+
   function renderStats() {
-    const scope = questions.filter(q => category === 'all' || q.category === category);
+    const scope = questions.filter(q => q.difficulty === difficulty && (category === 'all' || q.category === category));
     const answered = scope.filter(q => answers[q.id]);
     const correct = answered.filter(q => answers[q.id] === q.answer).length;
     $('answered-stat').innerHTML = `${answered.length}<span>/${scope.length}</span>`;
     $('correct-stat').textContent = correct;
     $('wrong-stat').textContent = answered.length - correct;
     $('accuracy-stat').textContent = answered.length ? Math.round(correct / answered.length * 100) + '%' : '—';
-    $('progress-fill').style.width = answered.length / scope.length * 100 + '%';
+    $('progress-fill').style.width = (scope.length ? answered.length / scope.length * 100 : 0) + '%';
     $('progress-track').setAttribute('aria-valuenow', answered.length);
     $('progress-track').setAttribute('aria-valuemax', scope.length);
   }
@@ -135,8 +217,8 @@
   }
 
   function renderQuestion() {
-    const q = byId.get(currentId);
-    const empty = !q || !visibleIds.length;
+    const source = byId.get(currentId);
+    const empty = !source || !visibleIds.length;
     $('question-card').hidden = empty;
     $('navigation').hidden = empty;
     $('empty-state').hidden = !empty;
@@ -152,9 +234,12 @@
       $('empty-message').textContent = message;
       return;
     }
-    const selected = answers[q.id];
+    const q = displayedQuestion(source);
+    const selected = q.options.find(option => option.sourceLetter === answers[q.id])?.letter;
     $('question-index').textContent = 'CÂU ' + String(q.id).padStart(2, '0');
     $('topic-label').textContent = 'Chủ đề ' + q.category;
+    $('difficulty-badge').textContent = difficulties.find(d => d.id === q.difficulty).name;
+    $('difficulty-badge').dataset.level = q.difficulty;
     $('question-title').textContent = q.title;
     $('question-prompt').innerHTML = markdown(q.prompt);
     $('answer-instruction').textContent = selected ? 'Đã ghi nhận đáp án của bạn.' : 'Chọn một đáp án đúng nhất.';
@@ -168,6 +253,7 @@
       button.type = 'button';
       button.className = 'option';
       button.dataset.letter = option.letter;
+      button.dataset.sourceLetter = option.sourceLetter;
       button.disabled = Boolean(selected);
       let indicator = '';
       let status = '';
@@ -190,11 +276,11 @@
       const alternatives = q.options.filter(option => option.letter !== q.answer && q.incorrectExplanations?.[option.letter]);
       feedback.innerHTML = `<div class="feedback-title"><span aria-hidden="true">${isCorrect ? '✓' : '×'}</span>${isCorrect ? 'Chính xác! Bạn đã chọn đáp án ' + q.answer + '.' : 'Chưa chính xác. Bạn chọn ' + selected + ', đáp án đúng là ' + q.answer + '.'}</div>
         <section class="correct-explanation" aria-label="Giải thích đáp án đúng"><h4>Vì sao ${q.answer} đúng?</h4><div class="markdown">${markdown(q.explanation)}</div></section>
-        ${alternatives.length ? `<section class="alternative-explanations" aria-label="Giải thích các phương án sai"><h4>Vì sao các phương án còn lại sai?</h4><ul class="alternative-list">${alternatives.map(option => `<li class="alternative-item${selected === option.letter ? ' your-choice' : ''}" data-explanation-letter="${option.letter}"><div class="alternative-heading"><span class="alternative-letter">${option.letter}</span><span class="markdown alternative-option">${inlineMarkdown(option.text)}</span>${selected === option.letter ? '<span class="your-choice-tag">Bạn đã chọn</span>' : ''}</div><div class="markdown alternative-reason">${markdown(q.incorrectExplanations[option.letter])}</div></li>`).join('')}</ul></section>` : ''}
+        ${alternatives.length ? `<section class="alternative-explanations" aria-label="Giải thích các phương án sai"><h4>Vì sao các phương án còn lại sai?</h4><ul class="alternative-list">${alternatives.map(option => `<li class="alternative-item${selected === option.letter ? ' your-choice' : ''}" data-explanation-letter="${option.letter}" data-source-letter="${option.sourceLetter}"><div class="alternative-heading"><span class="alternative-letter">${option.letter}</span><span class="markdown alternative-option">${inlineMarkdown(option.text)}</span>${selected === option.letter ? '<span class="your-choice-tag">Bạn đã chọn</span>' : ''}</div><div class="markdown alternative-reason">${markdown(q.incorrectExplanations[option.letter])}</div></li>`).join('')}</ul></section>` : ''}
         ${q.takeaway ? `<section class="takeaway" aria-label="Kiến thức cần ghi nhớ"><h4>Ghi nhớ</h4><div class="markdown">${markdown(q.takeaway)}</div></section>` : ''}`;
     } else feedback.replaceChildren();
     $('retry-button').hidden = !selected;
-    $('answer-hint').textContent = selected ? 'Đọc lời giải để hiểu rõ hơn trước khi tiếp tục.' : 'ⓘ Lời giải xuất hiện sau khi bạn chọn đáp án.';
+    $('card-bottom').hidden = !selected;
     const position = visibleIds.indexOf(q.id);
     $('position-label').textContent = `${position + 1} / ${visibleIds.length} câu`;
     $('previous-button').disabled = position <= 0;
@@ -203,6 +289,7 @@
 
   function render() {
     renderCategories();
+    renderDifficulties();
     renderStats();
     renderGrid();
     renderQuestion();
@@ -216,7 +303,7 @@
 
   function answer(letter) {
     if (!currentId || answers[currentId] || !/^[A-D]$/.test(letter)) return;
-    answers[currentId] = letter;
+    answers[currentId] = optionOrders[currentId]['ABCD'.indexOf(letter)];
     // Update only results; keep the live status node in the DOM for screen readers.
     renderStats();
     renderGrid();
@@ -266,10 +353,8 @@
     $('options').querySelector('button')?.focus();
   });
   $('shuffle-button').addEventListener('click', () => {
-    for (let i = order.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [order[i], order[j]] = [order[j], order[i]];
-    }
+    order = shuffled(order);
+    optionOrders = newOptionOrders();
     currentId = null;
     refreshList();
   });
@@ -281,6 +366,7 @@
     if (event.submitter?.value !== 'reset') return;
     answers = {}; bookmarks.clear(); category = 'all'; filter = 'all'; search = '';
     currentId = questions[0].id; order = questions.map(q => q.id);
+    optionOrders = newOptionOrders();
     $('question-search').value = ''; refreshList();
   });
   document.addEventListener('keydown', event => {

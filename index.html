@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#175c50">
-  <meta name="description" content="Luyện tập 140 câu trắc nghiệm Olympic Trí tuệ nhân tạo UET 2026, chấm đáp án và giải thích ngay sau khi chọn.">
+  <meta name="description" content="Luyện tập AI Olympic UET 2026 theo ba mức Dễ, Trung bình và Khó, có đáp án và lời giải chi tiết.">
   <title>AI Practice · Ôn luyện Olympic UET 2026</title>
   <link rel="stylesheet" href="styles.css">
   <script src="questions.js" defer></script>
@@ -16,9 +16,13 @@
       <p class="eyebrow">GÓC HỌC TẬP CỦA BẠN</p>
       <h1>Mỗi câu hỏi,<br>một bước tiến.</h1>
       <p class="sidebar-intro">Luyện tư duy AI qua từng tình huống.<br>Hiểu lời giải, nắm vững kiến thức.</p>
-      <div class="section-heading">NGÂN HÀNG CÂU HỎI <span id="bank-total">140</span></div>
+      <div class="section-heading">NGÂN HÀNG CÂU HỎI <span id="bank-total">300</span></div>
       <nav id="categories" class="categories" aria-label="Lọc theo chủ đề"></nav>
-      <p class="source-note">Biên soạn từ ngân hàng ôn tập<br>Olympic Trí tuệ nhân tạo UET 2026</p>
+      <section class="difficulty-section" aria-labelledby="difficulty-heading">
+        <h2 id="difficulty-heading">MỨC ĐỘ LUYỆN TẬP</h2>
+        <div id="difficulties" class="difficulties" role="group" aria-label="Chọn mức độ khó"></div>
+        <p id="difficulty-description" class="difficulty-description"></p>
+      </section>
     </aside>
 
     <section class="practice" aria-label="Luyện tập trắc nghiệm">
@@ -32,18 +36,17 @@
       <div class="toolbar"><div class="filter-tabs" role="group" aria-label="Lọc trạng thái câu hỏi"><button type="button" data-filter="all" class="active" aria-pressed="true">Tất cả</button><button type="button" data-filter="unanswered" aria-pressed="false">Chưa làm</button><button type="button" data-filter="wrong" aria-pressed="false">Câu sai</button><button type="button" data-filter="bookmarked" aria-pressed="false">Đã lưu</button></div><button id="shuffle-button" class="text-button" type="button">⇄ <span>Xáo trộn</span></button></div>
 
       <article class="question-card" id="question-card" aria-labelledby="question-title" tabindex="0">
-        <div class="question-meta"><span class="question-index" id="question-index">CÂU 01</span><span class="topic-label" id="topic-label"></span><button type="button" class="bookmark" id="bookmark-button" aria-label="Lưu câu hỏi" aria-pressed="false">☆</button></div>
+        <div class="question-meta"><span class="question-index" id="question-index">CÂU 01</span><span class="topic-label" id="topic-label"></span><span class="difficulty-badge" id="difficulty-badge"></span><button type="button" class="bookmark" id="bookmark-button" aria-label="Lưu câu hỏi" aria-pressed="false">☆</button></div>
         <h3 id="question-title"></h3>
         <div class="markdown question-prompt" id="question-prompt"></div>
         <p class="answer-instruction" id="answer-instruction">Chọn một đáp án đúng nhất.</p>
         <div class="options" id="options" role="group" aria-label="Các phương án trả lời"></div>
         <div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" hidden></div>
-        <div class="card-bottom"><span id="answer-hint"><span aria-hidden="true">ⓘ</span> Lời giải xuất hiện sau khi bạn chọn đáp án.</span><button class="text-button" id="retry-button" type="button" hidden>↺ Thử lại câu này</button></div>
+        <div class="card-bottom" id="card-bottom" hidden><button class="text-button" id="retry-button" type="button" hidden>↺ Thử lại câu này</button></div>
       </article>
       <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">✧</span><h3 id="empty-title">Không có câu hỏi</h3><p id="empty-message"></p><button type="button" class="button button-primary" id="show-all-button">Xem tất cả câu hỏi</button></div>
       <div class="navigation" id="navigation"><button type="button" id="previous-button" class="button button-outline">← Câu trước</button><span id="position-label"></span><button type="button" id="next-button" class="button button-primary">Câu tiếp theo →</button></div>
-      <p class="keyboard-note">Phím <kbd>1</kbd>–<kbd>4</kbd> chọn đáp án <span>·</span> <kbd>←</kbd> <kbd>→</kbd> chuyển câu</p>
-      <p class="storage-note" id="storage-note">Tiến độ được tự động lưu trên trình duyệt này.</p>
+      <p class="storage-note" id="storage-note" hidden></p>
     </section>
 
     <aside class="question-panel" id="question-panel" aria-label="Danh sách câu hỏi">

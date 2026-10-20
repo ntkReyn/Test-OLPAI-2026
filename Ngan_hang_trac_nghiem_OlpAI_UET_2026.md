@@ -328,7 +328,7 @@ B. Fit scaler trên cả train và validation mỗi fold
 C. Dùng `Pipeline([('scaler', StandardScaler()), ('model', LogisticRegression())])` rồi cross-validation pipeline
 D. Bỏ chuẩn hóa vì Logistic Regression không bị ảnh hưởng bởi scale
 
-**Đáp án: C.** `Pipeline` đảm bảo scaler chỉ fit trên phần train của từng fold, tránh data leakage. Mean và độ lệch chuẩn được học lại trong mỗi fold; validation chỉ được `transform` bằng các thống kê đó. Mỗi bước của `Pipeline` phải có cặp `(tên, estimator)` như trong phương án C.
+**Đáp án: C.** `Pipeline` đảm bảo scaler chỉ fit trên phần train của từng fold, tránh data leakage. Mean và độ lệch chuẩn được học lại trong mỗi fold; validation chỉ được `transform` bằng các thống kê đó. Mỗi bước của `Pipeline` phải có cặp `(tên, estimator)` như trong phương án đúng.
 
 **Vì sao các phương án còn lại sai?**
 - **A:** Chuẩn hóa trước CV để validation tham gia tính mean/std, làm quá trình huấn luyện gián tiếp biết phân phối phần dữ liệu cần đánh giá.
@@ -2175,7 +2175,7 @@ D. Crop nhẹ không làm mất object
 **Vì sao các phương án còn lại sai?**
 - **B:** Resize nhất quán và phù hợp model thường giữ hướng trái/phải; nó không phải biến đổi đảo nhãn như flip trong ví dụ.
 - **C:** Normalize phù hợp điều chỉnh cường độ pixel, không tự hoán đổi ngữ nghĩa trái với phải.
-- **D:** Crop nhẹ đã giả định không mất object và vẫn cần giữ dấu hiệu phân biệt nhãn, nên không phải lựa chọn gây đảo hướng rõ như A.
+- **D:** Crop nhẹ đã giả định không mất object và vẫn cần giữ dấu hiệu phân biệt nhãn, nên không phải lựa chọn gây đảo hướng rõ như lật ngang.
 
 **Ghi nhớ:** Augmentation chỉ hợp lệ khi giữ đúng nhãn hoặc có quy tắc cập nhật nhãn tương ứng.
 
